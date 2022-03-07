@@ -6,6 +6,8 @@
 //  
 //  - Using VS enviroment and AC review 
 //
+//		PRÁCTICAS ASD - ALEJANDRO FERNÁNDEZ TRIGO
+//
 //-----------------------------------------------------
 
 #include <stdio.h>

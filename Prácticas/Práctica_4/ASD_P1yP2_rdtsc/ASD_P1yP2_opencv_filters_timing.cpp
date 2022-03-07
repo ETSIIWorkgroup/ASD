@@ -7,8 +7,8 @@
 //  - OPENCV TEST TO SHOW A VIDEO OR AN IMAGE 
 //		(based on several examples from "Learning OpenCV. OREILLY BOOK"; page numbers are referred to this book)
 //  - TEST TIMING OF OPENCV AND OWN FUNCTION TO FILTER FRAMES FROM A VIDEO 
-//
-//		PRÁCTICAS ASD - ALEJANDRO FERNÁNDEZ TRIGO
+//	
+//		PRÁCTICAS ASD - ALEJANDRO FERNÁNDEZ TRIGO	
 //
 //-----------------------------------------------------
 
@@ -51,9 +51,7 @@ void onTrackbarSlide(int pos) {
 
 //-----------------------------------------------------
 // My own blurring functions
-
-void asd_blurring_unrolled( IplImage* img );
-void asd_blurring_simplest ( IplImage* img , int kernel_radius);
+void asd_blurring_simplest_own( IplImage* img );
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Based on example 2 page 18 of OReilly Learning OpenCV.pdf:
@@ -107,9 +105,9 @@ int main(int argc, char** argv) {
 
 #ifdef __VIDEO_ON
 		cvShowImage( "asd_P1-in", oldframe );
-		
+		 
 #endif 
-		
+
 		IplImage* out = cvCreateImage(
 			cvGetSize(oldframe),
 			IPL_DEPTH_8U,
@@ -129,9 +127,8 @@ int main(int argc, char** argv) {
 		// Do the smoothing using one of my own functions
 		crono_my_own_blurring.Start();
 
-		//UNCOMMENT THIS FUNCTION (and coment the other) WHEN NECESSARY :
-		asd_blurring_unrolled  ( oldframe  ); //this function modify image (parameter)
-		//asd_blurring_simplest ( oldframe , 1 ); //this function modify image (parameter)
+		// LLAMADA A LA FUNCIÓN DE DESENROLLADO DE CÓDIGO COMPLETO
+		asd_blurring_simplest_own ( oldframe ); 
 
 		crono_my_own_blurring.Stop();
 		crono_my_own_blurring.Reset();
@@ -183,81 +180,67 @@ int main(int argc, char** argv) {
 #endif
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// My own blurring function (the "simplest")
-void asd_blurring_simplest ( IplImage* img , int kernel_radius) {
-	int number_of_neighbours = (1+2*kernel_radius)*(1+2*kernel_radius);
-	// Remark: this loop has been  chosen to avoid boundary conditions be checked. 
-	// in fact two rows and two columns are not processed (this is a little difference: less than 0.3%)
-	for( int y=1; y<(img->height)-1; y++ ) {
-
-		// for( int y=0; y<img->height; y++ ) {   
-
-		//THIS POINTER ptr (to unsigned char) will point to the 
-		// first byte of a row in a RGB image 
-		// Do not worry about the fields of this structure; they are given by OpenCV
-    	uchar* ptr = (uchar*) (
-			img->imageData + y * img->widthStep
-			); //@comment
-	
-		int image_width = img->width;
-		// Remark: this loop has been  chosen to avoid boundary conditions be checked. 
-		// in fact two rows and two columns are not processed (this is a little difference: less than 0.3%)
-		for( int x=1; x<(image_width -1); x++ ) {
-	
-			//	for( int x=0; x<image_width ; x++ ) {  
-			for( int color=0; color<3; color++ ) {
-
-				int sum=0;
-				for( int yshift = -kernel_radius; yshift <= kernel_radius; yshift++ ) {
-					for( int xshift = -kernel_radius; xshift <= kernel_radius; xshift++ ) {
-						sum += ptr[3*(x+xshift)+3*image_width*yshift +color];
-					}
-				}
-				ptr[3*x+color] = sum/number_of_neighbours ;
-			}
-		}
-	}
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// My own blurring function (UNROLLED). 
-// another way to write the filter
-// ONLY VALID FOR 9 NEIGHBOURS !!... BUT VERY MUCH FASTER THAN THE GENERIC FILTER !!
-void asd_blurring_unrolled ( IplImage* img ) {
-	// Remark: this loop has been  chosen to avoid boundary conditions be checked. 
-	// in fact two rows and two columns are not processed (this is a little difference: less than 0.3%)
+// CÓDIGO COMPLETAMENTE DESENROLLADO POR MI - PRÁCTICA 3
+void asd_blurring_unrolled_own ( IplImage* img ) {
 	for( int y=1; y<(img->height)-1; y++ ) {
 	
-		// if you would like to use the next loop like, remember that boundary lines should be processed independently
-		//for( int y=0; y<img->height; y++ ) {
-		uchar* ptr = (uchar*) (
-			img->imageData + y * img->widthStep
-			);
+		uchar* ptr = (uchar*) (img->imageData + y * img->widthStep);
 		int image_width = img->width;
 
-		// Remark: this loop has been  chosen to avoid boundary conditions be checked. 
-		// in fact two rows and two columns are not processed (this is a little difference: less than 0.3%)
 		for( int x=1; x<(image_width -1); x++ ) {
 
-			// if you would like to use the next loop like, remember that boundary lines should be processed independently
-			//for( int x=0; x<image_width ; x++ ) {
-			for( int color=0; color<3; color++ ) {
-				int sum=0;
-				sum += ptr[3*x+color];
-				sum += ptr[3*(x-1)+color];
-				sum += ptr[3*(x+1)+color];
+				int sum0=0;
+				int sum1=0;
+				int sum2=0;
+
+				// ###################################
+
+				sum0 += ptr[3*x+0];
+				sum0 += ptr[3*(x-1)+0];
+				sum += ptr[3*(x+1)+0];
+
+				sum1 += ptr[3*x+1];
+				sum1 += ptr[3*(x-1)+1];
+				sum1 += ptr[3*(x+1)+1];
+
+				sum2 += ptr[3*x+2];
+				sum2 += ptr[3*(x-1)+2];
+				sum2 += ptr[3*(x+1)+2];
 				
-				sum += ptr[3*x+3*image_width +color];
-				sum += ptr[3*(x-1)+3*image_width +color];
-				sum += ptr[3*(x+1)+3*image_width +color];
+				// ###################################
+
+				sum0 += ptr[3*x+3*image_width +0];
+				sum0 += ptr[3*(x-1)+3*image_width +0];
+				sum0 += ptr[3*(x+1)+3*image_width +0];
+
+				sum1 += ptr[3*x+3*image_width +1];
+				sum1 += ptr[3*(x-1)+3*image_width +1];
+				sum1 += ptr[3*(x+1)+3*image_width +1];
+
+				sum2 += ptr[3*x+3*image_width +2];
+				sum2 += ptr[3*(x-1)+3*image_width +2];
+				sum2 += ptr[3*(x+1)+3*image_width +2];
+
+				// ###################################
 				
-				sum += ptr[3*x-3*image_width +color];
-				sum += ptr[3*(x-1)-3*image_width +color];
-				sum += ptr[3*(x+1)-3*image_width +color];
+				sum0 += ptr[3*x-3*image_width +0];
+				sum0 += ptr[3*(x-1)-3*image_width +0];
+				sum0 += ptr[3*(x+1)-3*image_width +0];
+
+				sum1 += ptr[3*x-3*image_width +1];
+				sum1 += ptr[3*(x-1)-3*image_width +1];
+				sum1 += ptr[3*(x+1)-3*image_width +1];
+
+				sum2 += ptr[3*x-3*image_width +2];
+				sum2 += ptr[3*(x-1)-3*image_width +2];
+				sum2 += ptr[3*(x+1)-3*image_width +2];
+
+				// ###################################
 				
-				ptr[3*x+color] = sum/9;
-			}
+				ptr[3*x+0] = sum0/9;
+				ptr[3*x+1] = sum1/9;
+				ptr[3*x+2] = sum2/9;
+
 		}
 	}
 }

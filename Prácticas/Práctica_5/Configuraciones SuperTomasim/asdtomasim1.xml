@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <CONFIGURATION>
+    <_x0023_ExLoad>1</_x0023_ExLoad>
+    <_x0023_ExStore>1</_x0023_ExStore>
+    <_x0023_ExAluInt>1</_x0023_ExAluInt>
+    <_x0023_ExMulFP>4</_x0023_ExMulFP>
+    <_x0023_ExAddFP>2</_x0023_ExAddFP>
+    <_x0023_ExDivFP>8</_x0023_ExDivFP>
+    <UfLoad>5</UfLoad>
+    <UfStore>5</UfStore>
+    <UfAluInt>5</UfAluInt>
+    <UfMulFP>5</UfMulFP>
+    <UfAddFP>5</UfAddFP>
+    <UfDivFP>1</UfDivFP>
+    <RsLoad>10</RsLoad>
+    <RsStore>1</RsStore>
+    <RsAluInt>10</RsAluInt>
+    <RsMulFP>10</RsMulFP>
+    <RsAddFP>10</RsAddFP>
+    <RsDivFP>5</RsDivFP>
+    <_x0023_Is>1</_x0023_Is>
+    <_x0023_CDB>10</_x0023_CDB>
+    <PredStage>1</PredStage>
+    <IssueWidth>1</IssueWidth>
+  </CONFIGURATION>
+</NewDataSet>

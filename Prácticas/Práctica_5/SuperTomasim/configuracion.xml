@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <CONFIGURACION>
+    <FasesExLoad>1</FasesExLoad>
+    <FasesExStore>1</FasesExStore>
+    <FasesExAluInt>1</FasesExAluInt>
+    <FasesExMulFP>4</FasesExMulFP>
+    <FasesExAddFP>2</FasesExAddFP>
+    <FasesExDivFP>8</FasesExDivFP>
+    <UfLoad>1</UfLoad>
+    <UfStore>1</UfStore>
+    <UfAluInt>1</UfAluInt>
+    <UfMulFP>1</UfMulFP>
+    <UfAddFP>1</UfAddFP>
+    <UfDivFP>1</UfDivFP>
+    <RsLoad>5</RsLoad>
+    <RsStore>5</RsStore>
+    <RsAluInt>5</RsAluInt>
+    <RsMulFP>5</RsMulFP>
+    <RsAddFP>5</RsAddFP>
+    <RsDivFP>5</RsDivFP>
+    <FasesIs>1</FasesIs>
+    <NumCDB>1</NumCDB>
+    <CargaPred>1</CargaPred>
+    <Escalaridad>1</Escalaridad>
+  </CONFIGURACION>
+</NewDataSet>

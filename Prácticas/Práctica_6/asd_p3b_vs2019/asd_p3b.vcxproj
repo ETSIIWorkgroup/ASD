@@ -19,7 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="asd_p3B.cpp" />
+    <ClCompile Include="asd_p3B.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Default</InlineFunctionExpansion>
+    </ClCompile>
     <ClCompile Include="QueryPerformanceTiming_rdtsc.cpp" />
   </ItemGroup>
   <ItemGroup>

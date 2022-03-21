@@ -72,9 +72,13 @@ double test2 (int niter)
 
 	// Write here the same algorithm using two accumulators
 	// for ( ; i<niter ; i+=2) //this must be the central loop
-	
+	for ( ; i < niter; i += 2) {
+		acc1 = acc1 * a[i];
+		acc2 = acc2 * a[i+1];
+	}
+	acc = acc1 * acc2;
 
-	return ;  //RETURN HERE THE TOTAL ACCUMULATOR
+	return acc;  //RETURN HERE THE TOTAL ACCUMULATOR
 }
 
 double test3 (int niter)
@@ -91,14 +95,16 @@ double test3 (int niter)
 
 	// Write here the same algorithm using 3 accumulators
 	// for ( ; i<niter ; i+=3) //this must be the central loop
-	for (; i < niter; i += 3)
+	for ( ; i < niter; i += 3)
 	{
-		
+		acc1 = acc1 * a[i];
+		acc2 = acc2 * a[i+1];
+		acc3 = acc3 * a[i+2];
 	}
 
+	acc = acc1 * acc2 * acc3;
 
-
-	return ;  //RETURN HERE THE TOTAL ACCUMULATOR
+	return acc;  //RETURN HERE THE TOTAL ACCUMULATOR
 }
 
 double test4 (int niter)
@@ -116,15 +122,18 @@ double test4 (int niter)
 
 	// Write here the same algorithm using 4 accumulators
 	// for ( ; i<niter ; i+=4) //this must be the central loop
-	for (; i < niter; i += 4)
+	for ( ; i < niter; i += 4)
 	{
-		
+		acc1 = acc1 * a[i];
+		acc2 = acc2 * a[i + 1];
+		acc3 = acc3 * a[i + 2];
+		acc4 = acc4 * a[i + 3];
 	}
 
+	acc = acc1 * acc2 * acc3 * acc4;
 
 
-
-		return ;  //RETURN HERE THE TOTAL ACCUMULATOR
+	return acc;  //RETURN HERE THE TOTAL ACCUMULATOR
 }
 
 

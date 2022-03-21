@@ -1,8 +1,7 @@
-﻿  QueryPerformanceTiming_rdtsc.cpp
-  asd_p3B.cpp
-  Generating code
-  1 of 29 functions ( 3.4%) were compiled, the rest were copied from previous compilation.
+﻿  asd_p3B.cpp
+  Generando código
+  3 of 29 functions (10.3%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  asd_p3b.vcxproj -> C:\Users\Luis\Desktop\asd_p3b_vs2017\Release\asd_p3b.exe
+    0 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+  asd_p3b.vcxproj -> C:\Users\practica\Desktop\asd_p3b_vs2019\Release\asd_p3b.exe

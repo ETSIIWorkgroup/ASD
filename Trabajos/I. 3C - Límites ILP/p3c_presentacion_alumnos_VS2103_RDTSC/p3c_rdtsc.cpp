@@ -14,6 +14,16 @@
 //  Uses Release mode of VS to measure times 
 //-----------------------------------------------------
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	Práctica 3C - Arquitectura de Sistemas Distribuidos - Universidad de Sevilla Curso 2021/2022
+// 
+//	Alumnos:
+//	- Pedro Escobar Rubio
+//	- Alejandro Fernández Trigo
+// 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -83,6 +93,8 @@ void vectors_init ()
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// tests
+
+// a. Una suma por iteración
 float problem ()
 {
 	int  i;
@@ -97,6 +109,60 @@ float problem ()
 	// IMPORTANT : Always return a value
 	return z; // Replace returned value
 }
+
+// b. Dos sumas por iteración
+/*
+float problem ()
+{
+	int  i;
+	float z = 0.0;
+
+	for (i=0;i<N_ELEM;i++)
+	{
+		// Put your code here
+
+	}
+
+	// IMPORTANT : Always return a value
+	return z; // Replace returned value
+}
+*/
+
+// c. Suma condicional - Dificilmente Predecible 
+/*
+float problem ()
+{
+	int  i;
+	float z = 0.0;
+
+	for (i=0;i<N_ELEM;i++)
+	{
+		// Put your code here
+
+	}
+
+	// IMPORTANT : Always return a value
+	return z; // Replace returned value
+}
+*/
+
+// c. Suma condicional - Facilmente Predecible 
+/*
+float problem ()
+{
+	int  i;
+	float z = 0.0;
+
+	for (i=0;i<N_ELEM;i++)
+	{
+		// Put your code here
+
+	}
+
+	// IMPORTANT : Always return a value
+	return z; // Replace returned value
+}
+*/
 
 float example ()
 {

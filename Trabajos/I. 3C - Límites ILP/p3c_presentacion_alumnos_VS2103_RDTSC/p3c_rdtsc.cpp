@@ -102,12 +102,11 @@ float problem ()
 
 	for (i=0;i<N_ELEM;i++)
 	{
-		// Put your code here
-
+		// Z igual a Z + el valor de a[] en la posición i
+		z = z + a[i];
 	}
 
-	// IMPORTANT : Always return a value
-	return z; // Replace returned value
+	return z;
 }
 
 // b. Dos sumas por iteración
@@ -119,12 +118,14 @@ float problem ()
 
 	for (i=0;i<N_ELEM;i++)
 	{
-		// Put your code here
+		// 1º Forma - Suma de dos vectores
+		z = z + (a[i] + b[i]);
 
+		// 2º Forma - Suma de un vector y una constante
+		// z = z + (a[i] + 3.0);
 	}
 
-	// IMPORTANT : Always return a value
-	return z; // Replace returned value
+	return z;
 }
 */
 
@@ -137,12 +138,14 @@ float problem ()
 
 	for (i=0;i<N_ELEM;i++)
 	{
-		// Put your code here
-
+		// cond3 contiene valores aleatorios (entre 0 y 1) dificilmente predecibles
+		if (cond3[i] == 1) {
+			z = z + cond3[i];
+		}
+		
 	}
 
-	// IMPORTANT : Always return a value
-	return z; // Replace returned value
+	return z; 
 }
 */
 
@@ -155,12 +158,19 @@ float problem ()
 
 	for (i=0;i<N_ELEM;i++)
 	{
-		// Put your code here
+		// Para valores MUY facilmente predecibles (todos son 1)
+		if (cond1[i] == 1) {
+			z = z + cond1[i];
+		}
+
+		// Para valores predecibles (entre 0 y 1)
+		if (cond2[i] == 1) {
+			z = z + cond2[i];
+		}
 
 	}
 
-	// IMPORTANT : Always return a value
-	return z; // Replace returned value
+	return z;
 }
 */
 
@@ -173,10 +183,8 @@ float example ()
 		a[i]=b[i]+8;
 	}
 	
-	// IMPORTANT : Always return a value
 	return a[N_ELEM-1 ];
 }
-
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int main( int argc, char** argv ) {

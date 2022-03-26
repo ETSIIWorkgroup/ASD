@@ -102,7 +102,6 @@ float problem ()
 
 	for (i=0;i<N_ELEM;i++)
 	{
-		// Z igual a Z + el valor de a[] en la posición i
 		z = z + a[i];
 	}
 
@@ -140,7 +139,10 @@ float problem ()
 	{
 		// cond3 contiene valores aleatorios (entre 0 y 1) dificilmente predecibles
 		if (cond3[i] == 1) {
-			z = z + cond3[i];
+			z = z + a[i];
+		}
+		else {
+			z = z + b[i];
 		}
 		
 	}
@@ -160,12 +162,18 @@ float problem ()
 	{
 		// Para valores MUY facilmente predecibles (todos son 1)
 		if (cond1[i] == 1) {
-			z = z + cond1[i];
+			z = z + a[i];
+		}
+		else {
+			z = z + b[i];
 		}
 
 		// Para valores predecibles (entre 0 y 1)
 		if (cond2[i] == 1) {
-			z = z + cond2[i];
+			z = z + a[i];
+		}
+		else {
+			z = z + b[i];
 		}
 
 	}

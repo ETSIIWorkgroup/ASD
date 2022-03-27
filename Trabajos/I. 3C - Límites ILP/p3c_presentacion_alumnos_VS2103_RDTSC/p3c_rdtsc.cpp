@@ -38,11 +38,14 @@ using namespace std;
 #include "QueryPerformanceTiming_rdtsc.h"
 
 #define  N_REPETIC 256
-// repeat several times each test to extract the minimum time
+// Repeat several times each test to extract the minimum time
 // and to have the caches filled
 
 #define  N_ELEM (1024*2)
-//big number to have a mean time (but not very big to avoid cache misses) 
+// Big number to have a mean time (but not very big to avoid cache misses) 
+
+// #define N_ELEM (1024*8)
+// Tamaño de vectores mucho más grande para pruebas
 
 __declspec(align(64)) int a_int[N_ELEM ], b_int[N_ELEM ];
 
@@ -54,8 +57,7 @@ float z;
 
 __declspec(align(64)) int cond1[N_ELEM ], cond2[N_ELEM ], cond3[N_ELEM ];
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// vectors  init
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void vectors_init ()
 {
 	int i;
@@ -91,10 +93,13 @@ void vectors_init ()
 	}
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/// tests
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // a. Una suma por iteración
+/*
+	PC I  ->
+	PC II -> 3.46094
+*/
 float problem ()
 {
 	int  i;
@@ -109,6 +114,10 @@ float problem ()
 }
 
 // b. Dos sumas por iteración
+/*
+	PC I  ->
+	PC II ->
+*/
 /*
 float problem ()
 {
@@ -129,6 +138,10 @@ float problem ()
 */
 
 // c. Suma condicional - Dificilmente Predecible 
+/*
+	PC I  ->
+	PC II ->
+*/
 /*
 float problem ()
 {
@@ -152,6 +165,14 @@ float problem ()
 */
 
 // c. Suma condicional - Facilmente Predecible 
+/*
+	Para valores MUY fácilmente predecibles:
+		PC I  ->
+		PC II ->
+	Para valores fácilmente predecibles:
+		PC I  ->
+		PC II ->
+*/
 /*
 float problem ()
 {
@@ -182,6 +203,11 @@ float problem ()
 }
 */
 
+// Ejemplo provisto en el proyecto
+/*
+	PC I  ->
+	PC II -> 0.994141
+*/
 float example ()
 {
 	int i;
@@ -194,7 +220,7 @@ float example ()
 	return a[N_ELEM-1 ];
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int main( int argc, char** argv ) {
 
 	float var1, var2;

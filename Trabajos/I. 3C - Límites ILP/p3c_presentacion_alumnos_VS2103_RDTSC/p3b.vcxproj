@@ -89,7 +89,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="p3c_rdtsc.cpp" />
+    <ClCompile Include="p3c_rdtsc.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
     <ClCompile Include="QueryPerformanceTiming_rdtsc.cpp" />
   </ItemGroup>
   <ItemGroup>

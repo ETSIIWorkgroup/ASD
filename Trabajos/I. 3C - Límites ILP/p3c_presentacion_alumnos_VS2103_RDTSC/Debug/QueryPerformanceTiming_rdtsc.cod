@@ -269,46 +269,6 @@ __CFBCA79E_Windows@h DB 01H
 __383FB5F5_QueryPerformanceTiming_rdtsc@h DB 01H
 __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp DB 01H
 msvcjmc	ENDS
-CONST	SEGMENT
-$SG156745 DB	'invalid argument', 00H
-	ORG $+3
-$SG156746 DB	'%s', 00H
-	ORG $+1
-$SG156747 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
-	DB	'VC\Tools\MSVC\14.31.31103\include\xmemory', 00H
-	ORG $+2
-$SG156749 DB	00H, 00H
-	ORG $+2
-$SG156748 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
-	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
-	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
-	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
-	DB	00H, ' ', 00H, 'V', 00H, 'i', 00H, 's', 00H, 'u', 00H, 'a', 00H
-	DB	'l', 00H, ' ', 00H, 'S', 00H, 't', 00H, 'u', 00H, 'd', 00H, 'i'
-	DB	00H, 'o', 00H, '\', 00H, '2', 00H, '0', 00H, '2', 00H, '2', 00H
-	DB	'\', 00H, 'C', 00H, 'o', 00H, 'm', 00H, 'm', 00H, 'u', 00H, 'n'
-	DB	00H, 'i', 00H, 't', 00H, 'y', 00H, '\', 00H, 'V', 00H, 'C', 00H
-	DB	'\', 00H, 'T', 00H, 'o', 00H, 'o', 00H, 'l', 00H, 's', 00H, '\'
-	DB	00H, 'M', 00H, 'S', 00H, 'V', 00H, 'C', 00H, '\', 00H, '1', 00H
-	DB	'4', 00H, '.', 00H, '3', 00H, '1', 00H, '.', 00H, '3', 00H, '1'
-	DB	00H, '1', 00H, '0', 00H, '3', 00H, '\', 00H, 'i', 00H, 'n', 00H
-	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
-	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
-	DB	00H, 00H
-$SG156750 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
-	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
-	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
-	ORG $+2
-$SG149311 DB	' measures)', 00H
-	ORG $+1
-$SG156786 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
-	DB	'VC\Tools\MSVC\14.31.31103\include\xlocale', 00H
-	ORG $+2
-$SG149312 DB	'   (in ', 00H
-$SG149326 DB	' measures)', 00H
-	ORG $+1
-$SG149327 DB	'   (in ', 00H
-CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPAXI@Z		; __empty_global_delete
 PUBLIC	?ReadCycles@QPTimer@@AAEXPA_K@Z			; QPTimer::ReadCycles
@@ -337,19 +297,14 @@ PUBLIC	??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ ; std
 PUBLIC	??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z ; std::basic_ostream<char,std::char_traits<char> >::sentry::sentry
 PUBLIC	??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry
 PUBLIC	__JustMyCode_Default
+PUBLIC	??_C@_0L@CHDMIBHC@?5measures?$CJ@		; `string'
+PUBLIC	??_C@_07MLOIGAKO@?5?5?5?$CIin?5@		; `string'
 PUBLIC	__real@41e4dc9380000000
-EXTRN	_strlen:PROC
+EXTRN	___std_terminate:PROC
 EXTRN	?uncaught_exception@std@@YA_NXZ:PROC		; std::uncaught_exception
-EXTRN	__imp_?good@ios_base@std@@QBE_NXZ:PROC
-EXTRN	__imp_?flags@ios_base@std@@QBEHXZ:PROC
-EXTRN	__imp_?width@ios_base@std@@QBE_JXZ:PROC
-EXTRN	__imp_?width@ios_base@std@@QAE_J_J@Z:PROC
 EXTRN	__imp_?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHD@Z:PROC
 EXTRN	__imp_?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAE_JPBD_J@Z:PROC
 EXTRN	__imp_?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QAEXH_N@Z:PROC
-EXTRN	__imp_?tie@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_ostream@DU?$char_traits@D@std@@@2@XZ:PROC
-EXTRN	__imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ:PROC
-EXTRN	__imp_?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDXZ:PROC
 EXTRN	__imp_?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDD@Z:PROC
 EXTRN	__imp_?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEXXZ:PROC
 EXTRN	__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z:PROC
@@ -361,7 +316,6 @@ EXTRN	__imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@XZ:PROC
 EXTRN	@__CheckForDebuggerJustMyCode@4:PROC
 EXTRN	@__security_check_cookie@4:PROC
 EXTRN	___CxxFrameHandler3:PROC
-EXTRN	__ultod3:PROC
 EXTRN	__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A:BYTE
 EXTRN	___security_cookie:DWORD
 EXTRN	__fltused:DWORD
@@ -369,24 +323,26 @@ EXTRN	__fltused:DWORD
 CONST	SEGMENT
 __real@41e4dc9380000000 DQ 041e4dc9380000000r	; 2.8e+09
 CONST	ENDS
-;	COMDAT voltbl
-voltbl	SEGMENT
-_volmd	DB	09H
-voltbl	ENDS
+;	COMDAT ??_C@_07MLOIGAKO@?5?5?5?$CIin?5@
+CONST	SEGMENT
+??_C@_07MLOIGAKO@?5?5?5?$CIin?5@ DB '   (in ', 00H	; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0L@CHDMIBHC@?5measures?$CJ@
+CONST	SEGMENT
+??_C@_0L@CHDMIBHC@?5measures?$CJ@ DB ' measures)', 00H	; `string'
+CONST	ENDS
 ;	COMDAT xdata$x
 xdata$x	SEGMENT
+__unwindtable$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ DD 0ffffffffH
+	DD	FLAT:___std_terminate
 __ehfuncinfo$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ DD 019930522H
-	DD	00H
-	DD	00H
+	DD	01H
+	DD	FLAT:__unwindtable$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ
 	DD	2 DUP(00H)
 	DD	2 DUP(00H)
 	DD	00H
 	DD	05H
 xdata$x	ENDS
-;	COMDAT voltbl
-voltbl	SEGMENT
-_volmd	DB	016H
-voltbl	ENDS
 ;	COMDAT xdata$x
 xdata$x	SEGMENT
 __unwindtable$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z DD 0ffffffffH
@@ -399,10 +355,6 @@ __ehfuncinfo$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z
 	DD	00H
 	DD	01H
 xdata$x	ENDS
-;	COMDAT voltbl
-voltbl	SEGMENT
-_volmd	DB	09H
-voltbl	ENDS
 ;	COMDAT xdata$x
 xdata$x	SEGMENT
 __ehfuncinfo$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ DD 019930522H
@@ -413,13 +365,9 @@ __ehfuncinfo$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ
 	DD	00H
 	DD	05H
 xdata$x	ENDS
-;	COMDAT voltbl
-voltbl	SEGMENT
-_volmd	DB	019H
-voltbl	ENDS
 ;	COMDAT xdata$x
 xdata$x	SEGMENT
-__catchsym$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$11 DD 040H
+__catchsym$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$5 DD 040H
 	DD	00H
 	DD	00H
 	DD	FLAT:__catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0
@@ -427,21 +375,25 @@ __tryblocktable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_t
 	DD	01H
 	DD	02H
 	DD	01H
-	DD	FLAT:__catchsym$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$11
-__unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z DD 0ffffffffH
-	DD	FLAT:__unwindfunclet$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$2
-	DD	00H
-	DD	00H
-	DD	00H
-	DD	00H
+	DD	FLAT:__catchsym$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$5
 __ehfuncinfo$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z DD 019930522H
-	DD	03H
+	DD	05H
 	DD	FLAT:__unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z
 	DD	01H
 	DD	FLAT:__tryblocktable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z
 	DD	2 DUP(00H)
 	DD	00H
 	DD	01H
+__unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z DD 0ffffffffH
+	DD	FLAT:__unwindfunclet$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$2
+	DD	00H
+	DD	00H
+	DD	00H
+	DD	00H
+	DD	0ffffffffH
+	DD	FLAT:___std_terminate
+	DD	03H
+	DD	FLAT:___std_terminate
 xdata$x	ENDS
 ; Function compile flags: /Odt
 ;	COMDAT __JustMyCode_Default
@@ -453,13 +405,12 @@ __JustMyCode_Default PROC				; COMDAT
   00004	c3		 ret	 0
 __JustMyCode_Default ENDP
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
 ; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 ;	COMDAT ??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ
 _TEXT	SEGMENT
-_this$ = -20						; size = 4
-__Zero_uncaught_exceptions$ = -14			; size = 1
-tv72 = -13						; size = 1
 __$EHRec$ = -12						; size = 12
 ??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ PROC ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry, COMDAT
 ; _this$ = ecx
@@ -473,69 +424,77 @@ __$EHRec$ = -12						; size = 12
   0000a	64 a1 00 00 00
 	00		 mov	 eax, DWORD PTR fs:0
   00010	50		 push	 eax
-  00011	83 ec 08	 sub	 esp, 8
-  00014	a1 00 00 00 00	 mov	 eax, DWORD PTR ___security_cookie
-  00019	33 c5		 xor	 eax, ebp
-  0001b	50		 push	 eax
-  0001c	8d 45 f4	 lea	 eax, DWORD PTR __$EHRec$[ebp]
-  0001f	64 a3 00 00 00
+  00011	56		 push	 esi
+  00012	a1 00 00 00 00	 mov	 eax, DWORD PTR ___security_cookie
+  00017	33 c5		 xor	 eax, ebp
+  00019	50		 push	 eax
+  0001a	8d 45 f4	 lea	 eax, DWORD PTR __$EHRec$[ebp]
+  0001d	64 a3 00 00 00
 	00		 mov	 DWORD PTR fs:0, eax
-  00025	89 4d ec	 mov	 DWORD PTR _this$[ebp], ecx
-  00028	b9 00 00 00 00	 mov	 ecx, OFFSET __033B95B1_ostream
-  0002d	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00023	8b f1		 mov	 esi, ecx
+  00025	b9 00 00 00 00	 mov	 ecx, OFFSET __033B95B1_ostream
+  0002a	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  0002f	e8 00 00 00 00	 call	 ?uncaught_exception@std@@YA_NXZ ; std::uncaught_exception
+  00034	84 c0		 test	 al, al
+  00036	75 08		 jne	 SHORT $LN2@sentry
 
 ; 109  : #if !_HAS_EXCEPTIONS
 ; 110  :             const bool _Zero_uncaught_exceptions = true;
 ; 111  : #elif _HAS_DEPRECATED_UNCAUGHT_EXCEPTION
 ; 112  :             const bool _Zero_uncaught_exceptions = !_STD uncaught_exception(); // TRANSITION, ArchivedOS-12000909
-
-  00032	e8 00 00 00 00	 call	 ?uncaught_exception@std@@YA_NXZ ; std::uncaught_exception
-  00037	0f b6 c0	 movzx	 eax, al
-  0003a	85 c0		 test	 eax, eax
-  0003c	75 06		 jne	 SHORT $LN4@sentry
-  0003e	c6 45 f3 01	 mov	 BYTE PTR tv72[ebp], 1
-  00042	eb 04		 jmp	 SHORT $LN5@sentry
-$LN4@sentry:
-  00044	c6 45 f3 00	 mov	 BYTE PTR tv72[ebp], 0
-$LN5@sentry:
-  00048	8a 4d f3	 mov	 cl, BYTE PTR tv72[ebp]
-  0004b	88 4d f2	 mov	 BYTE PTR __Zero_uncaught_exceptions$[ebp], cl
-
 ; 113  : #else // ^^^ _HAS_DEPRECATED_UNCAUGHT_EXCEPTION / !_HAS_DEPRECATED_UNCAUGHT_EXCEPTION vvv
 ; 114  :             const bool _Zero_uncaught_exceptions = _STD uncaught_exceptions() == 0;
 ; 115  : #endif // !_HAS_DEPRECATED_UNCAUGHT_EXCEPTION
 ; 116  : 
 ; 117  :             if (_Zero_uncaught_exceptions) {
-
-  0004e	0f b6 55 f2	 movzx	 edx, BYTE PTR __Zero_uncaught_exceptions$[ebp]
-  00052	85 d2		 test	 edx, edx
-  00054	74 0b		 je	 SHORT $LN1@sentry
-
 ; 118  :                 this->_Myostr._Osfx();
 
-  00056	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
-  00059	8b 08		 mov	 ecx, DWORD PTR [eax]
-  0005b	ff 15 00 00 00
+  00038	8b 0e		 mov	 ecx, DWORD PTR [esi]
+  0003a	ff 15 00 00 00
 	00		 call	 DWORD PTR __imp_?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEXXZ
-$LN1@sentry:
+$LN2@sentry:
+
+; 78   :             const auto _Rdbuf = _Myostr.rdbuf();
+
+  00040	8b 0e		 mov	 ecx, DWORD PTR [esi]
+  00042	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+8], 0
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
+
+; 79   :         return _Mystrbuf;
+
+  00049	8b 01		 mov	 eax, DWORD PTR [ecx]
+  0004b	8b 40 04	 mov	 eax, DWORD PTR [eax+4]
+  0004e	8b 4c 08 38	 mov	 ecx, DWORD PTR [eax+ecx+56]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+
+; 79   :             if (_Rdbuf) {
+
+  00052	85 c9		 test	 ecx, ecx
+  00054	74 05		 je	 SHORT $LN5@sentry
+
+; 80   :                 _Rdbuf->_Unlock();
+
+  00056	8b 01		 mov	 eax, DWORD PTR [ecx]
+  00058	ff 50 08	 call	 DWORD PTR [eax+8]
+$LN5@sentry:
 
 ; 119  :             }
 ; 120  :         }
 
-  00061	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
-  00064	e8 00 00 00 00	 call	 ??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::~_Sentry_base
-  00069	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
-  0006c	64 89 0d 00 00
+  0005b	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  0005e	64 89 0d 00 00
 	00 00		 mov	 DWORD PTR fs:0, ecx
-  00073	59		 pop	 ecx
-  00074	8b e5		 mov	 esp, ebp
-  00076	5d		 pop	 ebp
-  00077	c3		 ret	 0
-  00078	cc		 int	 3
-  00079	cc		 int	 3
-  0007a	cc		 int	 3
-  0007b	cc		 int	 3
-  0007c	cc		 int	 3
+  00065	59		 pop	 ecx
+  00066	5e		 pop	 esi
+  00067	8b e5		 mov	 esp, ebp
+  00069	5d		 pop	 ebp
+  0006a	c3		 ret	 0
+  0006b	cc		 int	 3
+  0006c	cc		 int	 3
+  0006d	cc		 int	 3
+  0006e	cc		 int	 3
+  0006f	cc		 int	 3
 _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
@@ -544,20 +503,27 @@ __ehhandler$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ:
   00001	90		 npad	 1
   00002	8b 54 24 08	 mov	 edx, DWORD PTR [esp+8]
   00006	8d 42 0c	 lea	 eax, DWORD PTR [edx+12]
-  00009	8b 4a f4	 mov	 ecx, DWORD PTR [edx-12]
+  00009	8b 4a f8	 mov	 ecx, DWORD PTR [edx-8]
   0000c	33 c8		 xor	 ecx, eax
   0000e	e8 00 00 00 00	 call	 @__security_check_cookie@4
   00013	b8 00 00 00 00	 mov	 eax, OFFSET __ehfuncinfo$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ
   00018	e9 00 00 00 00	 jmp	 ___CxxFrameHandler3
 text$x	ENDS
 ??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ ENDP ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xiosbase
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xiosbase
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xiosbase
 ; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 ;	COMDAT ??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z
 _TEXT	SEGMENT
-tv160 = -28						; size = 4
-__Tied$ = -24						; size = 4
-__Rdbuf$2 = -20						; size = 4
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 __Ostr$ = 8						; size = 4
@@ -573,141 +539,135 @@ __Ostr$ = 8						; size = 4
   0000a	64 a1 00 00 00
 	00		 mov	 eax, DWORD PTR fs:0
   00010	50		 push	 eax
-  00011	83 ec 10	 sub	 esp, 16			; 00000010H
+  00011	51		 push	 ecx
+  00012	56		 push	 esi
+  00013	57		 push	 edi
   00014	a1 00 00 00 00	 mov	 eax, DWORD PTR ___security_cookie
   00019	33 c5		 xor	 eax, ebp
   0001b	50		 push	 eax
   0001c	8d 45 f4	 lea	 eax, DWORD PTR __$EHRec$[ebp]
   0001f	64 a3 00 00 00
 	00		 mov	 DWORD PTR fs:0, eax
-  00025	89 4d f0	 mov	 DWORD PTR _this$[ebp], ecx
-  00028	b9 00 00 00 00	 mov	 ecx, OFFSET __033B95B1_ostream
-  0002d	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00025	8b f1		 mov	 esi, ecx
+  00027	89 75 f0	 mov	 DWORD PTR _this$[ebp], esi
+  0002a	b9 00 00 00 00	 mov	 ecx, OFFSET __033B95B1_ostream
+  0002f	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
 
 ; 70   :         __CLR_OR_THIS_CALL _Sentry_base(basic_ostream& _Ostr) : _Myostr(_Ostr) { // lock the stream buffer, if there
 
-  00032	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
-  00035	8b 4d 08	 mov	 ecx, DWORD PTR __Ostr$[ebp]
-  00038	89 08		 mov	 DWORD PTR [eax], ecx
+  00034	8b 7d 08	 mov	 edi, DWORD PTR __Ostr$[ebp]
+  00037	89 3e		 mov	 DWORD PTR [esi], edi
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
 
-; 71   :             const auto _Rdbuf = _Myostr.rdbuf();
+; 79   :         return _Mystrbuf;
 
-  0003a	8b 55 f0	 mov	 edx, DWORD PTR _this$[ebp]
-  0003d	8b 02		 mov	 eax, DWORD PTR [edx]
-  0003f	89 45 e4	 mov	 DWORD PTR tv160[ebp], eax
-  00042	8b 4d e4	 mov	 ecx, DWORD PTR tv160[ebp]
-  00045	8b 11		 mov	 edx, DWORD PTR [ecx]
-  00047	8b 4d e4	 mov	 ecx, DWORD PTR tv160[ebp]
-  0004a	03 4a 04	 add	 ecx, DWORD PTR [edx+4]
-  0004d	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ
-  00053	89 45 ec	 mov	 DWORD PTR __Rdbuf$2[ebp], eax
+  00039	8b 07		 mov	 eax, DWORD PTR [edi]
+  0003b	8b 40 04	 mov	 eax, DWORD PTR [eax+4]
+  0003e	8b 4c 38 38	 mov	 ecx, DWORD PTR [eax+edi+56]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 
 ; 72   :             if (_Rdbuf) {
 
-  00056	83 7d ec 00	 cmp	 DWORD PTR __Rdbuf$2[ebp], 0
-  0005a	74 0d		 je	 SHORT $LN7@sentry
+  00042	85 c9		 test	 ecx, ecx
+  00044	74 05		 je	 SHORT $LN8@sentry
 
 ; 73   :                 _Rdbuf->_Lock();
 
-  0005c	8b 45 ec	 mov	 eax, DWORD PTR __Rdbuf$2[ebp]
-  0005f	8b 10		 mov	 edx, DWORD PTR [eax]
-  00061	8b 4d ec	 mov	 ecx, DWORD PTR __Rdbuf$2[ebp]
-  00064	8b 42 04	 mov	 eax, DWORD PTR [edx+4]
-  00067	ff d0		 call	 eax
-$LN7@sentry:
+  00046	8b 01		 mov	 eax, DWORD PTR [ecx]
+  00048	ff 50 04	 call	 DWORD PTR [eax+4]
+$LN8@sentry:
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xiosbase
+
+; 272  :         return _Mystate;
+
+  0004b	8b 07		 mov	 eax, DWORD PTR [edi]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 
 ; 91   :         explicit __CLR_OR_THIS_CALL sentry(basic_ostream& _Ostr) : _Sentry_base(_Ostr) {
 
-  00069	c7 45 fc 00 00
+  0004d	c7 45 fc 00 00
 	00 00		 mov	 DWORD PTR __$EHRec$[ebp+8], 0
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xiosbase
+
+; 272  :         return _Mystate;
+
+  00054	8b 40 04	 mov	 eax, DWORD PTR [eax+4]
+
+; 291  :         return rdstate() == ios_base::goodbit;
+
+  00057	83 7c 38 0c 00	 cmp	 DWORD PTR [eax+edi+12], 0
+
+; 272  :         return _Mystate;
+
+  0005c	8d 0c 38	 lea	 ecx, DWORD PTR [eax+edi]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 
 ; 92   :             if (!_Ostr.good()) {
 
-  00070	8b 4d 08	 mov	 ecx, DWORD PTR __Ostr$[ebp]
-  00073	8b 11		 mov	 edx, DWORD PTR [ecx]
-  00075	8b 4d 08	 mov	 ecx, DWORD PTR __Ostr$[ebp]
-  00078	03 4a 04	 add	 ecx, DWORD PTR [edx+4]
-  0007b	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?good@ios_base@std@@QBE_NXZ
-  00081	0f b6 c0	 movzx	 eax, al
-  00084	85 c0		 test	 eax, eax
-  00086	75 09		 jne	 SHORT $LN2@sentry
+  0005f	74 04		 je	 SHORT $LN2@sentry
 
 ; 93   :                 _Ok = false;
 
-  00088	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
-  0008b	c6 41 04 00	 mov	 BYTE PTR [ecx+4], 0
+  00061	32 c0		 xor	 al, al
 
 ; 94   :                 return;
 
-  0008f	eb 4d		 jmp	 SHORT $LN1@sentry
+  00063	eb 22		 jmp	 SHORT $LN23@sentry
 $LN2@sentry:
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
 
-; 95   :             }
-; 96   : 
-; 97   :             const auto _Tied = _Ostr.tie();
+; 69   :         return _Tiestr;
 
-  00091	8b 55 08	 mov	 edx, DWORD PTR __Ostr$[ebp]
-  00094	8b 02		 mov	 eax, DWORD PTR [edx]
-  00096	8b 4d 08	 mov	 ecx, DWORD PTR __Ostr$[ebp]
-  00099	03 48 04	 add	 ecx, DWORD PTR [eax+4]
-  0009c	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?tie@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_ostream@DU?$char_traits@D@std@@@2@XZ
-  000a2	89 45 e8	 mov	 DWORD PTR __Tied$[ebp], eax
+  00065	8b 49 3c	 mov	 ecx, DWORD PTR [ecx+60]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 
 ; 98   :             if (!_Tied || _Tied == &_Ostr) {
 
-  000a5	83 7d e8 00	 cmp	 DWORD PTR __Tied$[ebp], 0
-  000a9	74 08		 je	 SHORT $LN4@sentry
-  000ab	8b 4d e8	 mov	 ecx, DWORD PTR __Tied$[ebp]
-  000ae	3b 4d 08	 cmp	 ecx, DWORD PTR __Ostr$[ebp]
-  000b1	75 09		 jne	 SHORT $LN3@sentry
-$LN4@sentry:
-
-; 99   :                 _Ok = true;
-
-  000b3	8b 55 f0	 mov	 edx, DWORD PTR _this$[ebp]
-  000b6	c6 42 04 01	 mov	 BYTE PTR [edx+4], 1
+  00068	85 c9		 test	 ecx, ecx
+  0006a	74 19		 je	 SHORT $LN4@sentry
+  0006c	3b cf		 cmp	 ecx, edi
+  0006e	74 15		 je	 SHORT $LN4@sentry
 
 ; 100  :                 return;
-
-  000ba	eb 22		 jmp	 SHORT $LN1@sentry
-$LN3@sentry:
-
 ; 101  :             }
 ; 102  : 
 ; 103  :             _Tied->flush();
 
-  000bc	8b 4d e8	 mov	 ecx, DWORD PTR __Tied$[ebp]
-  000bf	ff 15 00 00 00
+  00070	ff 15 00 00 00
 	00		 call	 DWORD PTR __imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@XZ
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xiosbase
+
+; 291  :         return rdstate() == ios_base::goodbit;
+
+  00076	8b 07		 mov	 eax, DWORD PTR [edi]
+  00078	8b 40 04	 mov	 eax, DWORD PTR [eax+4]
+  0007b	83 7c 38 0c 00	 cmp	 DWORD PTR [eax+edi+12], 0
+  00080	0f 94 c0	 sete	 al
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 
 ; 104  :             _Ok = _Ostr.good(); // store test only after flushing tie
 
-  000c5	8b 45 08	 mov	 eax, DWORD PTR __Ostr$[ebp]
-  000c8	8b 08		 mov	 ecx, DWORD PTR [eax]
-  000ca	8b 55 08	 mov	 edx, DWORD PTR __Ostr$[ebp]
-  000cd	03 51 04	 add	 edx, DWORD PTR [ecx+4]
-  000d0	8b ca		 mov	 ecx, edx
-  000d2	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?good@ios_base@std@@QBE_NXZ
-  000d8	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
-  000db	88 41 04	 mov	 BYTE PTR [ecx+4], al
-$LN1@sentry:
+  00083	eb 02		 jmp	 SHORT $LN23@sentry
+$LN4@sentry:
+
+; 99   :                 _Ok = true;
+
+  00085	b0 01		 mov	 al, 1
+$LN23@sentry:
 
 ; 105  :         }
 
-  000de	c7 45 fc ff ff
-	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+8], -1
-  000e5	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
-  000e8	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
-  000eb	64 89 0d 00 00
+  00087	88 46 04	 mov	 BYTE PTR [esi+4], al
+  0008a	8b c6		 mov	 eax, esi
+  0008c	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  0008f	64 89 0d 00 00
 	00 00		 mov	 DWORD PTR fs:0, ecx
-  000f2	59		 pop	 ecx
-  000f3	8b e5		 mov	 esp, ebp
-  000f5	5d		 pop	 ebp
-  000f6	c2 04 00	 ret	 4
+  00096	59		 pop	 ecx
+  00097	5f		 pop	 edi
+  00098	5e		 pop	 esi
+  00099	8b e5		 mov	 esp, ebp
+  0009b	5d		 pop	 ebp
+  0009c	c2 04 00	 ret	 4
 _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
@@ -724,20 +684,19 @@ __ehhandler$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z:
   0000e	90		 npad	 1
   0000f	8b 54 24 08	 mov	 edx, DWORD PTR [esp+8]
   00013	8d 42 0c	 lea	 eax, DWORD PTR [edx+12]
-  00016	8b 4a ec	 mov	 ecx, DWORD PTR [edx-20]
+  00016	8b 4a f0	 mov	 ecx, DWORD PTR [edx-16]
   00019	33 c8		 xor	 ecx, eax
   0001b	e8 00 00 00 00	 call	 @__security_check_cookie@4
   00020	b8 00 00 00 00	 mov	 eax, OFFSET __ehfuncinfo$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z
   00025	e9 00 00 00 00	 jmp	 ___CxxFrameHandler3
 text$x	ENDS
 ??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z ENDP ; std::basic_ostream<char,std::char_traits<char> >::sentry::sentry
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
 ; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 ;	COMDAT ??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ
 _TEXT	SEGMENT
-_this$ = -24						; size = 4
-tv72 = -20						; size = 4
-__Rdbuf$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ PROC ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::~_Sentry_base, COMDAT
 ; _this$ = ecx
@@ -751,59 +710,53 @@ __$EHRec$ = -12						; size = 12
   0000a	64 a1 00 00 00
 	00		 mov	 eax, DWORD PTR fs:0
   00010	50		 push	 eax
-  00011	83 ec 0c	 sub	 esp, 12			; 0000000cH
-  00014	a1 00 00 00 00	 mov	 eax, DWORD PTR ___security_cookie
-  00019	33 c5		 xor	 eax, ebp
-  0001b	50		 push	 eax
-  0001c	8d 45 f4	 lea	 eax, DWORD PTR __$EHRec$[ebp]
-  0001f	64 a3 00 00 00
+  00011	56		 push	 esi
+  00012	a1 00 00 00 00	 mov	 eax, DWORD PTR ___security_cookie
+  00017	33 c5		 xor	 eax, ebp
+  00019	50		 push	 eax
+  0001a	8d 45 f4	 lea	 eax, DWORD PTR __$EHRec$[ebp]
+  0001d	64 a3 00 00 00
 	00		 mov	 DWORD PTR fs:0, eax
-  00025	89 4d e8	 mov	 DWORD PTR _this$[ebp], ecx
-  00028	b9 00 00 00 00	 mov	 ecx, OFFSET __033B95B1_ostream
-  0002d	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00023	8b f1		 mov	 esi, ecx
+  00025	b9 00 00 00 00	 mov	 ecx, OFFSET __033B95B1_ostream
+  0002a	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  0002f	8b 0e		 mov	 ecx, DWORD PTR [esi]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
 
-; 78   :             const auto _Rdbuf = _Myostr.rdbuf();
+; 79   :         return _Mystrbuf;
 
-  00032	8b 45 e8	 mov	 eax, DWORD PTR _this$[ebp]
-  00035	8b 08		 mov	 ecx, DWORD PTR [eax]
-  00037	89 4d ec	 mov	 DWORD PTR tv72[ebp], ecx
-  0003a	8b 55 ec	 mov	 edx, DWORD PTR tv72[ebp]
-  0003d	8b 02		 mov	 eax, DWORD PTR [edx]
-  0003f	8b 4d ec	 mov	 ecx, DWORD PTR tv72[ebp]
-  00042	03 48 04	 add	 ecx, DWORD PTR [eax+4]
-  00045	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ
-  0004b	89 45 f0	 mov	 DWORD PTR __Rdbuf$[ebp], eax
+  00031	8b 01		 mov	 eax, DWORD PTR [ecx]
+  00033	8b 40 04	 mov	 eax, DWORD PTR [eax+4]
+  00036	8b 4c 08 38	 mov	 ecx, DWORD PTR [eax+ecx+56]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 
 ; 79   :             if (_Rdbuf) {
 
-  0004e	83 7d f0 00	 cmp	 DWORD PTR __Rdbuf$[ebp], 0
-  00052	74 0d		 je	 SHORT $LN3@Sentry_bas
+  0003a	85 c9		 test	 ecx, ecx
+  0003c	74 05		 je	 SHORT $LN2@Sentry_bas
 
 ; 80   :                 _Rdbuf->_Unlock();
 
-  00054	8b 4d f0	 mov	 ecx, DWORD PTR __Rdbuf$[ebp]
-  00057	8b 11		 mov	 edx, DWORD PTR [ecx]
-  00059	8b 4d f0	 mov	 ecx, DWORD PTR __Rdbuf$[ebp]
-  0005c	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
-  0005f	ff d0		 call	 eax
-$LN3@Sentry_bas:
+  0003e	8b 01		 mov	 eax, DWORD PTR [ecx]
+  00040	ff 50 08	 call	 DWORD PTR [eax+8]
+$LN2@Sentry_bas:
 
 ; 81   :             }
 ; 82   :         }
 
-  00061	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
-  00064	64 89 0d 00 00
+  00043	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  00046	64 89 0d 00 00
 	00 00		 mov	 DWORD PTR fs:0, ecx
-  0006b	59		 pop	 ecx
-  0006c	8b e5		 mov	 esp, ebp
-  0006e	5d		 pop	 ebp
-  0006f	c3		 ret	 0
-  00070	cc		 int	 3
-  00071	cc		 int	 3
-  00072	cc		 int	 3
-  00073	cc		 int	 3
-  00074	cc		 int	 3
+  0004d	59		 pop	 ecx
+  0004e	5e		 pop	 esi
+  0004f	8b e5		 mov	 esp, ebp
+  00051	5d		 pop	 ebp
+  00052	c3		 ret	 0
+  00053	cc		 int	 3
+  00054	cc		 int	 3
+  00055	cc		 int	 3
+  00056	cc		 int	 3
+  00057	cc		 int	 3
 _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
@@ -812,14 +765,14 @@ __ehhandler$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ:
   00001	90		 npad	 1
   00002	8b 54 24 08	 mov	 edx, DWORD PTR [esp+8]
   00006	8d 42 0c	 lea	 eax, DWORD PTR [edx+12]
-  00009	8b 4a f0	 mov	 ecx, DWORD PTR [edx-16]
+  00009	8b 4a f8	 mov	 ecx, DWORD PTR [edx-8]
   0000c	33 c8		 xor	 ecx, eax
   0000e	e8 00 00 00 00	 call	 @__security_check_cookie@4
   00013	b8 00 00 00 00	 mov	 eax, OFFSET __ehfuncinfo$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ
   00018	e9 00 00 00 00	 jmp	 ___CxxFrameHandler3
 text$x	ENDS
 ??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ ENDP ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::~_Sentry_base
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 ;	COMDAT ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z
 _TEXT	SEGMENT
@@ -830,77 +783,73 @@ __Ostr$ = 8						; size = 4
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
-  00003	b9 00 00 00 00	 mov	 ecx, OFFSET __033B95B1_ostream
-  00008	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00003	56		 push	 esi
+  00004	b9 00 00 00 00	 mov	 ecx, OFFSET __033B95B1_ostream
+  00009	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  0000e	8b 75 08	 mov	 esi, DWORD PTR __Ostr$[ebp]
+  00011	6a 0a		 push	 10			; 0000000aH
+  00013	8b 06		 mov	 eax, DWORD PTR [esi]
+  00015	8b 48 04	 mov	 ecx, DWORD PTR [eax+4]
+  00018	03 ce		 add	 ecx, esi
+  0001a	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp_?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDD@Z
+  00020	0f b6 c8	 movzx	 ecx, al
+  00023	51		 push	 ecx
+  00024	8b ce		 mov	 ecx, esi
+  00026	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp_?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@D@Z
+  0002c	8b ce		 mov	 ecx, esi
+  0002e	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@XZ
+  00034	8b c6		 mov	 eax, esi
+  00036	5e		 pop	 esi
 
 ; 1002 :     _Ostr.put(_Ostr.widen('\n'));
-
-  0000d	6a 0a		 push	 10			; 0000000aH
-  0000f	8b 45 08	 mov	 eax, DWORD PTR __Ostr$[ebp]
-  00012	8b 08		 mov	 ecx, DWORD PTR [eax]
-  00014	8b 55 08	 mov	 edx, DWORD PTR __Ostr$[ebp]
-  00017	03 51 04	 add	 edx, DWORD PTR [ecx+4]
-  0001a	8b ca		 mov	 ecx, edx
-  0001c	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDD@Z
-  00022	0f b6 c0	 movzx	 eax, al
-  00025	50		 push	 eax
-  00026	8b 4d 08	 mov	 ecx, DWORD PTR __Ostr$[ebp]
-  00029	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@D@Z
-
 ; 1003 :     _Ostr.flush();
-
-  0002f	8b 4d 08	 mov	 ecx, DWORD PTR __Ostr$[ebp]
-  00032	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@XZ
-
 ; 1004 :     return _Ostr;
-
-  00038	8b 45 08	 mov	 eax, DWORD PTR __Ostr$[ebp]
-
 ; 1005 : }
 
-  0003b	5d		 pop	 ebp
-  0003c	c3		 ret	 0
+  00037	5d		 pop	 ebp
+  00038	c3		 ret	 0
 ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ENDP ; std::endl<char,std::char_traits<char> >
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 ; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xstring
 ; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 ; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xstring
-; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xiosbase
 ; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xstring
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xiosbase
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xiosbase
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xiosbase
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xiosbase
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
 ; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 ;	COMDAT ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z
 _TEXT	SEGMENT
-__Ok$ = -140						; size = 8
-tv322 = -132						; size = 8
-tv397 = -124						; size = 8
-tv385 = -116						; size = 8
-$T2 = -108						; size = 4
-$T3 = -104						; size = 4
-$T4 = -100						; size = 4
-tv325 = -96						; size = 4
-tv324 = -92						; size = 4
-tv321 = -88						; size = 4
-$T5 = -84						; size = 4
-$T6 = -80						; size = 4
-tv320 = -76						; size = 4
-tv307 = -72						; size = 4
-tv137 = -68						; size = 4
-$T7 = -64						; size = 4
-tv135 = -60						; size = 8
-tv186 = -52						; size = 4
-tv140 = -48						; size = 4
-__Count$ = -44						; size = 8
-__Pad$ = -36						; size = 8
-$T8 = -25						; size = 1
-tv323 = -24						; size = 1
-$T9 = -23						; size = 1
-tv334 = -22						; size = 1
-$T10 = -21						; size = 1
+__Ok$ = -36						; size = 8
+$T2 = -28						; size = 1
+$T3 = -28						; size = 1
+__Count$2$ = -24					; size = 4
 __State$ = -20						; size = 4
 __$EHRec$ = -16						; size = 16
 __Ostr$ = 8						; size = 4
@@ -916,1012 +865,935 @@ __Val$ = 12						; size = 4
   0000a	64 a1 00 00 00
 	00		 mov	 eax, DWORD PTR fs:0
   00010	50		 push	 eax
-  00011	51		 push	 ecx
-  00012	83 ec 7c	 sub	 esp, 124		; 0000007cH
-  00015	53		 push	 ebx
-  00016	56		 push	 esi
-  00017	57		 push	 edi
-  00018	a1 00 00 00 00	 mov	 eax, DWORD PTR ___security_cookie
-  0001d	33 c5		 xor	 eax, ebp
-  0001f	50		 push	 eax
-  00020	8d 45 f4	 lea	 eax, DWORD PTR __$EHRec$[ebp+4]
-  00023	64 a3 00 00 00
+  00011	83 ec 18	 sub	 esp, 24			; 00000018H
+  00014	53		 push	 ebx
+  00015	56		 push	 esi
+  00016	57		 push	 edi
+  00017	a1 00 00 00 00	 mov	 eax, DWORD PTR ___security_cookie
+  0001c	33 c5		 xor	 eax, ebp
+  0001e	50		 push	 eax
+  0001f	8d 45 f4	 lea	 eax, DWORD PTR __$EHRec$[ebp+4]
+  00022	64 a3 00 00 00
 	00		 mov	 DWORD PTR fs:0, eax
-  00029	89 65 f0	 mov	 DWORD PTR __$EHRec$[ebp], esp
-  0002c	b9 00 00 00 00	 mov	 ecx, OFFSET __033B95B1_ostream
-  00031	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
-
-; 758  :     // insert NTBS into char stream
-; 759  :     using _Elem = char;
-; 760  :     using _Myos = basic_ostream<_Elem, _Traits>;
-; 761  : 
-; 762  :     ios_base::iostate _State = ios_base::goodbit;
-
-  00036	c7 45 ec 00 00
-	00 00		 mov	 DWORD PTR __State$[ebp], 0
+  00028	89 65 f0	 mov	 DWORD PTR __$EHRec$[ebp], esp
+  0002b	b9 00 00 00 00	 mov	 ecx, OFFSET __033B95B1_ostream
+  00030	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
 ; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xstring
 
 ; 396  :         return _CSTD strlen(reinterpret_cast<const char*>(_First));
 
-  0003d	8b 45 0c	 mov	 eax, DWORD PTR __Val$[ebp]
-  00040	50		 push	 eax
-  00041	e8 00 00 00 00	 call	 _strlen
-  00046	83 c4 04	 add	 esp, 4
-  00049	89 45 c0	 mov	 DWORD PTR $T7[ebp], eax
+  00035	8b 55 0c	 mov	 edx, DWORD PTR __Val$[ebp]
 ; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 
-; 763  :     streamsize _Count        = static_cast<streamsize>(_Traits::length(_Val));
+; 762  :     ios_base::iostate _State = ios_base::goodbit;
 
-  0004c	8b 4d c0	 mov	 ecx, DWORD PTR $T7[ebp]
-  0004f	33 d2		 xor	 edx, edx
-  00051	89 4d d4	 mov	 DWORD PTR __Count$[ebp], ecx
-  00054	89 55 d8	 mov	 DWORD PTR __Count$[ebp+4], edx
+  00038	33 db		 xor	 ebx, ebx
+  0003a	89 5d ec	 mov	 DWORD PTR __State$[ebp], ebx
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xstring
+
+; 396  :         return _CSTD strlen(reinterpret_cast<const char*>(_First));
+
+  0003d	8d 4a 01	 lea	 ecx, DWORD PTR [edx+1]
+$LL76@operator:
+  00040	8a 02		 mov	 al, BYTE PTR [edx]
+  00042	42		 inc	 edx
+  00043	84 c0		 test	 al, al
+  00045	75 f9		 jne	 SHORT $LL76@operator
+  00047	2b d1		 sub	 edx, ecx
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xiosbase
+
+; 359  :         return _Wide;
+
+  00049	8b 4d 08	 mov	 ecx, DWORD PTR __Ostr$[ebp]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xstring
+
+; 396  :         return _CSTD strlen(reinterpret_cast<const char*>(_First));
+
+  0004c	89 55 e8	 mov	 DWORD PTR __Count$2$[ebp], edx
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xiosbase
+
+; 359  :         return _Wide;
+
+  0004f	8b 01		 mov	 eax, DWORD PTR [ecx]
+  00051	8b 40 04	 mov	 eax, DWORD PTR [eax+4]
+  00054	8b 7c 08 24	 mov	 edi, DWORD PTR [eax+ecx+36]
+  00058	8b 74 08 20	 mov	 esi, DWORD PTR [eax+ecx+32]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 
 ; 764  :     streamsize _Pad          = _Ostr.width() <= 0 || _Ostr.width() <= _Count ? 0 : _Ostr.width() - _Count;
 
-  00057	8b 45 08	 mov	 eax, DWORD PTR __Ostr$[ebp]
-  0005a	8b 08		 mov	 ecx, DWORD PTR [eax]
-  0005c	8b 55 08	 mov	 edx, DWORD PTR __Ostr$[ebp]
-  0005f	03 51 04	 add	 edx, DWORD PTR [ecx+4]
-  00062	8b ca		 mov	 ecx, edx
-  00064	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?width@ios_base@std@@QBE_JXZ
-  0006a	89 45 8c	 mov	 DWORD PTR tv385[ebp], eax
-  0006d	89 55 90	 mov	 DWORD PTR tv385[ebp+4], edx
-  00070	83 7d 90 00	 cmp	 DWORD PTR tv385[ebp+4], 0
-  00074	7c 52		 jl	 SHORT $LN17@operator
-  00076	7f 06		 jg	 SHORT $LN64@operator
-  00078	83 7d 8c 00	 cmp	 DWORD PTR tv385[ebp], 0
-  0007c	76 4a		 jbe	 SHORT $LN17@operator
-$LN64@operator:
-  0007e	8b 45 08	 mov	 eax, DWORD PTR __Ostr$[ebp]
-  00081	8b 08		 mov	 ecx, DWORD PTR [eax]
-  00083	8b 55 08	 mov	 edx, DWORD PTR __Ostr$[ebp]
-  00086	03 51 04	 add	 edx, DWORD PTR [ecx+4]
-  00089	8b ca		 mov	 ecx, edx
-  0008b	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?width@ios_base@std@@QBE_JXZ
-  00091	89 45 84	 mov	 DWORD PTR tv397[ebp], eax
-  00094	89 55 88	 mov	 DWORD PTR tv397[ebp+4], edx
-  00097	8b 45 88	 mov	 eax, DWORD PTR tv397[ebp+4]
-  0009a	3b 45 d8	 cmp	 eax, DWORD PTR __Count$[ebp+4]
-  0009d	7c 29		 jl	 SHORT $LN17@operator
-  0009f	7f 08		 jg	 SHORT $LN65@operator
-  000a1	8b 4d 84	 mov	 ecx, DWORD PTR tv397[ebp]
-  000a4	3b 4d d4	 cmp	 ecx, DWORD PTR __Count$[ebp]
-  000a7	76 1f		 jbe	 SHORT $LN17@operator
-$LN65@operator:
-  000a9	8b 55 08	 mov	 edx, DWORD PTR __Ostr$[ebp]
-  000ac	8b 02		 mov	 eax, DWORD PTR [edx]
-  000ae	8b 4d 08	 mov	 ecx, DWORD PTR __Ostr$[ebp]
-  000b1	03 48 04	 add	 ecx, DWORD PTR [eax+4]
-  000b4	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?width@ios_base@std@@QBE_JXZ
-  000ba	2b 45 d4	 sub	 eax, DWORD PTR __Count$[ebp]
-  000bd	1b 55 d8	 sbb	 edx, DWORD PTR __Count$[ebp+4]
-  000c0	89 45 c4	 mov	 DWORD PTR tv135[ebp], eax
-  000c3	89 55 c8	 mov	 DWORD PTR tv135[ebp+4], edx
-  000c6	eb 09		 jmp	 SHORT $LN18@operator
+  0005c	85 ff		 test	 edi, edi
+  0005e	7c 16		 jl	 SHORT $LN17@operator
+  00060	7f 0e		 jg	 SHORT $LN78@operator
+  00062	85 f6		 test	 esi, esi
+  00064	74 10		 je	 SHORT $LN17@operator
+  00066	85 ff		 test	 edi, edi
+  00068	7c 0c		 jl	 SHORT $LN17@operator
+  0006a	7f 04		 jg	 SHORT $LN78@operator
+  0006c	3b f2		 cmp	 esi, edx
+  0006e	76 06		 jbe	 SHORT $LN17@operator
+$LN78@operator:
+  00070	2b f2		 sub	 esi, edx
+  00072	1b fb		 sbb	 edi, ebx
+  00074	eb 04		 jmp	 SHORT $LN18@operator
 $LN17@operator:
-  000c8	c5 f8 57 c0	 vxorps	 xmm0, xmm0, xmm0
-  000cc	c5 f9 13 45 c4	 vmovlpd QWORD PTR tv135[ebp], xmm0
+  00076	33 f6		 xor	 esi, esi
+  00078	33 ff		 xor	 edi, edi
 $LN18@operator:
-  000d1	8b 4d c4	 mov	 ecx, DWORD PTR tv135[ebp]
-  000d4	8b 55 c8	 mov	 edx, DWORD PTR tv135[ebp+4]
-  000d7	89 4d dc	 mov	 DWORD PTR __Pad$[ebp], ecx
-  000da	89 55 e0	 mov	 DWORD PTR __Pad$[ebp+4], edx
 
 ; 765  :     const typename _Myos::sentry _Ok(_Ostr);
 
-  000dd	8b 45 08	 mov	 eax, DWORD PTR __Ostr$[ebp]
-  000e0	50		 push	 eax
-  000e1	8d 8d 74 ff ff
-	ff		 lea	 ecx, DWORD PTR __Ok$[ebp]
-  000e7	e8 00 00 00 00	 call	 ??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z ; std::basic_ostream<char,std::char_traits<char> >::sentry::sentry
-  000ec	c7 45 fc 00 00
-	00 00		 mov	 DWORD PTR __$EHRec$[ebp+12], 0
-
-; 124  :             return _Ok;
-
-  000f3	8a 8d 78 ff ff
-	ff		 mov	 cl, BYTE PTR __Ok$[ebp+4]
-  000f9	88 4d eb	 mov	 BYTE PTR $T10[ebp], cl
+  0007a	51		 push	 ecx
+  0007b	8d 4d dc	 lea	 ecx, DWORD PTR __Ok$[ebp]
+  0007e	e8 00 00 00 00	 call	 ??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z ; std::basic_ostream<char,std::char_traits<char> >::sentry::sentry
 
 ; 766  : 
 ; 767  :     if (!_Ok) {
 
-  000fc	0f b6 55 eb	 movzx	 edx, BYTE PTR $T10[ebp]
-  00100	85 d2		 test	 edx, edx
-  00102	75 0e		 jne	 SHORT $LN8@operator
+  00083	80 7d e0 00	 cmp	 BYTE PTR __Ok$[ebp+4], 0
+  00087	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+12], 0
+  0008e	75 0a		 jne	 SHORT $LN8@operator
 
 ; 768  :         _State |= ios_base::badbit;
 
-  00104	8b 45 ec	 mov	 eax, DWORD PTR __State$[ebp]
-  00107	83 c8 04	 or	 eax, 4
-  0010a	89 45 ec	 mov	 DWORD PTR __State$[ebp], eax
+  00090	bb 04 00 00 00	 mov	 ebx, 4
 
 ; 769  :     } else { // state okay, insert
 
-  0010d	e9 1b 02 00 00	 jmp	 $LN9@operator
+  00095	e9 ef 00 00 00	 jmp	 $LN88@operator
 $LN8@operator:
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xiosbase
+
+; 322  :         return _Fmtfl;
+
+  0009a	8b 4d 08	 mov	 ecx, DWORD PTR __Ostr$[ebp]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 
 ; 770  :         _TRY_IO_BEGIN
 
-  00112	c6 45 fc 01	 mov	 BYTE PTR __$EHRec$[ebp+12], 1
+  0009d	c6 45 fc 01	 mov	 BYTE PTR __$EHRec$[ebp+12], 1
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xiosbase
+
+; 322  :         return _Fmtfl;
+
+  000a1	8b 01		 mov	 eax, DWORD PTR [ecx]
+  000a3	8b 40 04	 mov	 eax, DWORD PTR [eax+4]
+  000a6	8b 44 08 14	 mov	 eax, DWORD PTR [eax+ecx+20]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 
 ; 771  :         if ((_Ostr.flags() & ios_base::adjustfield) != ios_base::left) {
 
-  00116	8b 4d 08	 mov	 ecx, DWORD PTR __Ostr$[ebp]
-  00119	8b 11		 mov	 edx, DWORD PTR [ecx]
-  0011b	8b 4d 08	 mov	 ecx, DWORD PTR __Ostr$[ebp]
-  0011e	03 4a 04	 add	 ecx, DWORD PTR [edx+4]
-  00121	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?flags@ios_base@std@@QBEHXZ
-  00127	89 45 bc	 mov	 DWORD PTR tv137[ebp], eax
-  0012a	8b 45 bc	 mov	 eax, DWORD PTR tv137[ebp]
-  0012d	25 c0 01 00 00	 and	 eax, 448		; 000001c0H
-  00132	83 f8 40	 cmp	 eax, 64			; 00000040H
-  00135	0f 84 aa 00 00
-	00		 je	 $LN11@operator
+  000aa	25 c0 01 00 00	 and	 eax, 448		; 000001c0H
+  000af	83 f8 40	 cmp	 eax, 64			; 00000040H
+  000b2	74 36		 je	 SHORT $LN73@operator
+$LL4@operator:
 
 ; 772  :             for (; 0 < _Pad; --_Pad) { // pad on left
 
-  0013b	eb 12		 jmp	 SHORT $LN4@operator
-$LN2@operator:
-  0013d	8b 4d dc	 mov	 ecx, DWORD PTR __Pad$[ebp]
-  00140	83 e9 01	 sub	 ecx, 1
-  00143	8b 55 e0	 mov	 edx, DWORD PTR __Pad$[ebp+4]
-  00146	83 da 00	 sbb	 edx, 0
-  00149	89 4d dc	 mov	 DWORD PTR __Pad$[ebp], ecx
-  0014c	89 55 e0	 mov	 DWORD PTR __Pad$[ebp+4], edx
-$LN4@operator:
-  0014f	83 7d e0 00	 cmp	 DWORD PTR __Pad$[ebp+4], 0
-  00153	0f 8c 8c 00 00
-	00		 jl	 $LN11@operator
-  00159	7f 0a		 jg	 SHORT $LN66@operator
-  0015b	83 7d dc 00	 cmp	 DWORD PTR __Pad$[ebp], 0
-  0015f	0f 86 80 00 00
-	00		 jbe	 $LN11@operator
-$LN66@operator:
+  000b4	85 ff		 test	 edi, edi
+  000b6	7c 32		 jl	 SHORT $LN73@operator
+  000b8	7f 04		 jg	 SHORT $LN79@operator
+  000ba	85 f6		 test	 esi, esi
+  000bc	74 2c		 je	 SHORT $LN73@operator
+$LN79@operator:
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
 
-; 773  :                 if (_Traits::eq_int_type(_Traits::eof(), _Ostr.rdbuf()->sputc(_Ostr.fill()))) {
+; 100  :         return _Fillch;
 
-  00165	8b 45 08	 mov	 eax, DWORD PTR __Ostr$[ebp]
-  00168	8b 08		 mov	 ecx, DWORD PTR [eax]
-  0016a	8b 55 08	 mov	 edx, DWORD PTR __Ostr$[ebp]
-  0016d	03 51 04	 add	 edx, DWORD PTR [ecx+4]
-  00170	8b ca		 mov	 ecx, edx
-  00172	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDXZ
-  00178	88 45 ea	 mov	 BYTE PTR tv334[ebp], al
-  0017b	8b 45 08	 mov	 eax, DWORD PTR __Ostr$[ebp]
-  0017e	8b 08		 mov	 ecx, DWORD PTR [eax]
-  00180	8b 55 08	 mov	 edx, DWORD PTR __Ostr$[ebp]
-  00183	03 51 04	 add	 edx, DWORD PTR [ecx+4]
-  00186	8b ca		 mov	 ecx, edx
-  00188	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ
-  0018e	89 45 b8	 mov	 DWORD PTR tv307[ebp], eax
-  00191	0f b6 45 ea	 movzx	 eax, BYTE PTR tv334[ebp]
-  00195	50		 push	 eax
-  00196	8b 4d b8	 mov	 ecx, DWORD PTR tv307[ebp]
-  00199	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHD@Z
-  0019f	89 45 b4	 mov	 DWORD PTR tv320[ebp], eax
-  001a2	8b 4d b4	 mov	 ecx, DWORD PTR tv320[ebp]
-  001a5	89 4d ac	 mov	 DWORD PTR $T5[ebp], ecx
-; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xstring
-
-; 462  :         return static_cast<int_type>(EOF);
-
-  001a8	c7 45 b0 ff ff
-	ff ff		 mov	 DWORD PTR $T6[ebp], -1
-
-; 454  :         return _Left == _Right;
-
-  001af	8b 55 b0	 mov	 edx, DWORD PTR $T6[ebp]
-  001b2	3b 55 ac	 cmp	 edx, DWORD PTR $T5[ebp]
-  001b5	75 09		 jne	 SHORT $LN43@operator
-  001b7	c7 45 d0 01 00
-	00 00		 mov	 DWORD PTR tv140[ebp], 1
-  001be	eb 07		 jmp	 SHORT $LN44@operator
-$LN43@operator:
-  001c0	c7 45 d0 00 00
-	00 00		 mov	 DWORD PTR tv140[ebp], 0
-$LN44@operator:
-  001c7	8a 45 d0	 mov	 al, BYTE PTR tv140[ebp]
-  001ca	88 45 e9	 mov	 BYTE PTR $T9[ebp], al
+  000be	8b 01		 mov	 eax, DWORD PTR [ecx]
+  000c0	03 48 04	 add	 ecx, DWORD PTR [eax+4]
+  000c3	8a 41 40	 mov	 al, BYTE PTR [ecx+64]
 ; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 
 ; 773  :                 if (_Traits::eq_int_type(_Traits::eof(), _Ostr.rdbuf()->sputc(_Ostr.fill()))) {
 
-  001cd	0f b6 4d e9	 movzx	 ecx, BYTE PTR $T9[ebp]
-  001d1	85 c9		 test	 ecx, ecx
-  001d3	74 0b		 je	 SHORT $LN12@operator
+  000c6	8b 49 38	 mov	 ecx, DWORD PTR [ecx+56]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
+
+; 100  :         return _Fillch;
+
+  000c9	88 45 e4	 mov	 BYTE PTR $T3[ebp], al
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+
+; 773  :                 if (_Traits::eq_int_type(_Traits::eof(), _Ostr.rdbuf()->sputc(_Ostr.fill()))) {
+
+  000cc	ff 75 e4	 push	 DWORD PTR $T3[ebp]
+  000cf	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp_?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHD@Z
+  000d5	83 f8 ff	 cmp	 eax, -1
+  000d8	75 05		 jne	 SHORT $LN2@operator
 
 ; 774  :                     _State |= ios_base::badbit; // insertion failed, quit
 
-  001d5	8b 55 ec	 mov	 edx, DWORD PTR __State$[ebp]
-  001d8	83 ca 04	 or	 edx, 4
-  001db	89 55 ec	 mov	 DWORD PTR __State$[ebp], edx
+  000da	8d 58 05	 lea	 ebx, DWORD PTR [eax+5]
 
 ; 775  :                     break;
 
-  001de	eb 05		 jmp	 SHORT $LN11@operator
-$LN12@operator:
+  000dd	eb 65		 jmp	 SHORT $LN6@operator
+$LN2@operator:
 
-; 776  :                 }
-; 777  :             }
+; 772  :             for (; 0 < _Pad; --_Pad) { // pad on left
 
-  001e0	e9 58 ff ff ff	 jmp	 $LN2@operator
-$LN11@operator:
+  000df	8b 4d 08	 mov	 ecx, DWORD PTR __Ostr$[ebp]
+  000e2	83 c6 ff	 add	 esi, -1
+  000e5	83 d7 ff	 adc	 edi, -1
+  000e8	eb ca		 jmp	 SHORT $LL4@operator
+$LN73@operator:
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
 
-; 778  :         }
-; 779  : 
+; 79   :         return _Mystrbuf;
+
+  000ea	8b 01		 mov	 eax, DWORD PTR [ecx]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+
 ; 780  :         if (_State == ios_base::goodbit && _Ostr.rdbuf()->sputn(_Val, _Count) != _Count) {
 
-  001e5	83 7d ec 00	 cmp	 DWORD PTR __State$[ebp], 0
-  001e9	75 50		 jne	 SHORT $LN13@operator
-  001eb	8b 45 08	 mov	 eax, DWORD PTR __Ostr$[ebp]
-  001ee	8b 08		 mov	 ecx, DWORD PTR [eax]
-  001f0	8b 55 08	 mov	 edx, DWORD PTR __Ostr$[ebp]
-  001f3	03 51 04	 add	 edx, DWORD PTR [ecx+4]
-  001f6	8b ca		 mov	 ecx, edx
-  001f8	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ
-  001fe	89 45 a8	 mov	 DWORD PTR tv321[ebp], eax
-  00201	8b 45 d8	 mov	 eax, DWORD PTR __Count$[ebp+4]
-  00204	50		 push	 eax
-  00205	8b 4d d4	 mov	 ecx, DWORD PTR __Count$[ebp]
-  00208	51		 push	 ecx
-  00209	8b 55 0c	 mov	 edx, DWORD PTR __Val$[ebp]
-  0020c	52		 push	 edx
-  0020d	8b 4d a8	 mov	 ecx, DWORD PTR tv321[ebp]
-  00210	ff 15 00 00 00
+  000ec	6a 00		 push	 0
+  000ee	ff 75 e8	 push	 DWORD PTR __Count$2$[ebp]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
+
+; 79   :         return _Mystrbuf;
+
+  000f1	8b 40 04	 mov	 eax, DWORD PTR [eax+4]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+
+; 780  :         if (_State == ios_base::goodbit && _Ostr.rdbuf()->sputn(_Val, _Count) != _Count) {
+
+  000f4	ff 75 0c	 push	 DWORD PTR __Val$[ebp]
+  000f7	8b 4c 08 38	 mov	 ecx, DWORD PTR [eax+ecx+56]
+  000fb	ff 15 00 00 00
 	00		 call	 DWORD PTR __imp_?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAE_JPBD_J@Z
-  00216	89 85 7c ff ff
-	ff		 mov	 DWORD PTR tv322[ebp], eax
-  0021c	89 55 80	 mov	 DWORD PTR tv322[ebp+4], edx
-  0021f	8b 85 7c ff ff
-	ff		 mov	 eax, DWORD PTR tv322[ebp]
-  00225	3b 45 d4	 cmp	 eax, DWORD PTR __Count$[ebp]
-  00228	75 08		 jne	 SHORT $LN67@operator
-  0022a	8b 4d 80	 mov	 ecx, DWORD PTR tv322[ebp+4]
-  0022d	3b 4d d8	 cmp	 ecx, DWORD PTR __Count$[ebp+4]
-  00230	74 09		 je	 SHORT $LN13@operator
-$LN67@operator:
+  00101	3b 45 e8	 cmp	 eax, DWORD PTR __Count$2$[ebp]
+  00104	75 3b		 jne	 SHORT $LN80@operator
+  00106	85 d2		 test	 edx, edx
+  00108	75 37		 jne	 SHORT $LN80@operator
+  0010a	8d 9b 00 00 00
+	00		 npad	 6
+$LL82@operator:
 
 ; 781  :             _State |= ios_base::badbit;
-
-  00232	8b 55 ec	 mov	 edx, DWORD PTR __State$[ebp]
-  00235	83 ca 04	 or	 edx, 4
-  00238	89 55 ec	 mov	 DWORD PTR __State$[ebp], edx
-$LN13@operator:
-
 ; 782  :         }
 ; 783  : 
 ; 784  :         if (_State == ios_base::goodbit) {
-
-  0023b	83 7d ec 00	 cmp	 DWORD PTR __State$[ebp], 0
-  0023f	0f 85 a2 00 00
-	00		 jne	 $LN14@operator
-
 ; 785  :             for (; 0 < _Pad; --_Pad) { // pad on right
 
-  00245	eb 12		 jmp	 SHORT $LN7@operator
-$LN5@operator:
-  00247	8b 45 dc	 mov	 eax, DWORD PTR __Pad$[ebp]
-  0024a	83 e8 01	 sub	 eax, 1
-  0024d	8b 4d e0	 mov	 ecx, DWORD PTR __Pad$[ebp+4]
-  00250	83 d9 00	 sbb	 ecx, 0
-  00253	89 45 dc	 mov	 DWORD PTR __Pad$[ebp], eax
-  00256	89 4d e0	 mov	 DWORD PTR __Pad$[ebp+4], ecx
-$LN7@operator:
-  00259	83 7d e0 00	 cmp	 DWORD PTR __Pad$[ebp+4], 0
-  0025d	0f 8c 84 00 00
-	00		 jl	 $LN14@operator
-  00263	7f 06		 jg	 SHORT $LN68@operator
-  00265	83 7d dc 00	 cmp	 DWORD PTR __Pad$[ebp], 0
-  00269	76 7c		 jbe	 SHORT $LN14@operator
-$LN68@operator:
+  00110	85 ff		 test	 edi, edi
+  00112	7c 30		 jl	 SHORT $LN6@operator
+  00114	7f 04		 jg	 SHORT $LN81@operator
+  00116	85 f6		 test	 esi, esi
+  00118	74 2a		 je	 SHORT $LN6@operator
+$LN81@operator:
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
 
-; 786  :                 if (_Traits::eq_int_type(_Traits::eof(), _Ostr.rdbuf()->sputc(_Ostr.fill()))) {
+; 100  :         return _Fillch;
 
-  0026b	8b 55 08	 mov	 edx, DWORD PTR __Ostr$[ebp]
-  0026e	8b 02		 mov	 eax, DWORD PTR [edx]
-  00270	8b 4d 08	 mov	 ecx, DWORD PTR __Ostr$[ebp]
-  00273	03 48 04	 add	 ecx, DWORD PTR [eax+4]
-  00276	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDXZ
-  0027c	88 45 e8	 mov	 BYTE PTR tv323[ebp], al
-  0027f	8b 4d 08	 mov	 ecx, DWORD PTR __Ostr$[ebp]
-  00282	8b 11		 mov	 edx, DWORD PTR [ecx]
-  00284	8b 4d 08	 mov	 ecx, DWORD PTR __Ostr$[ebp]
-  00287	03 4a 04	 add	 ecx, DWORD PTR [edx+4]
-  0028a	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ
-  00290	89 45 a4	 mov	 DWORD PTR tv324[ebp], eax
-  00293	0f b6 45 e8	 movzx	 eax, BYTE PTR tv323[ebp]
-  00297	50		 push	 eax
-  00298	8b 4d a4	 mov	 ecx, DWORD PTR tv324[ebp]
-  0029b	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHD@Z
-  002a1	89 45 a0	 mov	 DWORD PTR tv325[ebp], eax
-  002a4	8b 4d a0	 mov	 ecx, DWORD PTR tv325[ebp]
-  002a7	89 4d 98	 mov	 DWORD PTR $T3[ebp], ecx
-; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xstring
-
-; 462  :         return static_cast<int_type>(EOF);
-
-  002aa	c7 45 9c ff ff
-	ff ff		 mov	 DWORD PTR $T4[ebp], -1
-
-; 454  :         return _Left == _Right;
-
-  002b1	8b 55 9c	 mov	 edx, DWORD PTR $T4[ebp]
-  002b4	3b 55 98	 cmp	 edx, DWORD PTR $T3[ebp]
-  002b7	75 09		 jne	 SHORT $LN51@operator
-  002b9	c7 45 cc 01 00
-	00 00		 mov	 DWORD PTR tv186[ebp], 1
-  002c0	eb 07		 jmp	 SHORT $LN52@operator
-$LN51@operator:
-  002c2	c7 45 cc 00 00
-	00 00		 mov	 DWORD PTR tv186[ebp], 0
-$LN52@operator:
-  002c9	8a 45 cc	 mov	 al, BYTE PTR tv186[ebp]
-  002cc	88 45 e7	 mov	 BYTE PTR $T8[ebp], al
+  0011a	8b 4d 08	 mov	 ecx, DWORD PTR __Ostr$[ebp]
+  0011d	8b 01		 mov	 eax, DWORD PTR [ecx]
+  0011f	03 48 04	 add	 ecx, DWORD PTR [eax+4]
+  00122	8a 41 40	 mov	 al, BYTE PTR [ecx+64]
 ; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 
 ; 786  :                 if (_Traits::eq_int_type(_Traits::eof(), _Ostr.rdbuf()->sputc(_Ostr.fill()))) {
 
-  002cf	0f b6 4d e7	 movzx	 ecx, BYTE PTR $T8[ebp]
-  002d3	85 c9		 test	 ecx, ecx
-  002d5	74 0b		 je	 SHORT $LN15@operator
+  00125	8b 49 38	 mov	 ecx, DWORD PTR [ecx+56]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
+
+; 100  :         return _Fillch;
+
+  00128	88 45 e4	 mov	 BYTE PTR $T2[ebp], al
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+
+; 786  :                 if (_Traits::eq_int_type(_Traits::eof(), _Ostr.rdbuf()->sputc(_Ostr.fill()))) {
+
+  0012b	ff 75 e4	 push	 DWORD PTR $T2[ebp]
+  0012e	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp_?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHD@Z
+  00134	83 f8 ff	 cmp	 eax, -1
+  00137	74 08		 je	 SHORT $LN80@operator
+
+; 781  :             _State |= ios_base::badbit;
+; 782  :         }
+; 783  : 
+; 784  :         if (_State == ios_base::goodbit) {
+; 785  :             for (; 0 < _Pad; --_Pad) { // pad on right
+
+  00139	83 c6 ff	 add	 esi, -1
+  0013c	83 d7 ff	 adc	 edi, -1
+  0013f	eb cf		 jmp	 SHORT $LL82@operator
+$LN80@operator:
 
 ; 787  :                     _State |= ios_base::badbit; // insertion failed, quit
-
-  002d7	8b 55 ec	 mov	 edx, DWORD PTR __State$[ebp]
-  002da	83 ca 04	 or	 edx, 4
-  002dd	89 55 ec	 mov	 DWORD PTR __State$[ebp], edx
-
 ; 788  :                     break;
-
-  002e0	eb 05		 jmp	 SHORT $LN14@operator
-$LN15@operator:
-
 ; 789  :                 }
 ; 790  :             }
-
-  002e2	e9 60 ff ff ff	 jmp	 $LN5@operator
-$LN14@operator:
-
 ; 791  :         }
 ; 792  : 
 ; 793  :         _Ostr.width(0);
 
-  002e7	6a 00		 push	 0
-  002e9	6a 00		 push	 0
-  002eb	8b 45 08	 mov	 eax, DWORD PTR __Ostr$[ebp]
-  002ee	8b 08		 mov	 ecx, DWORD PTR [eax]
-  002f0	8b 55 08	 mov	 edx, DWORD PTR __Ostr$[ebp]
-  002f3	03 51 04	 add	 edx, DWORD PTR [ecx+4]
-  002f6	8b ca		 mov	 ecx, edx
-  002f8	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_?width@ios_base@std@@QAE_J_J@Z
-  002fe	eb 1d		 jmp	 SHORT $LN19@operator
+  00141	83 cb 04	 or	 ebx, 4
+$LN6@operator:
+  00144	8b 75 08	 mov	 esi, DWORD PTR __Ostr$[ebp]
+  00147	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+12], 0
+  0014e	8b 06		 mov	 eax, DWORD PTR [esi]
+  00150	8b 40 04	 mov	 eax, DWORD PTR [eax+4]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xiosbase
+
+; 364  :         _Wide                      = _Newwidth;
+
+  00153	c7 44 30 20 00
+	00 00 00	 mov	 DWORD PTR [eax+esi+32], 0
+  0015b	c7 44 30 24 00
+	00 00 00	 mov	 DWORD PTR [eax+esi+36], 0
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+  00163	eb 27		 jmp	 SHORT $LN22@operator
 __catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0:
 
 ; 794  :         _CATCH_IO_(ios_base, _Ostr)
 
-  00300	6a 01		 push	 1
-  00302	6a 04		 push	 4
-  00304	8b 45 08	 mov	 eax, DWORD PTR __Ostr$[ebp]
-  00307	8b 08		 mov	 ecx, DWORD PTR [eax]
-  00309	8b 55 08	 mov	 edx, DWORD PTR __Ostr$[ebp]
-  0030c	03 51 04	 add	 edx, DWORD PTR [ecx+4]
-  0030f	8b ca		 mov	 ecx, edx
-  00311	ff 15 00 00 00
+  00165	8b 55 08	 mov	 edx, DWORD PTR __Ostr$[ebp]
+  00168	6a 01		 push	 1
+  0016a	6a 04		 push	 4
+  0016c	8b 02		 mov	 eax, DWORD PTR [edx]
+  0016e	8b 48 04	 mov	 ecx, DWORD PTR [eax+4]
+  00171	03 ca		 add	 ecx, edx
+  00173	ff 15 00 00 00
 	00		 call	 DWORD PTR __imp_?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QAEXH_N@Z
-  00317	b8 00 00 00 00	 mov	 eax, $LN23@operator
-  0031c	c3		 ret	 0
-$LN19@operator:
-  0031d	c7 45 fc 00 00
-	00 00		 mov	 DWORD PTR __$EHRec$[ebp+12], 0
-  00324	eb 07		 jmp	 SHORT $LN9@operator
+  00179	b8 00 00 00 00	 mov	 eax, $LN23@operator
+  0017e	c3		 ret	 0
 $LN23@operator:
-; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xstring
-  00326	c7 45 fc 00 00
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
+  0017f	8b 5d ec	 mov	 ebx, DWORD PTR __State$[ebp]
+  00182	c7 45 fc 00 00
 	00 00		 mov	 DWORD PTR __$EHRec$[ebp+12], 0
-$LN9@operator:
+$LN88@operator:
 ; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
 
 ; 795  :     }
 ; 796  : 
 ; 797  :     _Ostr.setstate(_State);
 
-  0032d	6a 00		 push	 0
-  0032f	8b 45 ec	 mov	 eax, DWORD PTR __State$[ebp]
-  00332	50		 push	 eax
-  00333	8b 4d 08	 mov	 ecx, DWORD PTR __Ostr$[ebp]
-  00336	8b 11		 mov	 edx, DWORD PTR [ecx]
-  00338	8b 4d 08	 mov	 ecx, DWORD PTR __Ostr$[ebp]
-  0033b	03 4a 04	 add	 ecx, DWORD PTR [edx+4]
-  0033e	ff 15 00 00 00
+  00189	8b 75 08	 mov	 esi, DWORD PTR __Ostr$[ebp]
+$LN22@operator:
+  0018c	8b 06		 mov	 eax, DWORD PTR [esi]
+  0018e	6a 00		 push	 0
+  00190	53		 push	 ebx
+  00191	8b 48 04	 mov	 ecx, DWORD PTR [eax+4]
+  00194	03 ce		 add	 ecx, esi
+  00196	ff 15 00 00 00
 	00		 call	 DWORD PTR __imp_?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QAEXH_N@Z
 
+; 108  :         __CLR_OR_THIS_CALL ~sentry() noexcept {
+
+  0019c	c7 45 fc 03 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+12], 3
+
+; 109  : #if !_HAS_EXCEPTIONS
+; 110  :             const bool _Zero_uncaught_exceptions = true;
+; 111  : #elif _HAS_DEPRECATED_UNCAUGHT_EXCEPTION
+; 112  :             const bool _Zero_uncaught_exceptions = !_STD uncaught_exception(); // TRANSITION, ArchivedOS-12000909
+
+  001a3	e8 00 00 00 00	 call	 ?uncaught_exception@std@@YA_NXZ ; std::uncaught_exception
+
+; 113  : #else // ^^^ _HAS_DEPRECATED_UNCAUGHT_EXCEPTION / !_HAS_DEPRECATED_UNCAUGHT_EXCEPTION vvv
+; 114  :             const bool _Zero_uncaught_exceptions = _STD uncaught_exceptions() == 0;
+; 115  : #endif // !_HAS_DEPRECATED_UNCAUGHT_EXCEPTION
+; 116  : 
+; 117  :             if (_Zero_uncaught_exceptions) {
+
+  001a8	84 c0		 test	 al, al
+  001aa	75 09		 jne	 SHORT $LN57@operator
+
+; 118  :                 this->_Myostr._Osfx();
+
+  001ac	8b 4d dc	 mov	 ecx, DWORD PTR __Ok$[ebp]
+  001af	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp_?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEXXZ
+$LN57@operator:
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
+
+; 79   :         return _Mystrbuf;
+
+  001b5	8b 55 dc	 mov	 edx, DWORD PTR __Ok$[ebp]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+
+; 77   :         __CLR_OR_THIS_CALL ~_Sentry_base() noexcept { // destroy after unlocking
+
+  001b8	c6 45 fc 04	 mov	 BYTE PTR __$EHRec$[ebp+12], 4
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ios
+
+; 79   :         return _Mystrbuf;
+
+  001bc	8b 0a		 mov	 ecx, DWORD PTR [edx]
+  001be	8b 49 04	 mov	 ecx, DWORD PTR [ecx+4]
+  001c1	8b 4c 11 38	 mov	 ecx, DWORD PTR [ecx+edx+56]
+; File C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream
+
+; 79   :             if (_Rdbuf) {
+
+  001c5	85 c9		 test	 ecx, ecx
+  001c7	74 05		 je	 SHORT $LN83@operator
+
+; 80   :                 _Rdbuf->_Unlock();
+
+  001c9	8b 11		 mov	 edx, DWORD PTR [ecx]
+  001cb	ff 52 08	 call	 DWORD PTR [edx+8]
+$LN83@operator:
+
 ; 798  :     return _Ostr;
-
-  00344	8b 45 08	 mov	 eax, DWORD PTR __Ostr$[ebp]
-  00347	89 45 94	 mov	 DWORD PTR $T2[ebp], eax
-  0034a	c7 45 fc ff ff
-	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+12], -1
-  00351	8d 8d 74 ff ff
-	ff		 lea	 ecx, DWORD PTR __Ok$[ebp]
-  00357	e8 00 00 00 00	 call	 ??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry
-  0035c	8b 45 94	 mov	 eax, DWORD PTR $T2[ebp]
-
 ; 799  : }
 
-  0035f	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp+4]
-  00362	64 89 0d 00 00
+  001ce	8b c6		 mov	 eax, esi
+  001d0	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp+4]
+  001d3	64 89 0d 00 00
 	00 00		 mov	 DWORD PTR fs:0, ecx
-  00369	59		 pop	 ecx
-  0036a	5f		 pop	 edi
-  0036b	5e		 pop	 esi
-  0036c	5b		 pop	 ebx
-  0036d	8b e5		 mov	 esp, ebp
-  0036f	5d		 pop	 ebp
-  00370	c3		 ret	 0
+  001da	59		 pop	 ecx
+  001db	5f		 pop	 edi
+  001dc	5e		 pop	 esi
+  001dd	5b		 pop	 ebx
+  001de	8b e5		 mov	 esp, ebp
+  001e0	5d		 pop	 ebp
+  001e1	c3		 ret	 0
 _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$2:
-  00000	8d 8d 74 ff ff
-	ff		 lea	 ecx, DWORD PTR __Ok$[ebp]
-  00006	e9 00 00 00 00	 jmp	 ??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry
+  00000	8d 4d dc	 lea	 ecx, DWORD PTR __Ok$[ebp]
+  00003	e9 00 00 00 00	 jmp	 ??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry
+  00008	cc		 int	 3
+  00009	cc		 int	 3
+  0000a	cc		 int	 3
   0000b	cc		 int	 3
   0000c	cc		 int	 3
-  0000d	cc		 int	 3
-  0000e	cc		 int	 3
-  0000f	cc		 int	 3
 __ehhandler$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z:
-  00010	90		 npad	 1
-  00011	90		 npad	 1
-  00012	8b 54 24 08	 mov	 edx, DWORD PTR [esp+8]
-  00016	8d 42 0c	 lea	 eax, DWORD PTR [edx+12]
-  00019	8b 8a 70 ff ff
-	ff		 mov	 ecx, DWORD PTR [edx-144]
-  0001f	33 c8		 xor	 ecx, eax
-  00021	e8 00 00 00 00	 call	 @__security_check_cookie@4
-  00026	b8 00 00 00 00	 mov	 eax, OFFSET __ehfuncinfo$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z
-  0002b	e9 00 00 00 00	 jmp	 ___CxxFrameHandler3
+  0000d	90		 npad	 1
+  0000e	90		 npad	 1
+  0000f	8b 54 24 08	 mov	 edx, DWORD PTR [esp+8]
+  00013	8d 42 0c	 lea	 eax, DWORD PTR [edx+12]
+  00016	8b 4a d8	 mov	 ecx, DWORD PTR [edx-40]
+  00019	33 c8		 xor	 ecx, eax
+  0001b	e8 00 00 00 00	 call	 @__security_check_cookie@4
+  00020	b8 00 00 00 00	 mov	 eax, OFFSET __ehfuncinfo$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z
+  00025	e9 00 00 00 00	 jmp	 ___CxxFrameHandler3
 text$x	ENDS
 ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ENDP ; std::operator<<<std::char_traits<char> >
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?PrintMinimumCyclesByIteration@QPTimer@@QAEXPBDH@Z
 _TEXT	SEGMENT
-_this$ = -4						; size = 4
+tv134 = -8						; size = 8
+tv131 = -8						; size = 8
 _message$ = 8						; size = 4
 _num$ = 12						; size = 4
-?PrintMinimumCyclesByIteration@QPTimer@@QAEXPBDH@Z PROC	; QPTimer::PrintMinimumCyclesByIteration
+?PrintMinimumCyclesByIteration@QPTimer@@QAEXPBDH@Z PROC	; QPTimer::PrintMinimumCyclesByIteration, COMDAT
 ; _this$ = ecx
 
 ; 140  : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
-  00003	51		 push	 ecx
-  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
-  00007	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  0000c	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00003	83 ec 08	 sub	 esp, 8
+  00006	56		 push	 esi
+  00007	8b f1		 mov	 esi, ecx
+  00009	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
+  0000e	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00013	80 7e 38 00	 cmp	 BYTE PTR [esi+56], 0
+  00017	75 40		 jne	 SHORT $LN2@PrintMinim
 
 ; 141  : 	if(!DisableOutput)
-
-  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00014	0f b6 48 38	 movzx	 ecx, BYTE PTR [eax+56]
-  00018	85 c9		 test	 ecx, ecx
-  0001a	75 26		 jne	 SHORT $LN2@PrintMinim
-
 ; 142  : 		PrintCyclesByIteration(message,(double)minimumTime,num);
 
-  0001c	8b 55 0c	 mov	 edx, DWORD PTR _num$[ebp]
-  0001f	52		 push	 edx
-  00020	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00023	8b 48 18	 mov	 ecx, DWORD PTR [eax+24]
-  00026	8b 50 1c	 mov	 edx, DWORD PTR [eax+28]
-  00029	e8 00 00 00 00	 call	 __ultod3
-  0002e	83 ec 08	 sub	 esp, 8
-  00031	c5 fb 11 04 24	 vmovsd	 QWORD PTR [esp], xmm0
-  00036	8b 4d 08	 mov	 ecx, DWORD PTR _message$[ebp]
-  00039	51		 push	 ecx
-  0003a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  0003d	e8 00 00 00 00	 call	 ?PrintCyclesByIteration@QPTimer@@AAEXPBDNH@Z ; QPTimer::PrintCyclesByIteration
+  00019	8b 46 18	 mov	 eax, DWORD PTR [esi+24]
+  0001c	8b 4e 1c	 mov	 ecx, DWORD PTR [esi+28]
+  0001f	ff 75 0c	 push	 DWORD PTR _num$[ebp]
+  00022	89 45 f8	 mov	 DWORD PTR tv134[ebp], eax
+  00025	8b c1		 mov	 eax, ecx
+  00027	81 e1 ff ff ff
+	7f		 and	 ecx, 2147483647		; 7fffffffH
+  0002d	25 00 00 00 80	 and	 eax, -2147483648	; 80000000H
+  00032	89 4d fc	 mov	 DWORD PTR tv134[ebp+4], ecx
+  00035	83 ec 08	 sub	 esp, 8
+  00038	df 6d f8	 fild	 QWORD PTR tv134[ebp]
+  0003b	89 45 fc	 mov	 DWORD PTR tv131[ebp+4], eax
+  0003e	8b ce		 mov	 ecx, esi
+  00040	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR tv131[ebp], 0
+  00047	df 6d f8	 fild	 QWORD PTR tv131[ebp]
+  0004a	d9 e0		 fchs
+  0004c	de c1		 faddp	 ST(1), ST(0)
+  0004e	dd 1c 24	 fstp	 QWORD PTR [esp]
+  00051	ff 75 08	 push	 DWORD PTR _message$[ebp]
+  00054	e8 00 00 00 00	 call	 ?PrintCyclesByIteration@QPTimer@@AAEXPBDNH@Z ; QPTimer::PrintCyclesByIteration
 $LN2@PrintMinim:
+  00059	5e		 pop	 esi
 
 ; 143  : }
 
-  00042	8b e5		 mov	 esp, ebp
-  00044	5d		 pop	 ebp
-  00045	c2 08 00	 ret	 8
+  0005a	8b e5		 mov	 esp, ebp
+  0005c	5d		 pop	 ebp
+  0005d	c2 08 00	 ret	 8
 ?PrintMinimumCyclesByIteration@QPTimer@@QAEXPBDH@Z ENDP	; QPTimer::PrintMinimumCyclesByIteration
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?PrintMinimumCycles@QPTimer@@QAEXPBD@Z
 _TEXT	SEGMENT
-_this$ = -4						; size = 4
+tv134 = -8						; size = 8
+tv131 = -8						; size = 8
 _message$ = 8						; size = 4
-?PrintMinimumCycles@QPTimer@@QAEXPBD@Z PROC		; QPTimer::PrintMinimumCycles
+?PrintMinimumCycles@QPTimer@@QAEXPBD@Z PROC		; QPTimer::PrintMinimumCycles, COMDAT
 ; _this$ = ecx
 
 ; 133  : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
-  00003	51		 push	 ecx
-  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
-  00007	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  0000c	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00003	83 ec 08	 sub	 esp, 8
+  00006	56		 push	 esi
+  00007	8b f1		 mov	 esi, ecx
+  00009	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
+  0000e	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00013	80 7e 38 00	 cmp	 BYTE PTR [esi+56], 0
+  00017	75 3d		 jne	 SHORT $LN2@PrintMinim
 
 ; 134  : 	if(!DisableOutput)
-
-  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00014	0f b6 48 38	 movzx	 ecx, BYTE PTR [eax+56]
-  00018	85 c9		 test	 ecx, ecx
-  0001a	75 22		 jne	 SHORT $LN2@PrintMinim
-
 ; 135  : 		PrintCycles(message,(double)minimumTime);
 
-  0001c	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
-  0001f	8b 4a 18	 mov	 ecx, DWORD PTR [edx+24]
-  00022	8b 52 1c	 mov	 edx, DWORD PTR [edx+28]
-  00025	e8 00 00 00 00	 call	 __ultod3
-  0002a	83 ec 08	 sub	 esp, 8
-  0002d	c5 fb 11 04 24	 vmovsd	 QWORD PTR [esp], xmm0
-  00032	8b 45 08	 mov	 eax, DWORD PTR _message$[ebp]
-  00035	50		 push	 eax
-  00036	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  00039	e8 00 00 00 00	 call	 ?PrintCycles@QPTimer@@AAEXPBDN@Z ; QPTimer::PrintCycles
+  00019	8b 46 18	 mov	 eax, DWORD PTR [esi+24]
+  0001c	83 ec 08	 sub	 esp, 8
+  0001f	8b 56 1c	 mov	 edx, DWORD PTR [esi+28]
+  00022	8b ce		 mov	 ecx, esi
+  00024	89 45 f8	 mov	 DWORD PTR tv134[ebp], eax
+  00027	8b c2		 mov	 eax, edx
+  00029	81 e2 ff ff ff
+	7f		 and	 edx, 2147483647		; 7fffffffH
+  0002f	25 00 00 00 80	 and	 eax, -2147483648	; 80000000H
+  00034	89 55 fc	 mov	 DWORD PTR tv134[ebp+4], edx
+  00037	df 6d f8	 fild	 QWORD PTR tv134[ebp]
+  0003a	89 45 fc	 mov	 DWORD PTR tv131[ebp+4], eax
+  0003d	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR tv131[ebp], 0
+  00044	df 6d f8	 fild	 QWORD PTR tv131[ebp]
+  00047	d9 e0		 fchs
+  00049	de c1		 faddp	 ST(1), ST(0)
+  0004b	dd 1c 24	 fstp	 QWORD PTR [esp]
+  0004e	ff 75 08	 push	 DWORD PTR _message$[ebp]
+  00051	e8 00 00 00 00	 call	 ?PrintCycles@QPTimer@@AAEXPBDN@Z ; QPTimer::PrintCycles
 $LN2@PrintMinim:
+  00056	5e		 pop	 esi
 
 ; 136  : }
 
-  0003e	8b e5		 mov	 esp, ebp
-  00040	5d		 pop	 ebp
-  00041	c2 04 00	 ret	 4
+  00057	8b e5		 mov	 esp, ebp
+  00059	5d		 pop	 ebp
+  0005a	c2 04 00	 ret	 4
 ?PrintMinimumCycles@QPTimer@@QAEXPBD@Z ENDP		; QPTimer::PrintMinimumCycles
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?PrintMinimumTime@QPTimer@@QAEXPBD@Z
 _TEXT	SEGMENT
-_this$ = -4						; size = 4
+tv134 = -8						; size = 8
+tv131 = -8						; size = 8
 _message$ = 8						; size = 4
-?PrintMinimumTime@QPTimer@@QAEXPBD@Z PROC		; QPTimer::PrintMinimumTime
+?PrintMinimumTime@QPTimer@@QAEXPBD@Z PROC		; QPTimer::PrintMinimumTime, COMDAT
 ; _this$ = ecx
 
 ; 126  : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
-  00003	51		 push	 ecx
-  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
-  00007	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  0000c	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00003	83 ec 08	 sub	 esp, 8
+  00006	56		 push	 esi
+  00007	8b f1		 mov	 esi, ecx
+  00009	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
+  0000e	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00013	80 7e 38 00	 cmp	 BYTE PTR [esi+56], 0
+  00017	75 3d		 jne	 SHORT $LN2@PrintMinim
 
 ; 127  : 	if(!DisableOutput)
-
-  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00014	0f b6 48 38	 movzx	 ecx, BYTE PTR [eax+56]
-  00018	85 c9		 test	 ecx, ecx
-  0001a	75 22		 jne	 SHORT $LN2@PrintMinim
-
 ; 128  : 		PrintTimeSeconds(message,(double)minimumTime);
 
-  0001c	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
-  0001f	8b 4a 18	 mov	 ecx, DWORD PTR [edx+24]
-  00022	8b 52 1c	 mov	 edx, DWORD PTR [edx+28]
-  00025	e8 00 00 00 00	 call	 __ultod3
-  0002a	83 ec 08	 sub	 esp, 8
-  0002d	c5 fb 11 04 24	 vmovsd	 QWORD PTR [esp], xmm0
-  00032	8b 45 08	 mov	 eax, DWORD PTR _message$[ebp]
-  00035	50		 push	 eax
-  00036	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  00039	e8 00 00 00 00	 call	 ?PrintTimeSeconds@QPTimer@@AAEXPBDN@Z ; QPTimer::PrintTimeSeconds
+  00019	8b 46 18	 mov	 eax, DWORD PTR [esi+24]
+  0001c	83 ec 08	 sub	 esp, 8
+  0001f	8b 56 1c	 mov	 edx, DWORD PTR [esi+28]
+  00022	8b ce		 mov	 ecx, esi
+  00024	89 45 f8	 mov	 DWORD PTR tv134[ebp], eax
+  00027	8b c2		 mov	 eax, edx
+  00029	81 e2 ff ff ff
+	7f		 and	 edx, 2147483647		; 7fffffffH
+  0002f	25 00 00 00 80	 and	 eax, -2147483648	; 80000000H
+  00034	89 55 fc	 mov	 DWORD PTR tv134[ebp+4], edx
+  00037	df 6d f8	 fild	 QWORD PTR tv134[ebp]
+  0003a	89 45 fc	 mov	 DWORD PTR tv131[ebp+4], eax
+  0003d	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR tv131[ebp], 0
+  00044	df 6d f8	 fild	 QWORD PTR tv131[ebp]
+  00047	d9 e0		 fchs
+  00049	de c1		 faddp	 ST(1), ST(0)
+  0004b	dd 1c 24	 fstp	 QWORD PTR [esp]
+  0004e	ff 75 08	 push	 DWORD PTR _message$[ebp]
+  00051	e8 00 00 00 00	 call	 ?PrintTimeSeconds@QPTimer@@AAEXPBDN@Z ; QPTimer::PrintTimeSeconds
 $LN2@PrintMinim:
+  00056	5e		 pop	 esi
 
 ; 129  : }
 
-  0003e	8b e5		 mov	 esp, ebp
-  00040	5d		 pop	 ebp
-  00041	c2 04 00	 ret	 4
+  00057	8b e5		 mov	 esp, ebp
+  00059	5d		 pop	 ebp
+  0005a	c2 04 00	 ret	 4
 ?PrintMinimumTime@QPTimer@@QAEXPBD@Z ENDP		; QPTimer::PrintMinimumTime
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?PrintMeanCycles@QPTimer@@QAEXPBD@Z
 _TEXT	SEGMENT
-_MeanCycles$1 = -12					; size = 8
-_this$ = -4						; size = 4
+tv173 = -8						; size = 8
+tv170 = -8						; size = 8
 _message$ = 8						; size = 4
-?PrintMeanCycles@QPTimer@@QAEXPBD@Z PROC		; QPTimer::PrintMeanCycles
+?PrintMeanCycles@QPTimer@@QAEXPBD@Z PROC		; QPTimer::PrintMeanCycles, COMDAT
 ; _this$ = ecx
 
 ; 160  : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
-  00003	83 ec 0c	 sub	 esp, 12			; 0000000cH
-  00006	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00003	83 ec 08	 sub	 esp, 8
+  00006	56		 push	 esi
+  00007	8b f1		 mov	 esi, ecx
   00009	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
   0000e	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00013	80 7e 38 00	 cmp	 BYTE PTR [esi+56], 0
+  00017	75 79		 jne	 SHORT $LN2@PrintMeanC
 
 ; 161  : 	if(!DisableOutput)
-
-  00013	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00016	0f b6 48 38	 movzx	 ecx, BYTE PTR [eax+56]
-  0001a	85 c9		 test	 ecx, ecx
-  0001c	75 76		 jne	 SHORT $LN2@PrintMeanC
-
 ; 162  : 	{
 ; 163  : 		double MeanCycles ;
 ; 164  : 		MeanCycles = ((double)totalTime/times);
-
-  0001e	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
-  00021	8b 4a 10	 mov	 ecx, DWORD PTR [edx+16]
-  00024	8b 52 14	 mov	 edx, DWORD PTR [edx+20]
-  00027	e8 00 00 00 00	 call	 __ultod3
-  0002c	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  0002f	c5 f3 2a 48 28	 vcvtsi2sd xmm1, xmm1, DWORD PTR [eax+40]
-  00034	c5 fb 5e c1	 vdivsd	 xmm0, xmm0, xmm1
-  00038	c5 fb 11 45 f4	 vmovsd	 QWORD PTR _MeanCycles$1[ebp], xmm0
-
 ; 165  : 
 ; 166  : 		PrintCycles(message,MeanCycles );
 
-  0003d	83 ec 08	 sub	 esp, 8
-  00040	c5 fb 10 45 f4	 vmovsd	 xmm0, QWORD PTR _MeanCycles$1[ebp]
-  00045	c5 fb 11 04 24	 vmovsd	 QWORD PTR [esp], xmm0
-  0004a	8b 4d 08	 mov	 ecx, DWORD PTR _message$[ebp]
-  0004d	51		 push	 ecx
-  0004e	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  00051	e8 00 00 00 00	 call	 ?PrintCycles@QPTimer@@AAEXPBDN@Z ; QPTimer::PrintCycles
+  00019	8b 46 10	 mov	 eax, DWORD PTR [esi+16]
+  0001c	83 ec 08	 sub	 esp, 8
+  0001f	8b 56 14	 mov	 edx, DWORD PTR [esi+20]
+  00022	8b ce		 mov	 ecx, esi
+  00024	89 45 f8	 mov	 DWORD PTR tv173[ebp], eax
+  00027	8b c2		 mov	 eax, edx
+  00029	81 e2 ff ff ff
+	7f		 and	 edx, 2147483647		; 7fffffffH
+  0002f	25 00 00 00 80	 and	 eax, -2147483648	; 80000000H
+  00034	89 55 fc	 mov	 DWORD PTR tv173[ebp+4], edx
+  00037	df 6d f8	 fild	 QWORD PTR tv173[ebp]
+  0003a	89 45 fc	 mov	 DWORD PTR tv170[ebp+4], eax
+  0003d	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR tv170[ebp], 0
+  00044	df 6d f8	 fild	 QWORD PTR tv170[ebp]
+  00047	d9 e0		 fchs
+  00049	de c1		 faddp	 ST(1), ST(0)
+  0004b	da 76 28	 fidiv	 DWORD PTR [esi+40]
+  0004e	dd 1c 24	 fstp	 QWORD PTR [esp]
+  00051	ff 75 08	 push	 DWORD PTR _message$[ebp]
+  00054	e8 00 00 00 00	 call	 ?PrintCycles@QPTimer@@AAEXPBDN@Z ; QPTimer::PrintCycles
 
 ; 167  : 		cout << "   (in " << times << " measures)" <<endl;
 
-  00056	68 00 00 00 00	 push	 OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
-  0005b	68 00 00 00 00	 push	 OFFSET $SG149326
-  00060	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
-  00063	8b 42 28	 mov	 eax, DWORD PTR [edx+40]
-  00066	50		 push	 eax
-  00067	68 00 00 00 00	 push	 OFFSET $SG149327
-  0006c	8b 0d 00 00 00
-	00		 mov	 ecx, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
-  00072	51		 push	 ecx
-  00073	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
-  00078	83 c4 08	 add	 esp, 8
-  0007b	8b c8		 mov	 ecx, eax
-  0007d	ff 15 00 00 00
+  00059	68 00 00 00 00	 push	 OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
+  0005e	68 00 00 00 00	 push	 OFFSET ??_C@_0L@CHDMIBHC@?5measures?$CJ@
+  00063	ff 76 28	 push	 DWORD PTR [esi+40]
+  00066	68 00 00 00 00	 push	 OFFSET ??_C@_07MLOIGAKO@?5?5?5?$CIin?5@
+  0006b	ff 35 00 00 00
+	00		 push	 DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+  00071	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+  00076	83 c4 08	 add	 esp, 8
+  00079	8b c8		 mov	 ecx, eax
+  0007b	ff 15 00 00 00
 	00		 call	 DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@H@Z
-  00083	50		 push	 eax
-  00084	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
-  00089	83 c4 08	 add	 esp, 8
-  0008c	8b c8		 mov	 ecx, eax
-  0008e	ff 15 00 00 00
+  00081	50		 push	 eax
+  00082	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+  00087	83 c4 08	 add	 esp, 8
+  0008a	8b c8		 mov	 ecx, eax
+  0008c	ff 15 00 00 00
 	00		 call	 DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
 $LN2@PrintMeanC:
+  00092	5e		 pop	 esi
 
 ; 168  : 	}
 ; 169  : }
 
-  00094	8b e5		 mov	 esp, ebp
-  00096	5d		 pop	 ebp
-  00097	c2 04 00	 ret	 4
+  00093	8b e5		 mov	 esp, ebp
+  00095	5d		 pop	 ebp
+  00096	c2 04 00	 ret	 4
 ?PrintMeanCycles@QPTimer@@QAEXPBD@Z ENDP		; QPTimer::PrintMeanCycles
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?PrintMeanTime@QPTimer@@QAEXPBD@Z
 _TEXT	SEGMENT
-_MeanTime$1 = -12					; size = 8
-_this$ = -4						; size = 4
+tv173 = -8						; size = 8
+tv170 = -8						; size = 8
 _message$ = 8						; size = 4
-?PrintMeanTime@QPTimer@@QAEXPBD@Z PROC			; QPTimer::PrintMeanTime
+?PrintMeanTime@QPTimer@@QAEXPBD@Z PROC			; QPTimer::PrintMeanTime, COMDAT
 ; _this$ = ecx
 
 ; 147  : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
-  00003	83 ec 0c	 sub	 esp, 12			; 0000000cH
-  00006	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00003	83 ec 08	 sub	 esp, 8
+  00006	56		 push	 esi
+  00007	8b f1		 mov	 esi, ecx
   00009	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
   0000e	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00013	80 7e 38 00	 cmp	 BYTE PTR [esi+56], 0
+  00017	75 79		 jne	 SHORT $LN2@PrintMeanT
 
 ; 148  : 	if(!DisableOutput)
-
-  00013	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00016	0f b6 48 38	 movzx	 ecx, BYTE PTR [eax+56]
-  0001a	85 c9		 test	 ecx, ecx
-  0001c	75 76		 jne	 SHORT $LN2@PrintMeanT
-
 ; 149  : 	{
 ; 150  : 		double MeanTime ;
 ; 151  : 		MeanTime = ((double)totalTime/times);
-
-  0001e	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
-  00021	8b 4a 10	 mov	 ecx, DWORD PTR [edx+16]
-  00024	8b 52 14	 mov	 edx, DWORD PTR [edx+20]
-  00027	e8 00 00 00 00	 call	 __ultod3
-  0002c	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  0002f	c5 f3 2a 48 28	 vcvtsi2sd xmm1, xmm1, DWORD PTR [eax+40]
-  00034	c5 fb 5e c1	 vdivsd	 xmm0, xmm0, xmm1
-  00038	c5 fb 11 45 f4	 vmovsd	 QWORD PTR _MeanTime$1[ebp], xmm0
-
 ; 152  : 
 ; 153  : 		PrintTimeSeconds(message,MeanTime);
 
-  0003d	83 ec 08	 sub	 esp, 8
-  00040	c5 fb 10 45 f4	 vmovsd	 xmm0, QWORD PTR _MeanTime$1[ebp]
-  00045	c5 fb 11 04 24	 vmovsd	 QWORD PTR [esp], xmm0
-  0004a	8b 4d 08	 mov	 ecx, DWORD PTR _message$[ebp]
-  0004d	51		 push	 ecx
-  0004e	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  00051	e8 00 00 00 00	 call	 ?PrintTimeSeconds@QPTimer@@AAEXPBDN@Z ; QPTimer::PrintTimeSeconds
+  00019	8b 46 10	 mov	 eax, DWORD PTR [esi+16]
+  0001c	83 ec 08	 sub	 esp, 8
+  0001f	8b 56 14	 mov	 edx, DWORD PTR [esi+20]
+  00022	8b ce		 mov	 ecx, esi
+  00024	89 45 f8	 mov	 DWORD PTR tv173[ebp], eax
+  00027	8b c2		 mov	 eax, edx
+  00029	81 e2 ff ff ff
+	7f		 and	 edx, 2147483647		; 7fffffffH
+  0002f	25 00 00 00 80	 and	 eax, -2147483648	; 80000000H
+  00034	89 55 fc	 mov	 DWORD PTR tv173[ebp+4], edx
+  00037	df 6d f8	 fild	 QWORD PTR tv173[ebp]
+  0003a	89 45 fc	 mov	 DWORD PTR tv170[ebp+4], eax
+  0003d	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR tv170[ebp], 0
+  00044	df 6d f8	 fild	 QWORD PTR tv170[ebp]
+  00047	d9 e0		 fchs
+  00049	de c1		 faddp	 ST(1), ST(0)
+  0004b	da 76 28	 fidiv	 DWORD PTR [esi+40]
+  0004e	dd 1c 24	 fstp	 QWORD PTR [esp]
+  00051	ff 75 08	 push	 DWORD PTR _message$[ebp]
+  00054	e8 00 00 00 00	 call	 ?PrintTimeSeconds@QPTimer@@AAEXPBDN@Z ; QPTimer::PrintTimeSeconds
 
 ; 154  : 		cout << "   (in " << times << " measures)" <<endl;
 
-  00056	68 00 00 00 00	 push	 OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
-  0005b	68 00 00 00 00	 push	 OFFSET $SG149311
-  00060	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
-  00063	8b 42 28	 mov	 eax, DWORD PTR [edx+40]
-  00066	50		 push	 eax
-  00067	68 00 00 00 00	 push	 OFFSET $SG149312
-  0006c	8b 0d 00 00 00
-	00		 mov	 ecx, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
-  00072	51		 push	 ecx
-  00073	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
-  00078	83 c4 08	 add	 esp, 8
-  0007b	8b c8		 mov	 ecx, eax
-  0007d	ff 15 00 00 00
+  00059	68 00 00 00 00	 push	 OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
+  0005e	68 00 00 00 00	 push	 OFFSET ??_C@_0L@CHDMIBHC@?5measures?$CJ@
+  00063	ff 76 28	 push	 DWORD PTR [esi+40]
+  00066	68 00 00 00 00	 push	 OFFSET ??_C@_07MLOIGAKO@?5?5?5?$CIin?5@
+  0006b	ff 35 00 00 00
+	00		 push	 DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+  00071	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+  00076	83 c4 08	 add	 esp, 8
+  00079	8b c8		 mov	 ecx, eax
+  0007b	ff 15 00 00 00
 	00		 call	 DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@H@Z
-  00083	50		 push	 eax
-  00084	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
-  00089	83 c4 08	 add	 esp, 8
-  0008c	8b c8		 mov	 ecx, eax
-  0008e	ff 15 00 00 00
+  00081	50		 push	 eax
+  00082	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+  00087	83 c4 08	 add	 esp, 8
+  0008a	8b c8		 mov	 ecx, eax
+  0008c	ff 15 00 00 00
 	00		 call	 DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
 $LN2@PrintMeanT:
+  00092	5e		 pop	 esi
 
 ; 155  : 	}
 ; 156  : }
 
-  00094	8b e5		 mov	 esp, ebp
-  00096	5d		 pop	 ebp
-  00097	c2 04 00	 ret	 4
+  00093	8b e5		 mov	 esp, ebp
+  00095	5d		 pop	 ebp
+  00096	c2 04 00	 ret	 4
 ?PrintMeanTime@QPTimer@@QAEXPBD@Z ENDP			; QPTimer::PrintMeanTime
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?PrintCycles@QPTimer@@QAEXPBD@Z
 _TEXT	SEGMENT
-_this$ = -4						; size = 4
+tv134 = -8						; size = 8
+tv131 = -8						; size = 8
 _message$ = 8						; size = 4
-?PrintCycles@QPTimer@@QAEXPBD@Z PROC			; QPTimer::PrintCycles
+?PrintCycles@QPTimer@@QAEXPBD@Z PROC			; QPTimer::PrintCycles, COMDAT
 ; _this$ = ecx
 
 ; 119  : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
-  00003	51		 push	 ecx
-  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
-  00007	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  0000c	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00003	83 ec 08	 sub	 esp, 8
+  00006	56		 push	 esi
+  00007	8b f1		 mov	 esi, ecx
+  00009	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
+  0000e	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00013	80 7e 38 00	 cmp	 BYTE PTR [esi+56], 0
+  00017	75 3d		 jne	 SHORT $LN2@PrintCycle
 
 ; 120  : 	if(!DisableOutput)
-
-  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00014	0f b6 48 38	 movzx	 ecx, BYTE PTR [eax+56]
-  00018	85 c9		 test	 ecx, ecx
-  0001a	75 22		 jne	 SHORT $LN2@PrintCycle
-
 ; 121  : 		PrintCycles(message,(double)result);
 
-  0001c	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
-  0001f	8b 4a 08	 mov	 ecx, DWORD PTR [edx+8]
-  00022	8b 52 0c	 mov	 edx, DWORD PTR [edx+12]
-  00025	e8 00 00 00 00	 call	 __ultod3
-  0002a	83 ec 08	 sub	 esp, 8
-  0002d	c5 fb 11 04 24	 vmovsd	 QWORD PTR [esp], xmm0
-  00032	8b 45 08	 mov	 eax, DWORD PTR _message$[ebp]
-  00035	50		 push	 eax
-  00036	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  00039	e8 00 00 00 00	 call	 ?PrintCycles@QPTimer@@AAEXPBDN@Z ; QPTimer::PrintCycles
+  00019	8b 46 08	 mov	 eax, DWORD PTR [esi+8]
+  0001c	83 ec 08	 sub	 esp, 8
+  0001f	8b 56 0c	 mov	 edx, DWORD PTR [esi+12]
+  00022	8b ce		 mov	 ecx, esi
+  00024	89 45 f8	 mov	 DWORD PTR tv134[ebp], eax
+  00027	8b c2		 mov	 eax, edx
+  00029	81 e2 ff ff ff
+	7f		 and	 edx, 2147483647		; 7fffffffH
+  0002f	25 00 00 00 80	 and	 eax, -2147483648	; 80000000H
+  00034	89 55 fc	 mov	 DWORD PTR tv134[ebp+4], edx
+  00037	df 6d f8	 fild	 QWORD PTR tv134[ebp]
+  0003a	89 45 fc	 mov	 DWORD PTR tv131[ebp+4], eax
+  0003d	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR tv131[ebp], 0
+  00044	df 6d f8	 fild	 QWORD PTR tv131[ebp]
+  00047	d9 e0		 fchs
+  00049	de c1		 faddp	 ST(1), ST(0)
+  0004b	dd 1c 24	 fstp	 QWORD PTR [esp]
+  0004e	ff 75 08	 push	 DWORD PTR _message$[ebp]
+  00051	e8 00 00 00 00	 call	 ?PrintCycles@QPTimer@@AAEXPBDN@Z ; QPTimer::PrintCycles
 $LN2@PrintCycle:
+  00056	5e		 pop	 esi
 
 ; 122  : }
 
-  0003e	8b e5		 mov	 esp, ebp
-  00040	5d		 pop	 ebp
-  00041	c2 04 00	 ret	 4
+  00057	8b e5		 mov	 esp, ebp
+  00059	5d		 pop	 ebp
+  0005a	c2 04 00	 ret	 4
 ?PrintCycles@QPTimer@@QAEXPBD@Z ENDP			; QPTimer::PrintCycles
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?PrintTime@QPTimer@@QAEXPBD@Z
 _TEXT	SEGMENT
-_this$ = -4						; size = 4
+tv134 = -8						; size = 8
+tv131 = -8						; size = 8
 _message$ = 8						; size = 4
-?PrintTime@QPTimer@@QAEXPBD@Z PROC			; QPTimer::PrintTime
+?PrintTime@QPTimer@@QAEXPBD@Z PROC			; QPTimer::PrintTime, COMDAT
 ; _this$ = ecx
 
 ; 112  : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
-  00003	51		 push	 ecx
-  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
-  00007	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  0000c	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00003	83 ec 08	 sub	 esp, 8
+  00006	56		 push	 esi
+  00007	8b f1		 mov	 esi, ecx
+  00009	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
+  0000e	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00013	80 7e 38 00	 cmp	 BYTE PTR [esi+56], 0
+  00017	75 3d		 jne	 SHORT $LN2@PrintTime
 
 ; 113  : 	if(!DisableOutput)
-
-  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00014	0f b6 48 38	 movzx	 ecx, BYTE PTR [eax+56]
-  00018	85 c9		 test	 ecx, ecx
-  0001a	75 22		 jne	 SHORT $LN2@PrintTime
-
 ; 114  : 		PrintTimeSeconds(message,(double)result);
 
-  0001c	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
-  0001f	8b 4a 08	 mov	 ecx, DWORD PTR [edx+8]
-  00022	8b 52 0c	 mov	 edx, DWORD PTR [edx+12]
-  00025	e8 00 00 00 00	 call	 __ultod3
-  0002a	83 ec 08	 sub	 esp, 8
-  0002d	c5 fb 11 04 24	 vmovsd	 QWORD PTR [esp], xmm0
-  00032	8b 45 08	 mov	 eax, DWORD PTR _message$[ebp]
-  00035	50		 push	 eax
-  00036	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  00039	e8 00 00 00 00	 call	 ?PrintTimeSeconds@QPTimer@@AAEXPBDN@Z ; QPTimer::PrintTimeSeconds
+  00019	8b 46 08	 mov	 eax, DWORD PTR [esi+8]
+  0001c	83 ec 08	 sub	 esp, 8
+  0001f	8b 56 0c	 mov	 edx, DWORD PTR [esi+12]
+  00022	8b ce		 mov	 ecx, esi
+  00024	89 45 f8	 mov	 DWORD PTR tv134[ebp], eax
+  00027	8b c2		 mov	 eax, edx
+  00029	81 e2 ff ff ff
+	7f		 and	 edx, 2147483647		; 7fffffffH
+  0002f	25 00 00 00 80	 and	 eax, -2147483648	; 80000000H
+  00034	89 55 fc	 mov	 DWORD PTR tv134[ebp+4], edx
+  00037	df 6d f8	 fild	 QWORD PTR tv134[ebp]
+  0003a	89 45 fc	 mov	 DWORD PTR tv131[ebp+4], eax
+  0003d	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR tv131[ebp], 0
+  00044	df 6d f8	 fild	 QWORD PTR tv131[ebp]
+  00047	d9 e0		 fchs
+  00049	de c1		 faddp	 ST(1), ST(0)
+  0004b	dd 1c 24	 fstp	 QWORD PTR [esp]
+  0004e	ff 75 08	 push	 DWORD PTR _message$[ebp]
+  00051	e8 00 00 00 00	 call	 ?PrintTimeSeconds@QPTimer@@AAEXPBDN@Z ; QPTimer::PrintTimeSeconds
 $LN2@PrintTime:
+  00056	5e		 pop	 esi
 
 ; 115  : }
 
-  0003e	8b e5		 mov	 esp, ebp
-  00040	5d		 pop	 ebp
-  00041	c2 04 00	 ret	 4
+  00057	8b e5		 mov	 esp, ebp
+  00059	5d		 pop	 ebp
+  0005a	c2 04 00	 ret	 4
 ?PrintTime@QPTimer@@QAEXPBD@Z ENDP			; QPTimer::PrintTime
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?ResetAll@QPTimer@@QAEXXZ
 _TEXT	SEGMENT
-_this$ = -4						; size = 4
-?ResetAll@QPTimer@@QAEXXZ PROC				; QPTimer::ResetAll
+?ResetAll@QPTimer@@QAEXXZ PROC				; QPTimer::ResetAll, COMDAT
 ; _this$ = ecx
 
 ; 101  : {
 
-  00000	55		 push	 ebp
-  00001	8b ec		 mov	 ebp, esp
-  00003	51		 push	 ecx
-  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
-  00007	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  0000c	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
-
-; 102  : 	//startTime=0.0;
-; 103  : 	result=0;
-
-  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00014	33 c9		 xor	 ecx, ecx
-  00016	33 d2		 xor	 edx, edx
-  00018	89 48 08	 mov	 DWORD PTR [eax+8], ecx
-  0001b	89 50 0c	 mov	 DWORD PTR [eax+12], edx
-
-; 104  : 	minimumTime= MAX_64BIT_VALUE;
-
-  0001e	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00021	83 c9 ff	 or	 ecx, -1
-  00024	c7 40 18 ff ff
-	ff ff		 mov	 DWORD PTR [eax+24], -1
-  0002b	89 48 1c	 mov	 DWORD PTR [eax+28], ecx
-
-; 105  : 	totalTime=0;
-
-  0002e	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
-  00031	33 c0		 xor	 eax, eax
-  00033	33 c9		 xor	 ecx, ecx
-  00035	89 42 10	 mov	 DWORD PTR [edx+16], eax
-  00038	89 4a 14	 mov	 DWORD PTR [edx+20], ecx
-
-; 106  : 
-; 107  : 	times=0;
-
-  0003b	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
-  0003e	c7 42 28 00 00
-	00 00		 mov	 DWORD PTR [edx+40], 0
-
-; 108  : }
-
-  00045	8b e5		 mov	 esp, ebp
-  00047	5d		 pop	 ebp
-  00048	c3		 ret	 0
+  00000	56		 push	 esi
+  00001	8b f1		 mov	 esi, ecx
+  00003	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
+  00008	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  0000d	c7 46 08 00 00
+	00 00		 mov	 DWORD PTR [esi+8], 0
+  00014	c7 46 0c 00 00
+	00 00		 mov	 DWORD PTR [esi+12], 0
+  0001b	c7 46 18 ff ff
+	ff ff		 mov	 DWORD PTR [esi+24], -1
+  00022	c7 46 1c ff ff
+	ff ff		 mov	 DWORD PTR [esi+28], -1
+  00029	c7 46 10 00 00
+	00 00		 mov	 DWORD PTR [esi+16], 0
+  00030	c7 46 14 00 00
+	00 00		 mov	 DWORD PTR [esi+20], 0
+  00037	c7 46 28 00 00
+	00 00		 mov	 DWORD PTR [esi+40], 0
+  0003e	5e		 pop	 esi
+  0003f	c3		 ret	 0
 ?ResetAll@QPTimer@@QAEXXZ ENDP				; QPTimer::ResetAll
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?Reset@QPTimer@@QAEXXZ
 _TEXT	SEGMENT
-_this$ = -4						; size = 4
-?Reset@QPTimer@@QAEXXZ PROC				; QPTimer::Reset
+?Reset@QPTimer@@QAEXXZ PROC				; QPTimer::Reset, COMDAT
 ; _this$ = ecx
 
 ; 94   : {
 
-  00000	55		 push	 ebp
-  00001	8b ec		 mov	 ebp, esp
-  00003	51		 push	 ecx
-  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
-  00007	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  0000c	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
-
-; 95   : 	//startTime=0.0;
-; 96   : 	result=0;
-
-  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00014	33 c9		 xor	 ecx, ecx
-  00016	33 d2		 xor	 edx, edx
-  00018	89 48 08	 mov	 DWORD PTR [eax+8], ecx
-  0001b	89 50 0c	 mov	 DWORD PTR [eax+12], edx
-
-; 97   : }
-
-  0001e	8b e5		 mov	 esp, ebp
-  00020	5d		 pop	 ebp
-  00021	c3		 ret	 0
+  00000	56		 push	 esi
+  00001	8b f1		 mov	 esi, ecx
+  00003	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
+  00008	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  0000d	c7 46 08 00 00
+	00 00		 mov	 DWORD PTR [esi+8], 0
+  00014	c7 46 0c 00 00
+	00 00		 mov	 DWORD PTR [esi+12], 0
+  0001b	5e		 pop	 esi
+  0001c	c3		 ret	 0
 ?Reset@QPTimer@@QAEXXZ ENDP				; QPTimer::Reset
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?Calibrate@QPTimer@@QAEXXZ
 _TEXT	SEGMENT
-_now$1 = -32						; size = 8
-_r$2 = -24						; size = 8
-_test_times$ = -16					; size = 4
-tv134 = -12						; size = 4
-_i$3 = -8						; size = 4
-_this$ = -4						; size = 4
-?Calibrate@QPTimer@@QAEXXZ PROC				; QPTimer::Calibrate
+_r$1 = -16						; size = 8
+_now$2 = -8						; size = 8
+?Calibrate@QPTimer@@QAEXXZ PROC				; QPTimer::Calibrate, COMDAT
 ; _this$ = ecx
 
 ; 71   : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
-  00003	83 ec 20	 sub	 esp, 32			; 00000020H
-  00006	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00003	83 ec 10	 sub	 esp, 16			; 00000010H
+  00006	56		 push	 esi
+  00007	8b f1		 mov	 esi, ecx
   00009	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  0000e	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
-
-; 72   : 	int test_times=50;
-
-  00013	c7 45 f0 32 00
-	00 00		 mov	 DWORD PTR _test_times$[ebp], 50 ; 00000032H
-
-; 73   : 	overhead= MAX_64BIT_VALUE;
-
-  0001a	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  0001d	83 c9 ff	 or	 ecx, -1
-  00020	c7 40 20 ff ff
-	ff ff		 mov	 DWORD PTR [eax+32], -1
-  00027	89 48 24	 mov	 DWORD PTR [eax+36], ecx
-
-; 74   : 
-; 75   : 	for (int i=0; i<test_times; i++)
-
-  0002a	c7 45 f8 00 00
-	00 00		 mov	 DWORD PTR _i$3[ebp], 0
-  00031	eb 09		 jmp	 SHORT $LN4@Calibrate
-$LN2@Calibrate:
-  00033	8b 55 f8	 mov	 edx, DWORD PTR _i$3[ebp]
-  00036	83 c2 01	 add	 edx, 1
-  00039	89 55 f8	 mov	 DWORD PTR _i$3[ebp], edx
-$LN4@Calibrate:
-  0003c	8b 45 f8	 mov	 eax, DWORD PTR _i$3[ebp]
-  0003f	3b 45 f0	 cmp	 eax, DWORD PTR _test_times$[ebp]
-  00042	7d 65		 jge	 SHORT $LN3@Calibrate
+  0000e	57		 push	 edi
+  0000f	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00014	c7 46 20 ff ff
+	ff ff		 mov	 DWORD PTR [esi+32], -1
+  0001b	bf 32 00 00 00	 mov	 edi, 50			; 00000032H
+  00020	c7 46 24 ff ff
+	ff ff		 mov	 DWORD PTR [esi+36], -1
+$LL4@Calibrate:
 
 ; 76   : 	{
 ; 77   : 		DWORD64 r;
@@ -1929,630 +1801,481 @@ $LN4@Calibrate:
 ; 79   : 
 ; 80   : 		ReadCycles(&startTime);
 
-  00044	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  00047	51		 push	 ecx
-  00048	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  0004b	e8 00 00 00 00	 call	 ?ReadCycles@QPTimer@@AAEXPA_K@Z ; QPTimer::ReadCycles
+  00027	56		 push	 esi
+  00028	8b ce		 mov	 ecx, esi
+  0002a	e8 00 00 00 00	 call	 ?ReadCycles@QPTimer@@AAEXPA_K@Z ; QPTimer::ReadCycles
 
 ; 81   : 		ReadCycles(&now);
 
-  00050	8d 55 e0	 lea	 edx, DWORD PTR _now$1[ebp]
-  00053	52		 push	 edx
-  00054	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  00057	e8 00 00 00 00	 call	 ?ReadCycles@QPTimer@@AAEXPA_K@Z ; QPTimer::ReadCycles
+  0002f	8d 45 f8	 lea	 eax, DWORD PTR _now$2[ebp]
+  00032	8b ce		 mov	 ecx, esi
+  00034	50		 push	 eax
+  00035	e8 00 00 00 00	 call	 ?ReadCycles@QPTimer@@AAEXPA_K@Z ; QPTimer::ReadCycles
 
 ; 82   : 
 ; 83   : 		RestCycles(&r,now,startTime);
 
-  0005c	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  0005f	8b 48 04	 mov	 ecx, DWORD PTR [eax+4]
-  00062	51		 push	 ecx
-  00063	8b 10		 mov	 edx, DWORD PTR [eax]
-  00065	52		 push	 edx
-  00066	8b 45 e4	 mov	 eax, DWORD PTR _now$1[ebp+4]
-  00069	50		 push	 eax
-  0006a	8b 4d e0	 mov	 ecx, DWORD PTR _now$1[ebp]
-  0006d	51		 push	 ecx
-  0006e	8d 55 e8	 lea	 edx, DWORD PTR _r$2[ebp]
-  00071	52		 push	 edx
-  00072	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  00075	e8 00 00 00 00	 call	 ?RestCycles@QPTimer@@AAEXPA_K_K1@Z ; QPTimer::RestCycles
+  0003a	ff 76 04	 push	 DWORD PTR [esi+4]
+  0003d	8d 45 f0	 lea	 eax, DWORD PTR _r$1[ebp]
+  00040	8b ce		 mov	 ecx, esi
+  00042	ff 36		 push	 DWORD PTR [esi]
+  00044	ff 75 fc	 push	 DWORD PTR _now$2[ebp+4]
+  00047	ff 75 f8	 push	 DWORD PTR _now$2[ebp]
+  0004a	50		 push	 eax
+  0004b	e8 00 00 00 00	 call	 ?RestCycles@QPTimer@@AAEXPA_K_K1@Z ; QPTimer::RestCycles
 
 ; 84   : 		
 ; 85   : 		if (overhead > r)
 
-  0007a	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  0007d	89 45 f4	 mov	 DWORD PTR tv134[ebp], eax
-  00080	8b 4d f4	 mov	 ecx, DWORD PTR tv134[ebp]
-  00083	8b 51 24	 mov	 edx, DWORD PTR [ecx+36]
-  00086	3b 55 ec	 cmp	 edx, DWORD PTR _r$2[ebp+4]
-  00089	72 1c		 jb	 SHORT $LN5@Calibrate
-  0008b	77 0b		 ja	 SHORT $LN7@Calibrate
-  0008d	8b 45 f4	 mov	 eax, DWORD PTR tv134[ebp]
-  00090	8b 48 20	 mov	 ecx, DWORD PTR [eax+32]
-  00093	3b 4d e8	 cmp	 ecx, DWORD PTR _r$2[ebp]
-  00096	76 0f		 jbe	 SHORT $LN5@Calibrate
-$LN7@Calibrate:
+  00050	8b 4d f4	 mov	 ecx, DWORD PTR _r$1[ebp+4]
+  00053	39 4e 24	 cmp	 DWORD PTR [esi+36], ecx
+  00056	72 10		 jb	 SHORT $LN2@Calibrate
+  00058	8b 45 f0	 mov	 eax, DWORD PTR _r$1[ebp]
+  0005b	77 05		 ja	 SHORT $LN11@Calibrate
+  0005d	39 46 20	 cmp	 DWORD PTR [esi+32], eax
+  00060	76 06		 jbe	 SHORT $LN2@Calibrate
+$LN11@Calibrate:
 
 ; 86   : 			overhead = r;
 
-  00098	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
-  0009b	8b 45 e8	 mov	 eax, DWORD PTR _r$2[ebp]
-  0009e	8b 4d ec	 mov	 ecx, DWORD PTR _r$2[ebp+4]
-  000a1	89 42 20	 mov	 DWORD PTR [edx+32], eax
-  000a4	89 4a 24	 mov	 DWORD PTR [edx+36], ecx
-$LN5@Calibrate:
+  00062	89 46 20	 mov	 DWORD PTR [esi+32], eax
+  00065	89 4e 24	 mov	 DWORD PTR [esi+36], ecx
+$LN2@Calibrate:
+
+; 72   : 	int test_times=50;
+; 73   : 	overhead= MAX_64BIT_VALUE;
+; 74   : 
+; 75   : 	for (int i=0; i<test_times; i++)
+
+  00068	83 ef 01	 sub	 edi, 1
+  0006b	75 ba		 jne	 SHORT $LL4@Calibrate
 
 ; 87   : 	}
-
-  000a7	eb 8a		 jmp	 SHORT $LN2@Calibrate
-$LN3@Calibrate:
-
 ; 88   : 	ResetAll();
 
-  000a9	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  000ac	e8 00 00 00 00	 call	 ?ResetAll@QPTimer@@QAEXXZ ; QPTimer::ResetAll
+  0006d	8b ce		 mov	 ecx, esi
+  0006f	e8 00 00 00 00	 call	 ?ResetAll@QPTimer@@QAEXXZ ; QPTimer::ResetAll
+  00074	5f		 pop	 edi
+  00075	5e		 pop	 esi
 
 ; 89   : }
 
-  000b1	8b e5		 mov	 esp, ebp
-  000b3	5d		 pop	 ebp
-  000b4	c3		 ret	 0
+  00076	8b e5		 mov	 esp, ebp
+  00078	5d		 pop	 ebp
+  00079	c3		 ret	 0
 ?Calibrate@QPTimer@@QAEXXZ ENDP				; QPTimer::Calibrate
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?Stop@QPTimer@@QAEXXZ
 _TEXT	SEGMENT
-_now$ = -28						; size = 8
-_r$ = -20						; size = 8
-tv179 = -12						; size = 4
-tv178 = -8						; size = 4
-_this$ = -4						; size = 4
-?Stop@QPTimer@@QAEXXZ PROC				; QPTimer::Stop
+_r$ = -12						; size = 8
+_now$ = -12						; size = 8
+_this$1$ = -4						; size = 4
+?Stop@QPTimer@@QAEXXZ PROC				; QPTimer::Stop, COMDAT
 ; _this$ = ecx
 
 ; 51   : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
-  00003	83 ec 1c	 sub	 esp, 28			; 0000001cH
-  00006	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00003	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00006	53		 push	 ebx
+  00007	8b d9		 mov	 ebx, ecx
   00009	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  0000e	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  0000e	56		 push	 esi
+  0000f	89 5d fc	 mov	 DWORD PTR _this$1$[ebp], ebx
+  00012	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00017	8d 45 f4	 lea	 eax, DWORD PTR _now$[ebp]
+  0001a	8b cb		 mov	 ecx, ebx
+  0001c	50		 push	 eax
+  0001d	e8 00 00 00 00	 call	 ?ReadCycles@QPTimer@@AAEXPA_K@Z ; QPTimer::ReadCycles
+  00022	ff 73 04	 push	 DWORD PTR [ebx+4]
+  00025	8d 45 f4	 lea	 eax, DWORD PTR _r$[ebp]
+  00028	8b cb		 mov	 ecx, ebx
+  0002a	ff 33		 push	 DWORD PTR [ebx]
+  0002c	ff 75 f8	 push	 DWORD PTR _now$[ebp+4]
+  0002f	ff 75 f4	 push	 DWORD PTR _now$[ebp]
+  00032	50		 push	 eax
+  00033	e8 00 00 00 00	 call	 ?RestCycles@QPTimer@@AAEXPA_K_K1@Z ; QPTimer::RestCycles
+  00038	ff 73 24	 push	 DWORD PTR [ebx+36]
+  0003b	8d 45 f4	 lea	 eax, DWORD PTR _r$[ebp]
+  0003e	8b cb		 mov	 ecx, ebx
+  00040	ff 73 20	 push	 DWORD PTR [ebx+32]
+  00043	ff 75 f8	 push	 DWORD PTR _r$[ebp+4]
+  00046	ff 75 f4	 push	 DWORD PTR _r$[ebp]
+  00049	50		 push	 eax
+  0004a	e8 00 00 00 00	 call	 ?RestCycles@QPTimer@@AAEXPA_K_K1@Z ; QPTimer::RestCycles
+  0004f	ff 75 f8	 push	 DWORD PTR _r$[ebp+4]
+  00052	8b 75 f4	 mov	 esi, DWORD PTR _r$[ebp]
+  00055	83 c3 08	 add	 ebx, 8
+  00058	8b 4d fc	 mov	 ecx, DWORD PTR _this$1$[ebp]
+  0005b	56		 push	 esi
+  0005c	ff 73 04	 push	 DWORD PTR [ebx+4]
+  0005f	ff 33		 push	 DWORD PTR [ebx]
+  00061	53		 push	 ebx
+  00062	e8 00 00 00 00	 call	 ?AddCycles@QPTimer@@AAEXPA_K_K1@Z ; QPTimer::AddCycles
+  00067	ff 75 f8	 push	 DWORD PTR _r$[ebp+4]
+  0006a	8b 45 fc	 mov	 eax, DWORD PTR _this$1$[ebp]
+  0006d	83 c0 10	 add	 eax, 16			; 00000010H
+  00070	56		 push	 esi
+  00071	8b 75 fc	 mov	 esi, DWORD PTR _this$1$[ebp]
+  00074	8b ce		 mov	 ecx, esi
+  00076	ff 70 04	 push	 DWORD PTR [eax+4]
+  00079	ff 30		 push	 DWORD PTR [eax]
+  0007b	50		 push	 eax
+  0007c	e8 00 00 00 00	 call	 ?AddCycles@QPTimer@@AAEXPA_K_K1@Z ; QPTimer::AddCycles
+  00081	8b 4b 04	 mov	 ecx, DWORD PTR [ebx+4]
+  00084	8b 03		 mov	 eax, DWORD PTR [ebx]
+  00086	39 4e 1c	 cmp	 DWORD PTR [esi+28], ecx
+  00089	72 0d		 jb	 SHORT $LN6@Stop
 
 ; 52   : 	DWORD64 now;
 ; 53   : 	ReadCycles(&now);
-
-  00013	8d 45 e4	 lea	 eax, DWORD PTR _now$[ebp]
-  00016	50		 push	 eax
-  00017	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  0001a	e8 00 00 00 00	 call	 ?ReadCycles@QPTimer@@AAEXPA_K@Z ; QPTimer::ReadCycles
-
 ; 54   : 
 ; 55   : 	DWORD64 r;
 ; 56   : 	RestCycles(&r,now,startTime);
-
-  0001f	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  00022	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
-  00025	52		 push	 edx
-  00026	8b 01		 mov	 eax, DWORD PTR [ecx]
-  00028	50		 push	 eax
-  00029	8b 4d e8	 mov	 ecx, DWORD PTR _now$[ebp+4]
-  0002c	51		 push	 ecx
-  0002d	8b 55 e4	 mov	 edx, DWORD PTR _now$[ebp]
-  00030	52		 push	 edx
-  00031	8d 45 ec	 lea	 eax, DWORD PTR _r$[ebp]
-  00034	50		 push	 eax
-  00035	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  00038	e8 00 00 00 00	 call	 ?RestCycles@QPTimer@@AAEXPA_K_K1@Z ; QPTimer::RestCycles
-
 ; 57   : 	RestCycles(&r,r,overhead);
-
-  0003d	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  00040	8b 51 24	 mov	 edx, DWORD PTR [ecx+36]
-  00043	52		 push	 edx
-  00044	8b 41 20	 mov	 eax, DWORD PTR [ecx+32]
-  00047	50		 push	 eax
-  00048	8b 4d f0	 mov	 ecx, DWORD PTR _r$[ebp+4]
-  0004b	51		 push	 ecx
-  0004c	8b 55 ec	 mov	 edx, DWORD PTR _r$[ebp]
-  0004f	52		 push	 edx
-  00050	8d 45 ec	 lea	 eax, DWORD PTR _r$[ebp]
-  00053	50		 push	 eax
-  00054	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  00057	e8 00 00 00 00	 call	 ?RestCycles@QPTimer@@AAEXPA_K_K1@Z ; QPTimer::RestCycles
-
 ; 58   : 
 ; 59   : 	AddCycles(&result,result,r);
-
-  0005c	8b 4d f0	 mov	 ecx, DWORD PTR _r$[ebp+4]
-  0005f	51		 push	 ecx
-  00060	8b 55 ec	 mov	 edx, DWORD PTR _r$[ebp]
-  00063	52		 push	 edx
-  00064	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00067	8b 48 0c	 mov	 ecx, DWORD PTR [eax+12]
-  0006a	51		 push	 ecx
-  0006b	8b 50 08	 mov	 edx, DWORD PTR [eax+8]
-  0006e	52		 push	 edx
-  0006f	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00072	83 c0 08	 add	 eax, 8
-  00075	50		 push	 eax
-  00076	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  00079	e8 00 00 00 00	 call	 ?AddCycles@QPTimer@@AAEXPA_K_K1@Z ; QPTimer::AddCycles
-
 ; 60   : 
 ; 61   : 	AddCycles(&totalTime,totalTime,r);
-
-  0007e	8b 4d f0	 mov	 ecx, DWORD PTR _r$[ebp+4]
-  00081	51		 push	 ecx
-  00082	8b 55 ec	 mov	 edx, DWORD PTR _r$[ebp]
-  00085	52		 push	 edx
-  00086	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00089	8b 48 14	 mov	 ecx, DWORD PTR [eax+20]
-  0008c	51		 push	 ecx
-  0008d	8b 50 10	 mov	 edx, DWORD PTR [eax+16]
-  00090	52		 push	 edx
-  00091	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00094	83 c0 10	 add	 eax, 16			; 00000010H
-  00097	50		 push	 eax
-  00098	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  0009b	e8 00 00 00 00	 call	 ?AddCycles@QPTimer@@AAEXPA_K_K1@Z ; QPTimer::AddCycles
-
 ; 62   : 
 ; 63   : 	if (minimumTime > result)
 
-  000a0	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  000a3	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
-  000a6	89 4d f8	 mov	 DWORD PTR tv178[ebp], ecx
-  000a9	89 55 f4	 mov	 DWORD PTR tv179[ebp], edx
-  000ac	8b 45 f8	 mov	 eax, DWORD PTR tv178[ebp]
-  000af	8b 4d f4	 mov	 ecx, DWORD PTR tv179[ebp]
-  000b2	8b 50 1c	 mov	 edx, DWORD PTR [eax+28]
-  000b5	3b 51 0c	 cmp	 edx, DWORD PTR [ecx+12]
-  000b8	72 22		 jb	 SHORT $LN2@Stop
-  000ba	77 0e		 ja	 SHORT $LN4@Stop
-  000bc	8b 45 f8	 mov	 eax, DWORD PTR tv178[ebp]
-  000bf	8b 4d f4	 mov	 ecx, DWORD PTR tv179[ebp]
-  000c2	8b 50 18	 mov	 edx, DWORD PTR [eax+24]
-  000c5	3b 51 08	 cmp	 edx, DWORD PTR [ecx+8]
-  000c8	76 12		 jbe	 SHORT $LN2@Stop
+  0008b	77 05		 ja	 SHORT $LN4@Stop
+  0008d	39 46 18	 cmp	 DWORD PTR [esi+24], eax
+  00090	76 06		 jbe	 SHORT $LN6@Stop
 $LN4@Stop:
 
 ; 64   : 			minimumTime = result;
 
-  000ca	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  000cd	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  000d0	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
-  000d3	8b 49 0c	 mov	 ecx, DWORD PTR [ecx+12]
-  000d6	89 50 18	 mov	 DWORD PTR [eax+24], edx
-  000d9	89 48 1c	 mov	 DWORD PTR [eax+28], ecx
-$LN2@Stop:
+  00092	89 46 18	 mov	 DWORD PTR [esi+24], eax
+  00095	89 4e 1c	 mov	 DWORD PTR [esi+28], ecx
+$LN6@Stop:
 
 ; 65   : 
 ; 66   : 	times++;
-
-  000dc	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
-  000df	8b 42 28	 mov	 eax, DWORD PTR [edx+40]
-  000e2	83 c0 01	 add	 eax, 1
-  000e5	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  000e8	89 41 28	 mov	 DWORD PTR [ecx+40], eax
-
 ; 67   : }
 
-  000eb	8b e5		 mov	 esp, ebp
-  000ed	5d		 pop	 ebp
-  000ee	c3		 ret	 0
+  00098	ff 46 28	 inc	 DWORD PTR [esi+40]
+  0009b	5e		 pop	 esi
+  0009c	5b		 pop	 ebx
+  0009d	8b e5		 mov	 esp, ebp
+  0009f	5d		 pop	 ebp
+  000a0	c3		 ret	 0
 ?Stop@QPTimer@@QAEXXZ ENDP				; QPTimer::Stop
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?Start@QPTimer@@QAEXXZ
 _TEXT	SEGMENT
-_this$ = -4						; size = 4
-?Start@QPTimer@@QAEXXZ PROC				; QPTimer::Start
+?Start@QPTimer@@QAEXXZ PROC				; QPTimer::Start, COMDAT
 ; _this$ = ecx
 
 ; 45   : {
 
-  00000	55		 push	 ebp
-  00001	8b ec		 mov	 ebp, esp
-  00003	51		 push	 ecx
-  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
-  00007	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  0000c	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
-
-; 46   : 	ReadCycles(&startTime);
-
-  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00014	50		 push	 eax
-  00015	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  00018	e8 00 00 00 00	 call	 ?ReadCycles@QPTimer@@AAEXPA_K@Z ; QPTimer::ReadCycles
-
-; 47   : }
-
-  0001d	8b e5		 mov	 esp, ebp
-  0001f	5d		 pop	 ebp
-  00020	c3		 ret	 0
+  00000	56		 push	 esi
+  00001	8b f1		 mov	 esi, ecx
+  00003	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
+  00008	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  0000d	56		 push	 esi
+  0000e	8b ce		 mov	 ecx, esi
+  00010	e8 00 00 00 00	 call	 ?ReadCycles@QPTimer@@AAEXPA_K@Z ; QPTimer::ReadCycles
+  00015	5e		 pop	 esi
+  00016	c3		 ret	 0
 ?Start@QPTimer@@QAEXXZ ENDP				; QPTimer::Start
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?NumberOfMeasures@QPTimer@@QAEHXZ
 _TEXT	SEGMENT
-_this$ = -4						; size = 4
-?NumberOfMeasures@QPTimer@@QAEHXZ PROC			; QPTimer::NumberOfMeasures
+?NumberOfMeasures@QPTimer@@QAEHXZ PROC			; QPTimer::NumberOfMeasures, COMDAT
 ; _this$ = ecx
 
 ; 171  : {
 
-  00000	55		 push	 ebp
-  00001	8b ec		 mov	 ebp, esp
-  00003	51		 push	 ecx
-  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
-  00007	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  0000c	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
-
-; 172  : 	return times;
-
-  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00014	8b 40 28	 mov	 eax, DWORD PTR [eax+40]
-
-; 173  : }
-
-  00017	8b e5		 mov	 esp, ebp
-  00019	5d		 pop	 ebp
-  0001a	c3		 ret	 0
+  00000	56		 push	 esi
+  00001	8b f1		 mov	 esi, ecx
+  00003	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
+  00008	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  0000d	8b 46 28	 mov	 eax, DWORD PTR [esi+40]
+  00010	5e		 pop	 esi
+  00011	c3		 ret	 0
 ?NumberOfMeasures@QPTimer@@QAEHXZ ENDP			; QPTimer::NumberOfMeasures
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ??0QPTimer@@QAE@XZ
 _TEXT	SEGMENT
-_this$ = -4						; size = 4
-??0QPTimer@@QAE@XZ PROC					; QPTimer::QPTimer
+??0QPTimer@@QAE@XZ PROC					; QPTimer::QPTimer, COMDAT
 ; _this$ = ecx
 
 ; 32   : {
 
-  00000	55		 push	 ebp
-  00001	8b ec		 mov	 ebp, esp
-  00003	51		 push	 ecx
-  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
-  00007	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  0000c	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
-
-; 33   : 	minimumTime= MAX_64BIT_VALUE;
-
-  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00014	83 c9 ff	 or	 ecx, -1
-  00017	c7 40 18 ff ff
-	ff ff		 mov	 DWORD PTR [eax+24], -1
-  0001e	89 48 1c	 mov	 DWORD PTR [eax+28], ecx
-
-; 34   : 	times=0;
-
-  00021	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
-  00024	c7 42 28 00 00
-	00 00		 mov	 DWORD PTR [edx+40], 0
-
-; 35   : 	overhead= 0;
-
-  0002b	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  0002e	33 c9		 xor	 ecx, ecx
-  00030	33 d2		 xor	 edx, edx
-  00032	89 48 20	 mov	 DWORD PTR [eax+32], ecx
-  00035	89 50 24	 mov	 DWORD PTR [eax+36], edx
-
-; 36   : 	totalTime=0;
-
-  00038	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  0003b	33 c9		 xor	 ecx, ecx
-  0003d	33 d2		 xor	 edx, edx
-  0003f	89 48 10	 mov	 DWORD PTR [eax+16], ecx
-  00042	89 50 14	 mov	 DWORD PTR [eax+20], edx
-
-; 37   : 	Reset();
-
-  00045	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  00048	e8 00 00 00 00	 call	 ?Reset@QPTimer@@QAEXXZ	; QPTimer::Reset
-
-; 38   : 	QPFrequencyHz =  CPU_FREQ_HZ ;
-
-  0004d	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00050	c5 fb 10 05 00
-	00 00 00	 vmovsd	 xmm0, QWORD PTR __real@41e4dc9380000000
-  00058	c5 fb 11 40 30	 vmovsd	 QWORD PTR [eax+48], xmm0
-
-; 39   : 	//QPFrequencyHz = getTickFrequency();
-; 40   : 	DisableOutput=false;
-
-  0005d	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
-  00060	c6 41 38 00	 mov	 BYTE PTR [ecx+56], 0
-
-; 41   : }
-
-  00064	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00067	8b e5		 mov	 esp, ebp
-  00069	5d		 pop	 ebp
-  0006a	c3		 ret	 0
+  00000	56		 push	 esi
+  00001	8b f1		 mov	 esi, ecx
+  00003	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
+  00008	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  0000d	8b ce		 mov	 ecx, esi
+  0000f	c7 46 18 ff ff
+	ff ff		 mov	 DWORD PTR [esi+24], -1
+  00016	c7 46 1c ff ff
+	ff ff		 mov	 DWORD PTR [esi+28], -1
+  0001d	c7 46 28 00 00
+	00 00		 mov	 DWORD PTR [esi+40], 0
+  00024	c7 46 20 00 00
+	00 00		 mov	 DWORD PTR [esi+32], 0
+  0002b	c7 46 24 00 00
+	00 00		 mov	 DWORD PTR [esi+36], 0
+  00032	c7 46 10 00 00
+	00 00		 mov	 DWORD PTR [esi+16], 0
+  00039	c7 46 14 00 00
+	00 00		 mov	 DWORD PTR [esi+20], 0
+  00040	e8 00 00 00 00	 call	 ?Reset@QPTimer@@QAEXXZ	; QPTimer::Reset
+  00045	dd 05 00 00 00
+	00		 fld	 QWORD PTR __real@41e4dc9380000000
+  0004b	8b c6		 mov	 eax, esi
+  0004d	dd 5e 30	 fstp	 QWORD PTR [esi+48]
+  00050	c6 46 38 00	 mov	 BYTE PTR [esi+56], 0
+  00054	5e		 pop	 esi
+  00055	c3		 ret	 0
 ??0QPTimer@@QAE@XZ ENDP					; QPTimer::QPTimer
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?AddCycles@QPTimer@@AAEXPA_K_K1@Z
 _TEXT	SEGMENT
-_this$ = -4						; size = 4
 _c_add$ = 8						; size = 4
 _c_final$ = 12						; size = 8
 _c_init$ = 20						; size = 8
-?AddCycles@QPTimer@@AAEXPA_K_K1@Z PROC			; QPTimer::AddCycles
+?AddCycles@QPTimer@@AAEXPA_K_K1@Z PROC			; QPTimer::AddCycles, COMDAT
 ; _this$ = ecx
 
 ; 226  : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
-  00003	51		 push	 ecx
-  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
-  00007	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  0000c	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00003	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
+  00008	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  0000d	8b 55 0c	 mov	 edx, DWORD PTR _c_final$[ebp]
+  00010	03 55 14	 add	 edx, DWORD PTR _c_init$[ebp]
+  00013	8b 45 08	 mov	 eax, DWORD PTR _c_add$[ebp]
+  00016	8b 4d 10	 mov	 ecx, DWORD PTR _c_final$[ebp+4]
+  00019	13 4d 18	 adc	 ecx, DWORD PTR _c_init$[ebp+4]
+  0001c	89 10		 mov	 DWORD PTR [eax], edx
+  0001e	89 48 04	 mov	 DWORD PTR [eax+4], ecx
 
 ; 227  : 	*c_add=c_final+c_init;
-
-  00011	8b 45 0c	 mov	 eax, DWORD PTR _c_final$[ebp]
-  00014	03 45 14	 add	 eax, DWORD PTR _c_init$[ebp]
-  00017	8b 4d 10	 mov	 ecx, DWORD PTR _c_final$[ebp+4]
-  0001a	13 4d 18	 adc	 ecx, DWORD PTR _c_init$[ebp+4]
-  0001d	8b 55 08	 mov	 edx, DWORD PTR _c_add$[ebp]
-  00020	89 02		 mov	 DWORD PTR [edx], eax
-  00022	89 4a 04	 mov	 DWORD PTR [edx+4], ecx
-
 ; 228  : }
 
-  00025	8b e5		 mov	 esp, ebp
-  00027	5d		 pop	 ebp
-  00028	c2 14 00	 ret	 20			; 00000014H
+  00021	5d		 pop	 ebp
+  00022	c2 14 00	 ret	 20			; 00000014H
 ?AddCycles@QPTimer@@AAEXPA_K_K1@Z ENDP			; QPTimer::AddCycles
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?RestCycles@QPTimer@@AAEXPA_K_K1@Z
 _TEXT	SEGMENT
-_this$ = -4						; size = 4
 _c_dif$ = 8						; size = 4
 _c_final$ = 12						; size = 8
 _c_init$ = 20						; size = 8
-?RestCycles@QPTimer@@AAEXPA_K_K1@Z PROC			; QPTimer::RestCycles
+?RestCycles@QPTimer@@AAEXPA_K_K1@Z PROC			; QPTimer::RestCycles, COMDAT
 ; _this$ = ecx
 
 ; 220  : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
-  00003	51		 push	 ecx
-  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
-  00007	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  0000c	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00003	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
+  00008	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  0000d	8b 55 0c	 mov	 edx, DWORD PTR _c_final$[ebp]
+  00010	2b 55 14	 sub	 edx, DWORD PTR _c_init$[ebp]
+  00013	8b 45 08	 mov	 eax, DWORD PTR _c_dif$[ebp]
+  00016	8b 4d 10	 mov	 ecx, DWORD PTR _c_final$[ebp+4]
+  00019	1b 4d 18	 sbb	 ecx, DWORD PTR _c_init$[ebp+4]
+  0001c	89 10		 mov	 DWORD PTR [eax], edx
+  0001e	89 48 04	 mov	 DWORD PTR [eax+4], ecx
 
 ; 221  : 	*c_dif=c_final-c_init;
-
-  00011	8b 45 0c	 mov	 eax, DWORD PTR _c_final$[ebp]
-  00014	2b 45 14	 sub	 eax, DWORD PTR _c_init$[ebp]
-  00017	8b 4d 10	 mov	 ecx, DWORD PTR _c_final$[ebp+4]
-  0001a	1b 4d 18	 sbb	 ecx, DWORD PTR _c_init$[ebp+4]
-  0001d	8b 55 08	 mov	 edx, DWORD PTR _c_dif$[ebp]
-  00020	89 02		 mov	 DWORD PTR [edx], eax
-  00022	89 4a 04	 mov	 DWORD PTR [edx+4], ecx
-
 ; 222  : 
 ; 223  : }
 
-  00025	8b e5		 mov	 esp, ebp
-  00027	5d		 pop	 ebp
-  00028	c2 14 00	 ret	 20			; 00000014H
+  00021	5d		 pop	 ebp
+  00022	c2 14 00	 ret	 20			; 00000014H
 ?RestCycles@QPTimer@@AAEXPA_K_K1@Z ENDP			; QPTimer::RestCycles
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?PrintTimeSeconds@QPTimer@@AAEXPBDN@Z
 _TEXT	SEGMENT
-_this$ = -4						; size = 4
 _pc$ = 8						; size = 4
 _cycles$ = 12						; size = 8
-?PrintTimeSeconds@QPTimer@@AAEXPBDN@Z PROC		; QPTimer::PrintTimeSeconds
+?PrintTimeSeconds@QPTimer@@AAEXPBDN@Z PROC		; QPTimer::PrintTimeSeconds, COMDAT
 ; _this$ = ecx
 
 ; 213  : {   
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
-  00003	51		 push	 ecx
-  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
-  00007	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  0000c	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00003	56		 push	 esi
+  00004	8b f1		 mov	 esi, ecx
+  00006	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
+  0000b	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00010	dd 45 0c	 fld	 QWORD PTR _cycles$[ebp]
+  00013	dc 76 30	 fdiv	 QWORD PTR [esi+48]
+  00016	68 00 00 00 00	 push	 OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
+  0001b	83 ec 08	 sub	 esp, 8
+  0001e	dd 1c 24	 fstp	 QWORD PTR [esp]
+  00021	ff 75 08	 push	 DWORD PTR _pc$[ebp]
+  00024	ff 35 00 00 00
+	00		 push	 DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+  0002a	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+  0002f	83 c4 08	 add	 esp, 8
+  00032	8b c8		 mov	 ecx, eax
+  00034	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@N@Z
+  0003a	8b c8		 mov	 ecx, eax
+  0003c	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
+  00042	5e		 pop	 esi
 
 ; 214  : 	cout << pc << cycles/QPFrequencyHz << endl;
-
-  00011	68 00 00 00 00	 push	 OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
-  00016	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
-  00019	c5 fb 10 45 0c	 vmovsd	 xmm0, QWORD PTR _cycles$[ebp]
-  0001e	c5 fb 5e 40 30	 vdivsd	 xmm0, xmm0, QWORD PTR [eax+48]
-  00023	83 ec 08	 sub	 esp, 8
-  00026	c5 fb 11 04 24	 vmovsd	 QWORD PTR [esp], xmm0
-  0002b	8b 4d 08	 mov	 ecx, DWORD PTR _pc$[ebp]
-  0002e	51		 push	 ecx
-  0002f	8b 15 00 00 00
-	00		 mov	 edx, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
-  00035	52		 push	 edx
-  00036	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
-  0003b	83 c4 08	 add	 esp, 8
-  0003e	8b c8		 mov	 ecx, eax
-  00040	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@N@Z
-  00046	8b c8		 mov	 ecx, eax
-  00048	ff 15 00 00 00
-	00		 call	 DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
-
 ; 215  : /*	if(pc!=NULL && strlen(pc)>0)
 ; 216  : 		printf("%s",pc);		*/
 ; 217  : }
 
-  0004e	8b e5		 mov	 esp, ebp
-  00050	5d		 pop	 ebp
-  00051	c2 0c 00	 ret	 12			; 0000000cH
+  00043	5d		 pop	 ebp
+  00044	c2 0c 00	 ret	 12			; 0000000cH
 ?PrintTimeSeconds@QPTimer@@AAEXPBDN@Z ENDP		; QPTimer::PrintTimeSeconds
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?PrintCyclesByIteration@QPTimer@@AAEXPBDNH@Z
 _TEXT	SEGMENT
-_this$ = -4						; size = 4
 _pc$ = 8						; size = 4
 _cycles$ = 12						; size = 8
 _NumberOfIterations$ = 20				; size = 4
-?PrintCyclesByIteration@QPTimer@@AAEXPBDNH@Z PROC	; QPTimer::PrintCyclesByIteration
+?PrintCyclesByIteration@QPTimer@@AAEXPBDNH@Z PROC	; QPTimer::PrintCyclesByIteration, COMDAT
 ; _this$ = ecx
 
 ; 205  : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
-  00003	51		 push	 ecx
-  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
-  00007	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  0000c	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
-
-; 206  : 	cout << pc << cycles/(long double)NumberOfIterations << endl;
-
-  00011	68 00 00 00 00	 push	 OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
-  00016	c5 fb 2a 45 14	 vcvtsi2sd xmm0, xmm0, DWORD PTR _NumberOfIterations$[ebp]
-  0001b	c5 fb 10 4d 0c	 vmovsd	 xmm1, QWORD PTR _cycles$[ebp]
-  00020	c5 f3 5e c0	 vdivsd	 xmm0, xmm1, xmm0
-  00024	83 ec 08	 sub	 esp, 8
-  00027	c5 fb 11 04 24	 vmovsd	 QWORD PTR [esp], xmm0
-  0002c	8b 45 08	 mov	 eax, DWORD PTR _pc$[ebp]
-  0002f	50		 push	 eax
-  00030	8b 0d 00 00 00
-	00		 mov	 ecx, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
-  00036	51		 push	 ecx
-  00037	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
-  0003c	83 c4 08	 add	 esp, 8
-  0003f	8b c8		 mov	 ecx, eax
-  00041	ff 15 00 00 00
+  00003	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
+  00008	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  0000d	db 45 14	 fild	 DWORD PTR _NumberOfIterations$[ebp]
+  00010	68 00 00 00 00	 push	 OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
+  00015	83 ec 08	 sub	 esp, 8
+  00018	dc 7d 0c	 fdivr	 QWORD PTR _cycles$[ebp]
+  0001b	dd 1c 24	 fstp	 QWORD PTR [esp]
+  0001e	ff 75 08	 push	 DWORD PTR _pc$[ebp]
+  00021	ff 35 00 00 00
+	00		 push	 DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+  00027	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+  0002c	83 c4 08	 add	 esp, 8
+  0002f	8b c8		 mov	 ecx, eax
+  00031	ff 15 00 00 00
 	00		 call	 DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@O@Z
-  00047	8b c8		 mov	 ecx, eax
-  00049	ff 15 00 00 00
+  00037	8b c8		 mov	 ecx, eax
+  00039	ff 15 00 00 00
 	00		 call	 DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
 
+; 206  : 	cout << pc << cycles/(long double)NumberOfIterations << endl;
 ; 207  : }	
 
-  0004f	8b e5		 mov	 esp, ebp
-  00051	5d		 pop	 ebp
-  00052	c2 10 00	 ret	 16			; 00000010H
+  0003f	5d		 pop	 ebp
+  00040	c2 10 00	 ret	 16			; 00000010H
 ?PrintCyclesByIteration@QPTimer@@AAEXPBDNH@Z ENDP	; QPTimer::PrintCyclesByIteration
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?PrintCycles@QPTimer@@AAEXPBDN@Z
 _TEXT	SEGMENT
-_this$ = -4						; size = 4
 _pc$ = 8						; size = 4
 _cycles$ = 12						; size = 8
-?PrintCycles@QPTimer@@AAEXPBDN@Z PROC			; QPTimer::PrintCycles
+?PrintCycles@QPTimer@@AAEXPBDN@Z PROC			; QPTimer::PrintCycles, COMDAT
 ; _this$ = ecx
 
 ; 198  : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
-  00003	51		 push	 ecx
-  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
-  00007	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  0000c	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
-
-; 199  : 	cout << pc << cycles << endl;
-
-  00011	68 00 00 00 00	 push	 OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
-  00016	83 ec 08	 sub	 esp, 8
-  00019	c5 fb 10 45 0c	 vmovsd	 xmm0, QWORD PTR _cycles$[ebp]
-  0001e	c5 fb 11 04 24	 vmovsd	 QWORD PTR [esp], xmm0
-  00023	8b 45 08	 mov	 eax, DWORD PTR _pc$[ebp]
-  00026	50		 push	 eax
-  00027	8b 0d 00 00 00
-	00		 mov	 ecx, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
-  0002d	51		 push	 ecx
-  0002e	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
-  00033	83 c4 08	 add	 esp, 8
-  00036	8b c8		 mov	 ecx, eax
-  00038	ff 15 00 00 00
+  00003	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
+  00008	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  0000d	dd 45 0c	 fld	 QWORD PTR _cycles$[ebp]
+  00010	68 00 00 00 00	 push	 OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
+  00015	83 ec 08	 sub	 esp, 8
+  00018	dd 1c 24	 fstp	 QWORD PTR [esp]
+  0001b	ff 75 08	 push	 DWORD PTR _pc$[ebp]
+  0001e	ff 35 00 00 00
+	00		 push	 DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+  00024	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+  00029	83 c4 08	 add	 esp, 8
+  0002c	8b c8		 mov	 ecx, eax
+  0002e	ff 15 00 00 00
 	00		 call	 DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@N@Z
-  0003e	8b c8		 mov	 ecx, eax
-  00040	ff 15 00 00 00
+  00034	8b c8		 mov	 ecx, eax
+  00036	ff 15 00 00 00
 	00		 call	 DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
 
+; 199  : 	cout << pc << cycles << endl;
 ; 200  : }	
 
-  00046	8b e5		 mov	 esp, ebp
-  00048	5d		 pop	 ebp
-  00049	c2 0c 00	 ret	 12			; 0000000cH
+  0003c	5d		 pop	 ebp
+  0003d	c2 0c 00	 ret	 12			; 0000000cH
 ?PrintCycles@QPTimer@@AAEXPBDN@Z ENDP			; QPTimer::PrintCycles
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
+;	COMDAT ?ReadCycles@QPTimer@@AAEXPA_K@Z
 _TEXT	SEGMENT
-_dummy$ = -8						; size = 4
-_this$ = -4						; size = 4
 _cycles$ = 8						; size = 4
-?ReadCycles@QPTimer@@AAEXPA_K@Z PROC			; QPTimer::ReadCycles
+?ReadCycles@QPTimer@@AAEXPA_K@Z PROC			; QPTimer::ReadCycles, COMDAT
 ; _this$ = ecx
 
 ; 180  : {
 
   00000	55		 push	 ebp
   00001	8b ec		 mov	 ebp, esp
-  00003	83 ec 08	 sub	 esp, 8
-  00006	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
-  00009	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  0000e	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  00003	51		 push	 ecx
+  00004	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
+  00009	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
+  0000e	0f 01 f9	 rdtscp
+  00011	8b 4d 08	 mov	 ecx, DWORD PTR _cycles$[ebp]
+  00014	89 01		 mov	 DWORD PTR [ecx], eax
+  00016	89 51 04	 mov	 DWORD PTR [ecx+4], edx
 
 ; 181  : 	unsigned int dummy;
 ; 182  : 
 ; 183  : 	*cycles = __rdtscp(&dummy);
-
-  00013	0f 01 f9	 rdtscp
-  00016	89 4d f8	 mov	 DWORD PTR _dummy$[ebp], ecx
-  00019	8b 4d 08	 mov	 ecx, DWORD PTR _cycles$[ebp]
-  0001c	89 01		 mov	 DWORD PTR [ecx], eax
-  0001e	89 51 04	 mov	 DWORD PTR [ecx+4], edx
-
 ; 184  : }
 
-  00021	8b e5		 mov	 esp, ebp
-  00023	5d		 pop	 ebp
-  00024	c2 04 00	 ret	 4
+  00019	8b e5		 mov	 esp, ebp
+  0001b	5d		 pop	 ebp
+  0001c	c2 04 00	 ret	 4
 ?ReadCycles@QPTimer@@AAEXPA_K@Z ENDP			; QPTimer::ReadCycles
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
 ;	COMDAT ?__empty_global_delete@@YAXPAXI@Z
 _TEXT	SEGMENT
 ___formal$ = 8						; size = 4
 ___formal$ = 12						; size = 4
 ?__empty_global_delete@@YAXPAXI@Z PROC			; __empty_global_delete, COMDAT
-
-  00000	55		 push	 ebp
-  00001	8b ec		 mov	 ebp, esp
-  00003	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  00008	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
-  0000d	5d		 pop	 ebp
-  0000e	c3		 ret	 0
+  00000	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
+  00005	e9 00 00 00 00	 jmp	 @__CheckForDebuggerJustMyCode@4
 ?__empty_global_delete@@YAXPAXI@Z ENDP			; __empty_global_delete
 _TEXT	ENDS
-; Function compile flags: /Odtp
+; Function compile flags: /Ogtp
 ; File C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\QueryPerformanceTiming_rdtsc.cpp
 ;	COMDAT ?__empty_global_delete@@YAXPAX@Z
 _TEXT	SEGMENT
 ___formal$ = 8						; size = 4
 ?__empty_global_delete@@YAXPAX@Z PROC			; __empty_global_delete, COMDAT
-
-  00000	55		 push	 ebp
-  00001	8b ec		 mov	 ebp, esp
-  00003	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
-  00008	e8 00 00 00 00	 call	 @__CheckForDebuggerJustMyCode@4
-  0000d	5d		 pop	 ebp
-  0000e	c3		 ret	 0
+  00000	b9 00 00 00 00	 mov	 ecx, OFFSET __A1AF8DEF_QueryPerformanceTiming_rdtsc@cpp
+  00005	e9 00 00 00 00	 jmp	 @__CheckForDebuggerJustMyCode@4
 ?__empty_global_delete@@YAXPAX@Z ENDP			; __empty_global_delete
 _TEXT	ENDS
 END

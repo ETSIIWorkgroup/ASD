@@ -1,1 +1,7 @@
-﻿
+﻿  p3c_rdtsc.cpp
+  QueryPerformanceTiming_rdtsc.cpp
+  Generando código
+  Previous IPDB not found, fall back to full compilation.
+  All 33 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  p3b.vcxproj -> C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\I. 3C - Límites ILP\p3c_presentacion_alumnos_VS2103_RDTSC\Release\p3c.exe

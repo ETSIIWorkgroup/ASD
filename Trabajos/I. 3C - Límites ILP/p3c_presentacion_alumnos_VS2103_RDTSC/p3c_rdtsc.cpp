@@ -38,14 +38,28 @@ using namespace std;
 #include "QueryPerformanceTiming_rdtsc.h"
 
 #define  N_REPETIC 256
-// Repeat several times each test to extract the minimum time
-// and to have the caches filled
+// Repetir múltiples veces para sacar el valor mínimo y llenar las cachés
 
-#define  N_ELEM (1024*2)
-// Big number to have a mean time (but not very big to avoid cache misses) 
+//#define  N_ELEM (1024*2)
+// Tamaño de vectores suficientemente grandes para tener un tiempo medio pero NO tener fallos de caché
 
-//#define N_ELEM (1024*512)
+#define N_ELEM (1024*1024)
 // Tamaño de vectores mucho más grande para pruebas
+/*
+ Un float son 4 bytes; entonces, 1024 · 2 · 4 = 8192 bytes. Si las cachés son de:
+	
+	PC I
+	- L1 6x32KB (196608B) > Habría que saturarlo con 1024*60*4
+	- L2 6x256KB (1572864B) > Habría que saturarlo con 1024*500*4
+	- L3 12MB (12*10^6B) > Habría que saturarlo con 1024*4096*4
+	- RAM 16GB (16*10^9B)
+
+	PC II
+	- L1 2x32KB (65536B) > Habría que saturarlo con 1024*25*4
+	- L2 2x256KB (524288B) > Habría que saturarlo con 1024*500*4
+	- L3 4MB (4*10^6B) > Habría que saturarlo con 1024*1024*4
+	- RAM 4GB (4*10^9B) 
+*/
 
 __declspec(align(64)) int a_int[N_ELEM ], b_int[N_ELEM ];
 
@@ -58,6 +72,7 @@ float z;
 __declspec(align(64)) int cond1[N_ELEM ], cond2[N_ELEM ], cond3[N_ELEM ];
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 void vectors_init ()
 {
 	int i;
@@ -102,25 +117,27 @@ void vectors_init ()
 			* Vectores normales
 				-> Instrucciones /SSE:
 				-> Instrucciones /IA32:
-			* Vectores grandes:
 		- /Od
 			* Vectores normales
 				-> Instrucciones /SSE:
 				-> Instrucciones /IA32:
-			* Vectores grandes:
+		- Vectores grandes (/O2 /SSE): 
+				-> L1:
+				-> L2:
+				-> L3:
 	PC II
 		- /O2 
 			* Vectores normales
-				-> Instrucciones /SSE: 3.45996 ciclos
-				-> Instrucciones /IA32: 3.45996 ciclos
-			* Vectores grandes:
-				-> Instrucciones /SSE: ciclos
-				-> Instrucciones /IA32: 
+				-> Instrucciones /SSE: 3.46094 ciclos - 2.53143e-06 segundos
+				-> Instrucciones /IA32: 3.45996 ciclos - 2.53071e-06 segundos
 		- /Od
 			* Vectores normales
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
-			* Vectores grandes:
+				-> Instrucciones /SSE: 3.45898 ciclos - 2.53e-06 segundos
+				-> Instrucciones /IA32: 3.45801 ciclos - 2.52929e-06 segundos
+		- Vectores grandes (/O2 /SSE):
+				-> L1: 3.86992 ciclos - 3.53821e-05 segundos
+				-> L2: 3.7221 ciclos - 0.000680613 segundos
+				-> L3: 4.1539 ciclos - 0.0015556 segundos
 */
 float problemA ()
 {
@@ -142,25 +159,27 @@ float problemA ()
 			* Vectores normales
 				-> Instrucciones /SSE:
 				-> Instrucciones /IA32:
-			* Vectores grandes:
 		- /Od
 			* Vectores normales
 				-> Instrucciones /SSE:
 				-> Instrucciones /IA32:
-			* Vectores grandes:
+		- Vectores grandes (/O2 /SSE):
+				-> L1:
+				-> L2:
+				-> L3:
 	PC II
 		- /O2
 			* Vectores normales
-				-> Instrucciones /SSE: 3.46484 ciclos
-				-> Instrucciones /IA32: 3.46191 ciclos
-			* Vectores grandes:
-				-> Instrucciones /SSE: ciclos
-				-> Instrucciones /IA32:
+				-> Instrucciones /SSE: 3.46484 ciclos - 2.53429e-06 segundos
+				-> Instrucciones /IA32: 3.46191 ciclos - 2.53214e-06 segundos
 		- /Od
 			* Vectores normales
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
-			* Vectores grandes:
+				-> Instrucciones /SSE: 3.46387 ciclos - 2.53357e-06 segundos
+				-> Instrucciones /IA32: 3.46191 ciclos - 2.53214e-06 segundos
+		- Vectores grandes (/O2 /SSE):
+				-> L1: 3.35359 ciclos - 3.06614e-05 segundos
+				-> L2: 3.37059 ciclos - 0.000616337 segundos
+				-> L3: 3.38062 ciclos - 0.00126601 segundos
 */
 float problemB ()
 {
@@ -186,25 +205,27 @@ float problemB ()
 			* Vectores normales
 				-> Instrucciones /SSE:
 				-> Instrucciones /IA32:
-			* Vectores grandes:
 		- /Od
 			* Vectores normales
 				-> Instrucciones /SSE:
 				-> Instrucciones /IA32:
-			* Vectores grandes:
+		- Vectores grandes (/O2 /SSE):
+				-> L1:
+				-> L2:
+				-> L3:
 	PC II
 		- /O2
 			* Vectores normales
-				-> Instrucciones /SSE: 3.47266 ciclos
-				-> Instrucciones /IA32: 3.47168 ciclos
-			* Vectores grandes:
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
+				-> Instrucciones /SSE: 3.47461 ciclos - 2.54143e-06 segundos 
+				-> Instrucciones /IA32: 3.40039 ciclos - 2.48714e-06 segundos
 		- /Od
 			* Vectores normales
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
-			* Vectores grandes:
+				-> Instrucciones /SSE: 3.40234 ciclos - 2.48857e-06 segundos
+				-> Instrucciones /IA32: 3.47266 ciclos - 2.54e-06 segundos
+		- Vectores grandes (/O2 /SSE): 
+				-> L1: 3.3618 ciclos - 3.07364e-05 segundos
+				-> L2: 4.25164 ciclos - 0.000777444 segundos
+				-> L3: 4.23906 ciclos - 0.00158749 segundos
 */
 float problemC ()
 {
@@ -234,25 +255,27 @@ float problemC ()
 			* Vectores normales
 				-> Instrucciones /SSE: 
 				-> Instrucciones /IA32:
-			* Vectores grandes:
 		- /Od
 			* Vectores normales
 				-> Instrucciones /SSE:
 				-> Instrucciones /IA32:
-			* Vectores grandes:
+		- Vectores grandes (/O2 /SSE):
+				-> L1:
+				-> L2:
+				-> L3:
 	PC II
 		- /O2
 			* Vectores normales
-				-> Instrucciones /SSE: 3.4707 ciclos
-				-> Instrucciones /IA32: 3.36133 ciclos
-			* Vectores grandes:
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
+				-> Instrucciones /SSE: 3.41309 ciclos - 2.49643e-06 segundos
+				-> Instrucciones /IA32: 3.38184 ciclos - 2.47357e-06 segundos
 		- /Od
 			* Vectores normales
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
-			* Vectores grandes:
+				-> Instrucciones /SSE: 3.41504 ciclos - 2.49786e-06 segundos
+				-> Instrucciones /IA32: 3.47168 ciclos - 2.53929e-06 segundos
+		- Vectores grandes (/O2 /SSE):
+				-> L1: 3.36023 ciclos - 3.07221e-05 segundos
+				-> L2: 3.89562 ciclos - 0.000712343 segundos
+				-> L3: 3.91309 ciclos - 0.00146542 segundos
 */
 float problemD1 ()
 {
@@ -282,25 +305,27 @@ float problemD1 ()
 			* Vectores normales
 				-> Instrucciones /SSE:
 				-> Instrucciones /IA32:
-			* Vectores grandes:
 		- /Od
 			* Vectores normales
 				-> Instrucciones /SSE:
 				-> Instrucciones /IA32:
-			* Vectores grandes:
+		- Vectores grandes (/O2 /SSE):
+				-> L1:
+				-> L2:
+				-> L3:
 	PC II
 		- /O2
 			* Vectores normales
-				-> Instrucciones /SSE: 3.35938 ciclos
-				-> Instrucciones /IA32: 3.35645 ciclos
-			* Vectores grandes:
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
+				-> Instrucciones /SSE: 3.36035 ciclos - 2.45786e-06 segundos
+				-> Instrucciones /IA32: 3.3916 ciclos - 2.48071e-06 segundos
 		- /Od
 			* Vectores normales
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
-			* Vectores grandes:
+				-> Instrucciones /SSE: 3.47266 ciclos - 2.54e-06 segundos
+				-> Instrucciones /IA32: 3.46973 ciclos - 2.53786e-06 segundos
+		- Vectores grandes (/O2 /SSE):
+				-> L1: 3.36141 ciclos - 3.07329e-05 segundos
+				-> L2: 4.06821 ciclos - 0.000743902 segundos
+				-> L3: 4.16774 ciclos - 0.00156078 segundos
 */
 float problemD2()
 {
@@ -329,25 +354,27 @@ float problemD2()
 			* Vectores normales
 				-> Instrucciones /SSE:
 				-> Instrucciones /IA32:
-			* Vectores grandes:
 		- /Od
 			* Vectores normales
 				-> Instrucciones /SSE:
 				-> Instrucciones /IA32:
-			* Vectores grandes:
+		- Vectores grandes (/O2 /SSE):
+				-> L1:
+				-> L2:
+				-> L3:
 	PC II
 		- /O2
 			* Vectores normales
-				-> Instrucciones /SSE: 1.02344 ciclos
-				-> Instrucciones /IA32: 1.27148 ciclos
-			* Vectores grandes:
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
+				-> Instrucciones /SSE: 1.01465 ciclos - 7.42143e-07 segundos
+				-> Instrucciones /IA32: 1.02539 ciclos - 7.5e-07 segundos
 		- /Od
 			* Vectores normales
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
-			* Vectores grandes:
+				-> Instrucciones /SSE: 1.00391 ciclos - 7.34286e-07 segundos
+				-> Instrucciones /IA32: 0.998047 ciclos - 7.3e-07 segundos
+		- Vectores grandes (/O2 /SSE): 
+				-> L1: 1.12234 ciclos - 1.02614e-05 segundos
+				-> L2: 2.69023 ciclos - 0.000491927 segundos
+				-> L3: 2.68793 ciclos - 0.00100661 segundos
 */
 float example ()
 {
@@ -454,10 +481,8 @@ int main( int argc, char** argv ) {
 	cout << "-Number of measures problemD2: " << c6.NumberOfMeasures() << endl;
 	cout << endl;
 
-	// uncomment this if more timing results were needed:
-	/*c1.PrintMinimumTime   (" Minimum time in seconds for example is:   ");
-	c1.PrintMeanTime      (" Mean time in seconds    for example is:   ");
-
+	// Otras mediciones posibles:
+	/*
 	c2.PrintMinimumCycles (" Minimum time in cycles for problem  is:   ");
 	c2.PrintMeanCycles    (" Mean time in cycles for problem is    :   ");
 	*/
@@ -469,32 +494,32 @@ int main( int argc, char** argv ) {
 	cout << endl;
 
 	c2.PrintMinimumCyclesByIteration  (" Minimum time in cycles for an element of 'problem A' is: ", N_ELEM);
-	c2.PrintMinimumTime(" Minimum time in seconds for example is:   ");
-	c2.PrintMeanTime(" Mean time in seconds for example is:   ");
+	c2.PrintMinimumTime(" Minimum time in seconds for problem A is:   ");
+	c2.PrintMeanTime(" Mean time in seconds for problem A is:   ");
 	cout << endl;
 	cout << endl;
 
 	c3.PrintMinimumCyclesByIteration(" Minimum time in cycles for an element of 'problem B' is: ", N_ELEM);
-	c3.PrintMinimumTime(" Minimum time in seconds for example is:   ");
-	c3.PrintMeanTime(" Mean time in seconds for example is:   ");
+	c3.PrintMinimumTime(" Minimum time in seconds for problem B is:   ");
+	c3.PrintMeanTime(" Mean time in seconds for problem B is:   ");
 	cout << endl;
 	cout << endl;
 
 	c4.PrintMinimumCyclesByIteration(" Minimum time in cycles for an element of 'problem C' is: ", N_ELEM);
-	c4.PrintMinimumTime(" Minimum time in seconds for example is:   ");
-	c4.PrintMeanTime(" Mean time in seconds for example is:   ");
+	c4.PrintMinimumTime(" Minimum time in seconds for problem C is:   ");
+	c4.PrintMeanTime(" Mean time in seconds for problem C is:   ");
 	cout << endl;
 	cout << endl;
 
 	c5.PrintMinimumCyclesByIteration(" Minimum time in cycles for an element of 'problem D1' is: ", N_ELEM);
-	c5.PrintMinimumTime(" Minimum time in seconds for example is:   ");
-	c5.PrintMeanTime(" Mean time in seconds for example is:   ");
+	c5.PrintMinimumTime(" Minimum time in seconds for problem D1 is:   ");
+	c5.PrintMeanTime(" Mean time in seconds for problem D1 is:   ");
 	cout << endl;
 	cout << endl;
 
 	c6.PrintMinimumCyclesByIteration(" Minimum time in cycles for an element of 'problem D2' is: ", N_ELEM);
-	c6.PrintMinimumTime(" Minimum time in seconds for example is:   ");
-	c6.PrintMeanTime(" Mean time in seconds for example is:   ");
+	c6.PrintMinimumTime(" Minimum time in seconds for problem D2  is:   ");
+	c6.PrintMeanTime(" Mean time in seconds for problem D2 is:   ");
 	cout << endl;
 	cout << endl;
 

@@ -41,10 +41,10 @@ using namespace std;
 // Repeat several times each test to extract the minimum time
 // and to have the caches filled
 
-//#define  N_ELEM (1024*2)
+#define  N_ELEM (1024*2)
 // Big number to have a mean time (but not very big to avoid cache misses) 
 
-#define N_ELEM (1024*512)
+//#define N_ELEM (1024*512)
 // Tamaño de vectores mucho más grande para pruebas
 
 __declspec(align(64)) int a_int[N_ELEM ], b_int[N_ELEM ];
@@ -447,11 +447,11 @@ int main( int argc, char** argv ) {
 
 	cout << "-Number of elements N_ELEM: " << N_ELEM << endl;
 	cout << "-Number of measures example: " << c1.NumberOfMeasures() << endl;
-	cout << "-Number of measures problem: " << c2.NumberOfMeasures() << endl;
-	cout << "-Number of measures problem: " << c3.NumberOfMeasures() << endl;
-	cout << "-Number of measures problem: " << c4.NumberOfMeasures() << endl;
-	cout << "-Number of measures problem: " << c5.NumberOfMeasures() << endl;
-	cout << "-Number of measures problem: " << c6.NumberOfMeasures() << endl;
+	cout << "-Number of measures problemA: " << c2.NumberOfMeasures() << endl;
+	cout << "-Number of measures problemB: " << c3.NumberOfMeasures() << endl;
+	cout << "-Number of measures problemC: " << c4.NumberOfMeasures() << endl;
+	cout << "-Number of measures problemD1: " << c5.NumberOfMeasures() << endl;
+	cout << "-Number of measures problemD2: " << c6.NumberOfMeasures() << endl;
 	cout << endl;
 
 	// uncomment this if more timing results were needed:

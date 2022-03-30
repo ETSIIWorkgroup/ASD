@@ -40,10 +40,10 @@ using namespace std;
 #define  N_REPETIC 256
 // Repetir múltiples veces para sacar el valor mínimo y llenar las cachés
 
-//#define  N_ELEM (1024*2)
-// Tamaño de vectores suficientemente grandes para tener un tiempo medio pero NO tener fallos de caché
+#define  N_ELEM (1024*2)
+// Tamaño de vectores suficientemente grande para tener un tiempo medio pero NO tener fallos de caché
 
-#define N_ELEM (1024*1024)
+//#define N_ELEM (1024*1024)
 // Tamaño de vectores mucho más grande para pruebas
 /*
  Un float son 4 bytes; entonces, 1024 · 2 · 4 = 8192 bytes. Si las cachés son de:
@@ -115,16 +115,16 @@ void vectors_init ()
 	PC I
 		- /O2
 			* Vectores normales
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
+				-> Instrucciones /SSE: 3.14844 ciclos - 2.30286e-06 segundos 
+				-> Instrucciones /IA32: 3.24316 ciclos - 2.37214e-06 segundos
 		- /Od
 			* Vectores normales
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
+				-> Instrucciones /SSE: 2.96582 ciclos - 2.16929e-06 segundos
+				-> Instrucciones /IA32: 3.24414 ciclos - 2.37286e-06 segundos
 		- Vectores grandes (/O2 /SSE): 
-				-> L1:
-				-> L2:
-				-> L3:
+				-> L1: 2.96904 ciclos - 6.51493e-05 segundos
+				-> L2: 2.95112 ciclos - 0.000539634 segundos
+				-> L3: 3.02621 ciclos - 0.00453316 segundos
 	PC II
 		- /O2 
 			* Vectores normales
@@ -157,16 +157,16 @@ float problemA ()
 	PC I
 		- /O2
 			* Vectores normales
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
+				-> Instrucciones /SSE: 2.96973 ciclos - 2.17214e-06 segundos
+				-> Instrucciones /IA32: 3.05566 ciclos - 2.235e-06 segundos
 		- /Od
 			* Vectores normales
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
+				-> Instrucciones /SSE: 2.9668 ciclos - 2.16929e-06 segundos
+				-> Instrucciones /IA32: 2.9668 ciclos - 2.17e-06 segundos
 		- Vectores grandes (/O2 /SSE):
-				-> L1:
-				-> L2:
-				-> L3:
+				-> L1: 2.96943 ciclos - 6.51579e-05 segundos
+				-> L2: 3.15949 ciclos - 0.000577736 segundos
+				-> L3: 3.27762 ciclos - 0.00490977 segundos
 	PC II
 		- /O2
 			* Vectores normales
@@ -203,16 +203,16 @@ float problemB ()
 	PC I
 		- /O2
 			* Vectores normales
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
+				-> Instrucciones /SSE: 2.97754 ciclos - 2.17786e-06 segundos
+				-> Instrucciones /IA32: 2.97656 ciclos - 2.17714e-06 segundos
 		- /Od
 			* Vectores normales
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
+				-> Instrucciones /SSE: 2.97852 ciclos - 2.17857e-06 segundos
+				-> Instrucciones /IA32: 2.97656 ciclos - 2.17714e-06 segundos
 		- Vectores grandes (/O2 /SSE):
-				-> L1:
-				-> L2:
-				-> L3:
+				-> L1: 2.91406 ciclos - 6.39429e-05 segundos
+				-> L2: 3.34541 ciclos - 0.000611733 segundos
+				-> L3: 3.52593 ciclos - 0.00528173 segundos
 	PC II
 		- /O2
 			* Vectores normales
@@ -253,16 +253,16 @@ float problemC ()
 	PC I
 		- /O2
 			* Vectores normales
-				-> Instrucciones /SSE: 
-				-> Instrucciones /IA32:
+				-> Instrucciones /SSE: 2.97461 ciclos - 2.17571e-06 segundos
+				-> Instrucciones /IA32: 2.97656 ciclos - 2.17714e-06 segundos
 		- /Od
 			* Vectores normales
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
+				-> Instrucciones /SSE: 2.97754 ciclos - 2.17786e-06 segundos
+				-> Instrucciones /IA32: 2.97754 ciclos - 2.17786e-06 segundos
 		- Vectores grandes (/O2 /SSE):
-				-> L1:
-				-> L2:
-				-> L3:
+				-> L1: 2.91781 ciclos - 6.4025e-05 segundos
+				-> L2: 3.28757 ciclos - 0.000601156 segundos
+				-> L3: 3.40077 ciclos - 0.00509423 segundos
 	PC II
 		- /O2
 			* Vectores normales
@@ -303,16 +303,16 @@ float problemD1 ()
 	PC I
 		- /O2
 			* Vectores normales
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
+				-> Instrucciones /SSE: 2.97559 ciclos - 2.17643e-06 segundos
+				-> Instrucciones /IA32: 2.97266 ciclos - 2.17429e-06 segundos
 		- /Od
 			* Vectores normales
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
+				-> Instrucciones /SSE: 2.97363 ciclos - 2.175e-06 segundos
+				-> Instrucciones /IA32: 2.97461 ciclos - 2.97461 segundos
 		- Vectores grandes (/O2 /SSE):
-				-> L1:
-				-> L2:
-				-> L3:
+				-> L1: 2.90999 ciclos - 6.38536e-05 segundos
+				-> L2: 3.29595 ciclos - 0.000602689 segundos
+				-> L3: 3.5364 ciclos - 3.5364 segundos
 	PC II
 		- /O2
 			* Vectores normales
@@ -352,16 +352,16 @@ float problemD2()
 	PC I
 		- /O2
 			* Vectores normales
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
+				-> Instrucciones /SSE: 0.90332 ciclos - 6.60714e-07 segundos
+				-> Instrucciones /IA32: 0.966797 ciclos - 7.07143e-07 segundos
 		- /Od
 			* Vectores normales
-				-> Instrucciones /SSE:
-				-> Instrucciones /IA32:
+				-> Instrucciones /SSE: 0.916992 ciclos - 6.70714e-07 segundos
+				-> Instrucciones /IA32: 0.935547 ciclos - 0.935547 segundos
 		- Vectores grandes (/O2 /SSE):
-				-> L1:
-				-> L2:
-				-> L3:
+				-> L1: 0.990853 ciclos - 2.17421e-05 segundos
+				-> L2: 1.70118 ciclos - 0.000311072 segundos
+				-> L3: 1.99127 ciclos - 0.00298285 segundos
 	PC II
 		- /O2
 			* Vectores normales

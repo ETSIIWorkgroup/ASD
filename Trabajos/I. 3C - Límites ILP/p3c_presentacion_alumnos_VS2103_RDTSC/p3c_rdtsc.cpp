@@ -40,10 +40,10 @@ using namespace std;
 #define  N_REPETIC 256
 // Repetir múltiples veces para sacar el valor mínimo y llenar las cachés
 
-#define  N_ELEM (1024*2)
+//#define  N_ELEM (1024*2)
 // Tamaño de vectores suficientemente grande para tener un tiempo medio pero NO tener fallos de caché
 
-//#define N_ELEM (1024*1024)
+#define N_ELEM (1024*1024)
 // Tamaño de vectores mucho más grande para pruebas
 /*
  Un float son 4 bytes; entonces, 1024 · 2 · 4 = 8192 bytes. Si las cachés son de:
@@ -111,34 +111,6 @@ void vectors_init ()
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // a. Una suma por iteración
-/*
-	PC I
-		- /O2
-			* Vectores normales
-				-> Instrucciones /SSE: 3.14844 ciclos - 2.30286e-06 segundos 
-				-> Instrucciones /IA32: 3.24316 ciclos - 2.37214e-06 segundos
-		- /Od
-			* Vectores normales
-				-> Instrucciones /SSE: 2.96582 ciclos - 2.16929e-06 segundos
-				-> Instrucciones /IA32: 3.24414 ciclos - 2.37286e-06 segundos
-		- Vectores grandes (/O2 /SSE): 
-				-> L1: 2.96904 ciclos - 6.51493e-05 segundos
-				-> L2: 2.95112 ciclos - 0.000539634 segundos
-				-> L3: 3.02621 ciclos - 0.00453316 segundos
-	PC II
-		- /O2 
-			* Vectores normales
-				-> Instrucciones /SSE: 3.46094 ciclos - 2.53143e-06 segundos
-				-> Instrucciones /IA32: 3.45996 ciclos - 2.53071e-06 segundos
-		- /Od
-			* Vectores normales
-				-> Instrucciones /SSE: 3.45898 ciclos - 2.53e-06 segundos
-				-> Instrucciones /IA32: 3.45801 ciclos - 2.52929e-06 segundos
-		- Vectores grandes (/O2 /SSE):
-				-> L1: 3.86992 ciclos - 3.53821e-05 segundos
-				-> L2: 3.7221 ciclos - 0.000680613 segundos
-				-> L3: 4.1539 ciclos - 0.0015556 segundos
-*/
 float problemA ()
 {
 	int  i;
@@ -153,34 +125,6 @@ float problemA ()
 }
 
 // b. Dos sumas por iteración
-/*
-	PC I
-		- /O2
-			* Vectores normales
-				-> Instrucciones /SSE: 2.96973 ciclos - 2.17214e-06 segundos
-				-> Instrucciones /IA32: 3.05566 ciclos - 2.235e-06 segundos
-		- /Od
-			* Vectores normales
-				-> Instrucciones /SSE: 2.9668 ciclos - 2.16929e-06 segundos
-				-> Instrucciones /IA32: 2.9668 ciclos - 2.17e-06 segundos
-		- Vectores grandes (/O2 /SSE):
-				-> L1: 2.96943 ciclos - 6.51579e-05 segundos
-				-> L2: 3.15949 ciclos - 0.000577736 segundos
-				-> L3: 3.27762 ciclos - 0.00490977 segundos
-	PC II
-		- /O2
-			* Vectores normales
-				-> Instrucciones /SSE: 3.46484 ciclos - 2.53429e-06 segundos
-				-> Instrucciones /IA32: 3.46191 ciclos - 2.53214e-06 segundos
-		- /Od
-			* Vectores normales
-				-> Instrucciones /SSE: 3.46387 ciclos - 2.53357e-06 segundos
-				-> Instrucciones /IA32: 3.46191 ciclos - 2.53214e-06 segundos
-		- Vectores grandes (/O2 /SSE):
-				-> L1: 3.35359 ciclos - 3.06614e-05 segundos
-				-> L2: 3.37059 ciclos - 0.000616337 segundos
-				-> L3: 3.38062 ciclos - 0.00126601 segundos
-*/
 float problemB ()
 {
 	int  i;
@@ -199,34 +143,6 @@ float problemB ()
 }
 
 // c. Suma condicional - Dificilmente Predecible 
-/*
-	PC I
-		- /O2
-			* Vectores normales
-				-> Instrucciones /SSE: 2.97754 ciclos - 2.17786e-06 segundos
-				-> Instrucciones /IA32: 2.97656 ciclos - 2.17714e-06 segundos
-		- /Od
-			* Vectores normales
-				-> Instrucciones /SSE: 2.97852 ciclos - 2.17857e-06 segundos
-				-> Instrucciones /IA32: 2.97656 ciclos - 2.17714e-06 segundos
-		- Vectores grandes (/O2 /SSE):
-				-> L1: 2.91406 ciclos - 6.39429e-05 segundos
-				-> L2: 3.34541 ciclos - 0.000611733 segundos
-				-> L3: 3.52593 ciclos - 0.00528173 segundos
-	PC II
-		- /O2
-			* Vectores normales
-				-> Instrucciones /SSE: 3.47461 ciclos - 2.54143e-06 segundos 
-				-> Instrucciones /IA32: 3.40039 ciclos - 2.48714e-06 segundos
-		- /Od
-			* Vectores normales
-				-> Instrucciones /SSE: 3.40234 ciclos - 2.48857e-06 segundos
-				-> Instrucciones /IA32: 3.47266 ciclos - 2.54e-06 segundos
-		- Vectores grandes (/O2 /SSE): 
-				-> L1: 3.3618 ciclos - 3.07364e-05 segundos
-				-> L2: 4.25164 ciclos - 0.000777444 segundos
-				-> L3: 4.23906 ciclos - 0.00158749 segundos
-*/
 float problemC ()
 {
 	int  i;
@@ -248,35 +164,6 @@ float problemC ()
 }
 
 // c. Suma condicional - Muy Fácilmente Predecible 
-/*
-	Para valores MUY fácilmente predecibles:
-	PC I
-		- /O2
-			* Vectores normales
-				-> Instrucciones /SSE: 2.97461 ciclos - 2.17571e-06 segundos
-				-> Instrucciones /IA32: 2.97656 ciclos - 2.17714e-06 segundos
-		- /Od
-			* Vectores normales
-				-> Instrucciones /SSE: 2.97754 ciclos - 2.17786e-06 segundos
-				-> Instrucciones /IA32: 2.97754 ciclos - 2.17786e-06 segundos
-		- Vectores grandes (/O2 /SSE):
-				-> L1: 2.91781 ciclos - 6.4025e-05 segundos
-				-> L2: 3.28757 ciclos - 0.000601156 segundos
-				-> L3: 3.40077 ciclos - 0.00509423 segundos
-	PC II
-		- /O2
-			* Vectores normales
-				-> Instrucciones /SSE: 3.41309 ciclos - 2.49643e-06 segundos
-				-> Instrucciones /IA32: 3.38184 ciclos - 2.47357e-06 segundos
-		- /Od
-			* Vectores normales
-				-> Instrucciones /SSE: 3.41504 ciclos - 2.49786e-06 segundos
-				-> Instrucciones /IA32: 3.47168 ciclos - 2.53929e-06 segundos
-		- Vectores grandes (/O2 /SSE):
-				-> L1: 3.36023 ciclos - 3.07221e-05 segundos
-				-> L2: 3.89562 ciclos - 0.000712343 segundos
-				-> L3: 3.91309 ciclos - 0.00146542 segundos
-*/
 float problemD1 ()
 {
 	int  i;
@@ -298,35 +185,6 @@ float problemD1 ()
 }
 
 // c. Suma condicional - Fácilmente Predecible 
-/*
-	Para valores fácilmente predecibles:
-	PC I
-		- /O2
-			* Vectores normales
-				-> Instrucciones /SSE: 2.97559 ciclos - 2.17643e-06 segundos
-				-> Instrucciones /IA32: 2.97266 ciclos - 2.17429e-06 segundos
-		- /Od
-			* Vectores normales
-				-> Instrucciones /SSE: 2.97363 ciclos - 2.175e-06 segundos
-				-> Instrucciones /IA32: 2.97461 ciclos - 2.97461 segundos
-		- Vectores grandes (/O2 /SSE):
-				-> L1: 2.90999 ciclos - 6.38536e-05 segundos
-				-> L2: 3.29595 ciclos - 0.000602689 segundos
-				-> L3: 3.5364 ciclos - 3.5364 segundos
-	PC II
-		- /O2
-			* Vectores normales
-				-> Instrucciones /SSE: 3.36035 ciclos - 2.45786e-06 segundos
-				-> Instrucciones /IA32: 3.3916 ciclos - 2.48071e-06 segundos
-		- /Od
-			* Vectores normales
-				-> Instrucciones /SSE: 3.47266 ciclos - 2.54e-06 segundos
-				-> Instrucciones /IA32: 3.46973 ciclos - 2.53786e-06 segundos
-		- Vectores grandes (/O2 /SSE):
-				-> L1: 3.36141 ciclos - 3.07329e-05 segundos
-				-> L2: 4.06821 ciclos - 0.000743902 segundos
-				-> L3: 4.16774 ciclos - 0.00156078 segundos
-*/
 float problemD2()
 {
 	int  i;
@@ -348,34 +206,6 @@ float problemD2()
 }
 
 // Ejemplo provisto en el proyecto
-/*
-	PC I
-		- /O2
-			* Vectores normales
-				-> Instrucciones /SSE: 0.90332 ciclos - 6.60714e-07 segundos
-				-> Instrucciones /IA32: 0.966797 ciclos - 7.07143e-07 segundos
-		- /Od
-			* Vectores normales
-				-> Instrucciones /SSE: 0.916992 ciclos - 6.70714e-07 segundos
-				-> Instrucciones /IA32: 0.935547 ciclos - 0.935547 segundos
-		- Vectores grandes (/O2 /SSE):
-				-> L1: 0.990853 ciclos - 2.17421e-05 segundos
-				-> L2: 1.70118 ciclos - 0.000311072 segundos
-				-> L3: 1.99127 ciclos - 0.00298285 segundos
-	PC II
-		- /O2
-			* Vectores normales
-				-> Instrucciones /SSE: 1.01465 ciclos - 7.42143e-07 segundos
-				-> Instrucciones /IA32: 1.02539 ciclos - 7.5e-07 segundos
-		- /Od
-			* Vectores normales
-				-> Instrucciones /SSE: 1.00391 ciclos - 7.34286e-07 segundos
-				-> Instrucciones /IA32: 0.998047 ciclos - 7.3e-07 segundos
-		- Vectores grandes (/O2 /SSE): 
-				-> L1: 1.12234 ciclos - 1.02614e-05 segundos
-				-> L2: 2.69023 ciclos - 0.000491927 segundos
-				-> L3: 2.68793 ciclos - 0.00100661 segundos
-*/
 float example ()
 {
 	int i;

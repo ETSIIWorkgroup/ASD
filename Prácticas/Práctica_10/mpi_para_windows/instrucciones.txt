@@ -1,0 +1,20 @@
+1. Ejecutar msmpisetup.exe (instala el runtime de MPI)
+2. Ejecutar msmpisdk.msi (instala el SDK de MPI)
+3. Descomprimir mpi_vstudio_2017.zip para crear la solución MPI con
+varios proyectos dentro para su comprobación
+4. Compilar como siempre
+5. Para ejecutar, es necesario abrir un Símbolo del Sistema, ir al directorio
+Debug del proyecto que se quiere ejecutar, y usar el comando mpiexec.
+
+Ej: para ejecutar el proyecto ej1 con 4 procesos, ir al directorio
+ej1\Debug y desde allí teclear: mpiexec -n 4 ej1.exe
+
+Para poder crear nuevos proyectos en Visual Studio con soporte de MPI:
+- Hacer los pasos 1 y 2 del apartado anterior
+- Localizad en vuestro PC la carpeta Documents\Visual Studio 2017\Templates\ProjectTemplates
+- Copiar el fichero "Aplicacion de consola con MPI.zip" que se encuentra en esta carpeta,
+  a esa carpeta
+La próxima vez que arranqueis Visual Studio 2017, al hacer Archivo - Nuevo - Proyecto,
+dentro de los proyectos de Visual C++ aparecerá una nueva plantilla de proyecto para
+crear aplicaciones de consola en Windows con soporte de MPI. Si la elegis, vereis que se
+crea un proyecto con un ejemplo de programa en MPI listo para compilar/modificar.  

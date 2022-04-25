@@ -52,8 +52,8 @@ int main()
 
 			// Uncomment the call to the function under test.
 			//------------------------------------------------
-			//saxpy(n);
-			res = dotproduct(n);
+			saxpy(n);
+			//res = dotproduct(n);
 			//nz = countzeros(n);
 			//------------------------------------------------
 
@@ -102,15 +102,16 @@ void init_vectors (int n)
 }
 
 // Computes: Y = a*X + Y
-/*
+
 void saxpy(int n)
 {
 	for (int i = 0; i < n; i++) {
 		y[i] = a * x[i] + y[i];
 	}
 }
-*/
 
+
+/*
 void saxpy(int n)
 {
 	#pragma omp parallel for
@@ -119,9 +120,10 @@ void saxpy(int n)
 			y[i] = a * x[i] + y[i];
 	}
 }
+*/
 
 // Computes and return the value X*Y (dot product)
-/*
+
 float dotproduct (int n)
 {
 	float sum_dotp=0.0;
@@ -132,8 +134,9 @@ float dotproduct (int n)
 
 	return sum_dotp; // just a filler
 }
-*/
 
+
+/*
 float dotproduct(int n)
 {
 	float sum_dotp = 0.0;
@@ -146,9 +149,10 @@ float dotproduct(int n)
 
 	return sum_dotp; // just a filler
 }
+*/
 
 // Counts and returns the number of zero-elements in Z
-/*
+
 int countzeros (int n)
 {
 	int nz = 0;
@@ -161,8 +165,9 @@ int countzeros (int n)
 	
 	return nz; // just a filler
 }
-*/
 
+
+/*
 int countzeros(int n)
 {
 	int nz = 0;
@@ -176,3 +181,4 @@ int countzeros(int n)
 
 	return nz; // just a filler
 }
+*/

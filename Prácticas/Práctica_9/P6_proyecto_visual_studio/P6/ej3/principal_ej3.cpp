@@ -53,8 +53,8 @@ int main()
 			// Uncomment the call to the function under test.
 			//------------------------------------------------
 			//saxpy(n);
-			//res = dotproduct(n);
-			nz = countzeros(n);
+			res = dotproduct(n);
+			//nz = countzeros(n);
 			//------------------------------------------------
 
 			c1.Stop();
@@ -88,7 +88,6 @@ int main()
 	cout << "Results file created. Import it into Excel" << endl;
 }
 
-
 void init_vectors (int n)
 {
     int i;
@@ -101,7 +100,6 @@ void init_vectors (int n)
         z[i] = (rand()>(RAND_MAX/2))? 1 : 0;
     }
 }
-
 
 // Computes: Y = a*X + Y
 /*
@@ -140,22 +138,11 @@ float dotproduct(int n)
 {
 	float sum_dotp = 0.0;
 
-	#pragma omp parallel 
-	{
-		#pragma omp critical
-		{
+	#pragma omp parallel for reduction(+:sum_dotp) 
 
-			// Nº de hilos:
-			int T = omp_get_num_threads();
-			// Hilo que está ejecutando:
-			int t = omp_get_thread_num();
-
-			for (int i = t*(n/T); i < ((t+1)*(n/T)); i++) {
-				sum_dotp = sum_dotp + (x[i] * y[i]);
-			}
+		for (int i = 0; i < n; i++) {
+			sum_dotp += x[i] * y[i];
 		}
-
-	}
 
 	return sum_dotp; // just a filler
 }
@@ -180,23 +167,12 @@ int countzeros(int n)
 {
 	int nz = 0;
 
-	#pragma omp parallel 
-	{
-		#pragma omp critical
-		{
-
-			// Nº de hilos:
-			int T = omp_get_num_threads();
-			// Hilo que está ejecutando:
-			int t = omp_get_thread_num();
-
-			for (int i = t * (n / T); i < ((t + 1) * (n / T)); i++) {
-				if (z[i] == 0) {
-					nz++;
-				}
+	#pragma omp parallel for reduction(+:nz)
+		for (int i = 0; i < n; i++) {
+			if (z[i] == 0) {
+				nz++;
 			}
 		}
-	}
 
 	return nz; // just a filler
 }

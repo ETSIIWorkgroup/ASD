@@ -1,2 +1,2 @@
 ﻿  hola_mundo_avanzado.c
-D:\Otros repositorios\ASD\Prácticas\Práctica_10\mpi_para_windows\ejemplo_mpi_vstudio_2017\MPI\ej1\hola_mundo_avanzado.c(2,10): fatal error C1083: No se puede abrir el archivo incluir: 'mpi.h': No such file or directory
+C:\Users\aleja\Documents\Repositorios\ASD\Prácticas\Práctica_10\mpi_para_windows\ejemplo_mpi_vstudio_2017\MPI\ej1\hola_mundo_avanzado.c(2,10): fatal error C1083: No se puede abrir el archivo incluir: 'mpi.h': No such file or directory

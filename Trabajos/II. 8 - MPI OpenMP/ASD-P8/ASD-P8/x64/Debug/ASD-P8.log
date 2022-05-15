@@ -1,0 +1,4 @@
+﻿  prod_escalar_mpi.c
+E:\Otros repositorios\ASD\Trabajos\II. 8 - MPI OpenMP\ASD-P8\ASD-P8\prod_escalar_mpi.c(41,25): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+E:\Otros repositorios\ASD\Trabajos\II. 8 - MPI OpenMP\ASD-P8\ASD-P8\prod_escalar_mpi.c(50,87): warning C4244: 'función': conversión de 'int' a 'float'; posible pérdida de datos
+  ASD-P8.vcxproj -> E:\Otros repositorios\ASD\Trabajos\II. 8 - MPI OpenMP\ASD-P8\ASD-P8\x64\Debug\ASD-P8.exe

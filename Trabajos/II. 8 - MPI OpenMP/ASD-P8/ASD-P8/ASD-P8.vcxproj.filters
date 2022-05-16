@@ -15,12 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mpi_Pract8a_histogram.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="OpenMP_Pract8a_histogram.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="WinMPI_Pract8a_histogram.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>

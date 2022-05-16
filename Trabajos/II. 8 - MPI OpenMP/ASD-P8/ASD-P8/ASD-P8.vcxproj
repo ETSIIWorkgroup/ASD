@@ -19,8 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mpi_Pract8a_histogram.cpp" />
-    <ClCompile Include="OpenMP_Pract8a_histogram.cpp" />
     <ClCompile Include="WinMPI_Pract8a_histogram.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -29,7 +27,7 @@
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>ASD_P8</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>ASD-P8</ProjectName>
+    <ProjectName>ASD-P8-MPI</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -125,6 +123,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

@@ -1,0 +1,5 @@
+﻿  OpenMP_Pract8a_histogram.cpp
+C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\II. 8 - MPI OpenMP\ASD-P8\ASD-P8\OpenMP_Pract8a_histogram.cpp(81,12): warning C4101: 'slice': variable local sin referencia
+C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\II. 8 - MPI OpenMP\ASD-P8\ASD-P8\OpenMP_Pract8a_histogram.cpp(81,6): warning C4101: 'iter': variable local sin referencia
+C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\II. 8 - MPI OpenMP\ASD-P8\ASD-P8\OpenMP_Pract8a_histogram.cpp(81,19): warning C4101: 'test': variable local sin referencia
+  p8_omp.vcxproj -> C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\II. 8 - MPI OpenMP\ASD-P8\x64\Debug\p8_omp.exe

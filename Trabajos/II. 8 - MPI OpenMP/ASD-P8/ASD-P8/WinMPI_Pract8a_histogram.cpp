@@ -23,7 +23,7 @@ using namespace std;
 
 #include <iostream>
 #include <iomanip>
-//#include <mpi.h>
+#include <mpi.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

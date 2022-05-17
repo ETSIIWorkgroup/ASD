@@ -86,38 +86,66 @@ void matrix_vector_init(int n_tests_part, void *mat)
 // pointers must be aligned to frontier of 16 (or 32) bytes
 void  par_histogram(long int n_iter,  void *mat)
 {
-	ElementType(*h_part)[RANGE]   ;
-	h_part = (ElementType(*)[RANGE] ) mat;
+	ElementType(*h_part)[RANGE];
+	h_part = (ElementType(*)[RANGE]) mat;
+
 	int iter, test;
 	unsigned long  slice;
-	int        p = 444, my_rank = 333; //GIVE VALUE TO THESE VARIABLES 
+	int p, my_rank; 
+	int destino = 0;
+	int etiqueta = 0;
+	MPI_Status status;
 
-	// VERSIÓN PARALELA MPI
-	// Abre la ejecución de MPI
-	MPI_Init(&argc,&arg);
+	// Resultado: Largo el nº de test y ancho el nº filas:
+	float hist[N_TESTS][RANGE];
 
 	// Pedir el rango actual y el total de procesos:
 	MPI_Comm_rank(MPI_COMM_WORLD,&my_rank);
 	MPI_Comm_size(MPI_COMM_WORLD, &p);
 
+	// Nº filas de la matriz por cada proceso
+	int n_test_per_process = N_TESTS / p;
+
+	// Maestro:
 	if (my_rank == 0) {
 
-		for (fuente = 1; fuente < p; fuente++) {
-
-			MPI_Recv(&, 1, MPI_FLOAT, fuente, etiqueta, MPI_COMM_WORLD, &status);
-
+		// Cálculo asociado al maestro (es igual para cada proceso):
+		for (test = 0; test < n_test_per_process; test++)
+		{
+			srand(seeds[test + n_test_per_process * my_rank]);
+			for (iter = 0; iter < n_iter; iter++) {
+				slice = (rand() * RANGE) / ((unsigned long)RAND_MAX + 1);
+				h_part[test][slice] ++;
+			}
 		}
 
+		/*
+			En hist[][] se guardan los datos recibidos de cada proceso.
+		*/
+		for (int i = 1; i < p; i++)
+		{
+			MPI_Recv(&h_part, 1, MPI_FLOAT, i, etiqueta, MPI_COMM_WORLD, &status);
+		}
+
+	// Esclavos:
 	} else {
 
-		MPI_Send(&, 1, MPI_FLOAT, dest, etiqueta, MPI_COMM_WORLD);
+		// Cálculo asociado a UN proceso:
+		for (test = 0; test < n_test_per_process; test++)
+		{
+			srand(seeds[test + n_test_per_process * my_rank]);
+			for (iter = 0; iter < n_iter; iter++) {
+				slice = (rand() * RANGE) / ((unsigned long)RAND_MAX + 1);
+				h_part[test][slice] ++;
+			}
+		}
+
+		/*
+			Cada proceso envía su h_part al maestro.
+		*/
+		MPI_Send(&h_part, 1, MPI_FLOAT, destino, etiqueta, MPI_COMM_WORLD);
 
 	}
-
-	// Cierra la ejecución de MPI
-	MPI_Finalize();
-
-	int n_test_per_process  = N_TESTS / p;
 
 #ifdef DEBUG_PRINT
 	printf("      Step: %3d . MPI computation begins . rank:%d out a total of :%d \n", debug_step++, my_rank, p);
@@ -128,6 +156,7 @@ void  par_histogram(long int n_iter,  void *mat)
 #endif
 
 }
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void seq_histogram(long int n_iter) {
 	int iter, test;
@@ -177,6 +206,9 @@ int main(int argc, char** argv) {
 	int test;
 	int  i, p, my_rank;
 
+	//************************
+	// Abre la ejecución de MPI
+	//************************
 	MPI_Init(&argc, &argv);
 	MPI_Comm_size(MPI_COMM_WORLD, &p);
 	MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
@@ -294,6 +326,9 @@ ElementType(*hist_partial)[RANGE];
 
 		free(hist_partial);
 
+	//************************
+	// Cierra la ejecución de MPI
+	//************************
 	MPI_Finalize();
 
 }

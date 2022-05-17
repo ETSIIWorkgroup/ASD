@@ -92,6 +92,7 @@ void  par_histogram(int current_n_slices, int n_iter) {
 	}
 
 }
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void seq_histogram(int current_n_slices, int n_iter) {
 	int iter, slice, test;

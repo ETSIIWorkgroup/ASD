@@ -92,12 +92,31 @@ void  par_histogram(long int n_iter,  void *mat)
 	unsigned long  slice;
 	int        p = 444, my_rank = 333; //GIVE VALUE TO THESE VARIABLES 
 
-	//@  STUDENTS MUST WRITE HERE THE PARALLEL VERSION” 
-	 //@  STUDENTS MUST WRITE HERE THE PARALLEL VERSION” 
-	 //@  STUDENTS MUST WRITE HERE THE PARALLEL VERSION” 
+	// VERSIÓN PARALELA MPI
+	// Abre la ejecución de MPI
+	MPI_Init(&argc,&arg);
 
-//	MPI_Comm_size(MPI_COMM_WORLD, &p);
-	//MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
+	// Pedir el rango actual y el total de procesos:
+	MPI_Comm_rank(MPI_COMM_WORLD,&my_rank);
+	MPI_Comm_size(MPI_COMM_WORLD, &p);
+
+	if (my_rank == 0) {
+
+		for (fuente = 1; fuente < p; fuente++) {
+
+			MPI_Recv(&, 1, MPI_FLOAT, fuente, etiqueta, MPI_COMM_WORLD, &status);
+
+		}
+
+	} else {
+
+		MPI_Send(&, 1, MPI_FLOAT, dest, etiqueta, MPI_COMM_WORLD);
+
+	}
+
+	// Cierra la ejecución de MPI
+	MPI_Finalize();
+
 	int n_test_per_process  = N_TESTS / p;
 
 #ifdef DEBUG_PRINT

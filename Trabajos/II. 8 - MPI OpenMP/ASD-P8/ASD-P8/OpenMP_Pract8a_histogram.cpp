@@ -81,7 +81,7 @@ void  par_histogram(int current_n_slices, int n_iter) {
 	int iter, slice, test;
 
 	// VERSIÓN PARALELA OpenMP
-	#pragma omp parallel for shared(N_TEST) private(test)
+	#pragma omp parallel for  private(test)
 	for (test = 0; test < N_TESTS; test++)
 	{
 		srand(seeds[test + omp_get_num_threads() * omp_get_thread_num()]);

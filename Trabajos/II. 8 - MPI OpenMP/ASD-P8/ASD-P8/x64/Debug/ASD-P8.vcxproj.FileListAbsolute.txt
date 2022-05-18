@@ -1,3 +1,3 @@
 E:\Otros repositorios\ASD\Trabajos\II. 8 - MPI OpenMP\ASD-P8\ASD-P8\x64\Debug\ASD-P8.exe
-D:\Otros repositorios\ASD\Trabajos\II. 8 - MPI OpenMP\ASD-P8\ASD-P8\x64\Debug\ASD-P8-MPI.exe
 C:\Users\aleja\Documents\Repositorios\ASD\Trabajos\II. 8 - MPI OpenMP\ASD-P8\ASD-P8\x64\Debug\ASD-P8-MPI.exe
+D:\Otros repositorios\ASD\Trabajos\II. 8 - MPI OpenMP\ASD-P8\ASD-P8\x64\Debug\ASD-P8-MPI.exe

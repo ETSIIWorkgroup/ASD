@@ -80,11 +80,13 @@ void matrix_vector_init(int current_n_slices)
 void  par_histogram(int current_n_slices, int n_iter) {
 	int iter, slice, test;
 
-	// VERSIÓN PARALELA OpenMP
-	#pragma omp parallel for  private(test)
+	int n_threads = omp_get_num_threads();
+	int thread_num = omp_get_thread_num();
+
+	#pragma omp parallel for default(none) shared(N_TESTS) private(test)
 	for (test = 0; test < N_TESTS; test++)
 	{
-		srand(seeds[test + omp_get_num_threads() * omp_get_thread_num()]);
+		//srand(seeds[test + n_threads * thread_num]);
 		for (iter = 0; iter < n_iter; iter++) {
 			slice = (rand() * current_n_slices) / (RAND_MAX + 1);
 			hist[test][slice] ++;

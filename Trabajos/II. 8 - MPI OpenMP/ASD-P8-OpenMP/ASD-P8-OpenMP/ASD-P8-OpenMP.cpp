@@ -84,7 +84,7 @@ void  par_histogram(int current_n_slices, int n_iter) {
 	int thread_num = omp_get_thread_num();
 	int n_tests_per_threads = N_TESTS / n_threads;
 
-	#pragma omp parallel for default(none) shared(n_threads, n_tests_per_threads) private(thread_num, test)
+	#pragma omp parallel for default(none) shared(n_tests_per_threads, n_iter, current_n_slices, slice, hist) private(test, thread_num, iter)
 	for (test = 0; test < N_TESTS; test++)
 	{
 		/*

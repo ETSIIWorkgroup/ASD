@@ -88,54 +88,26 @@ void  par_histogram(long int n_iter, void* mat)
 {
 	ElementType(*h_part)[RANGE];
 	h_part = (ElementType(*)[RANGE]) mat;
-
 	int iter, test;
 	unsigned long  slice;
+	// Estos valores se 'machacan' luego.
+	int p = 444, my_rank = 333;
 
-
-	// Nº filas de la matriz por cada proceso
+	// Rango (el proceso en concreto) y el total de procesos:
+	MPI_Comm_size(MPI_COMM_WORLD, &p);
+	MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
 	int n_test_per_process = N_TESTS / p;
 
-	// Maestro:
-	if (my_rank == 0) {
-
-		// Cálculo asociado al maestro (es igual para cada proceso):
-		for (test = 0; test < n_test_per_process; test++)
-		{
-			srand(seeds[test + n_test_per_process * my_rank]);
-			for (iter = 0; iter < n_iter; iter++) {
-				slice = (rand() * RANGE) / ((unsigned long)RAND_MAX + 1);
-				h_part[test][slice] ++;
-			}
-		}
-
+	for (test = 0; test < N_TESTS; test++)
+	{
 		/*
-			En hist[][] se guardan los datos recibidos de cada proceso.
+			Cada proceso usara nº aleatorios generados por una semilla distinta.
 		*/
-		for (int i = 1; i < p; i++)
-		{
-			MPI_Recv(&h_part, 1, MPI_FLOAT, i, etiqueta, MPI_COMM_WORLD, &status);
+		srand(seeds[test + n_test_per_process * my_rank]);
+		for (iter = 0; iter < n_iter; iter++) {
+			slice = (rand() * RANGE) / ((unsigned long)RAND_MAX + 1);
+			hist[test][slice] ++;
 		}
-
-		// Esclavos:
-	}
-	else {
-
-		// Cálculo asociado a UN proceso:
-		for (test = 0; test < n_test_per_process; test++)
-		{
-			srand(seeds[test + n_test_per_process * my_rank]);
-			for (iter = 0; iter < n_iter; iter++) {
-				slice = (rand() * RANGE) / ((unsigned long)RAND_MAX + 1);
-				h_part[test][slice] ++;
-			}
-		}
-
-		/*
-			Cada proceso envía su h_part al maestro.
-		*/
-		MPI_Send(&h_part, 1, MPI_FLOAT, destino, etiqueta, MPI_COMM_WORLD);
-
 	}
 
 #ifdef DEBUG_PRINT
@@ -196,6 +168,7 @@ int main(int argc, char** argv) {
 	unsigned long slice_number = 0;
 	int test;
 	int  i, p, my_rank;
+	MPI_Status status;
 
 	//************************
 	// Abre la ejecución de MPI
@@ -279,20 +252,28 @@ int main(int argc, char** argv) {
 		printf("      Step: %3d . MPI is going to collect results  . rank:%d out a total of :%d \n", debug_step++, my_rank, p);
 #endif
 
-
-
 		//@  STUDENTS MUST WRITE HERE THE MESSAGES TO COLLECT DATA  
-		
+		// Maestro:
+		if (my_rank == 0) {
 
+			/*
+				El maestro guarda todos los datos recibidos de cada proceso esclavo.
+			*/
+			for (int i = 1; i < p; i++)
+			{
+				MPI_Recv(&hist_partial, 1, MPI_FLOAT, i, 0, MPI_COMM_WORLD, &status);
+			}
 
+		// Esclavos:
+		} else {
 
+			/*
+				Cada proceso envía su hist_partial al maestro.
+			*/
+			MPI_Send(&hist_partial, 1, MPI_FLOAT, 0, 0, MPI_COMM_WORLD);
 
-
-
+		}
 		//@  STUDENTS MUST WRITE HERE THE MESSAGES TO COLLECT DATA  
-
-
-
 
 #ifdef DEBUG_PRINT
 		printf("      Step: %3d . MPI Barrier  . rank:%d out a total of :%d \n", debug_step++, my_rank, p);

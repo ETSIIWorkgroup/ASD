@@ -84,9 +84,12 @@ void  par_histogram(int current_n_slices, int n_iter) {
 	int thread_num = omp_get_thread_num();
 	int n_tests_per_threads = N_TESTS / n_threads;
 
-	#pragma omp parallel for default(none) shared(n_threads,n_tests_per_threads, test) private(thread_num)
+	#pragma omp parallel for default(none) shared(n_threads, n_tests_per_threads) private(thread_num, test)
 	for (test = 0; test < N_TESTS; test++)
 	{
+		/*
+			Cada hilo usara nº aleatorios generados por una semilla distinta.
+		*/
 		srand(seeds[test + n_tests_per_threads * thread_num]);
 		for (iter = 0; iter < n_iter; iter++) {
 			slice = (rand() * current_n_slices) / (RAND_MAX + 1);

@@ -103,7 +103,8 @@ void  par_histogram(long int n_iter, void* mat)
 		/*
 			Cada proceso usara nº aleatorios generados por una semilla distinta.
 		*/
-		srand(seeds[test + n_test_per_process * my_rank]);
+		//srand(seeds[test + n_test_per_process * my_rank]);
+		srand(seeds[test]);
 		for (iter = 0; iter < n_iter; iter++) {
 			slice = (rand() * RANGE) / ((unsigned long)RAND_MAX + 1);
 			hist[test][slice] ++;

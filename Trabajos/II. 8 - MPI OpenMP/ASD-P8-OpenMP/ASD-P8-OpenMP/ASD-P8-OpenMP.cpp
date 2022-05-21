@@ -44,8 +44,12 @@ using namespace std;
 #define  MAX_N_SLICES ((RAND_MAX+1)/32) // max number of slices in which the original random numbers are divided 
 #define  MIN_N_SLICES ((RAND_MAX+1)/512) // min number of slices in which the original random numbers are divided 
 
-#define  N_ITERATIONS  (1000*MAX_N_SLICES) //NUMBER of tested random numbers //big number to execute a considerable time . 
+//#define  N_ITERATIONS  (1000*MAX_N_SLICES) //NUMBER of tested random numbers //big number to execute a considerable time . 
 // IT MUST BE  a mulitple of MAX_N_SLICES (so that if the random generation were perfect, the histogram would be uniform)
+
+// Mayor nº de iteraciones para pruebas:
+#define  N_ITERATIONS  (6000*MAX_N_SLICES) //NUMBER of tested random numbers //big number to execute a considerable time . 
+
 
 #define  N_TESTS 4
 // repeat several times the test with different seeds for the random generation 
@@ -85,6 +89,7 @@ void  par_histogram(int current_n_slices, int n_iter) {
 	// int n_tests_per_threads = N_TESTS / n_threads;
 
 	#pragma omp parallel for default(none) shared(n_iter, current_n_slices, hist) private(test, iter, slice)
+	// #pragma omp parallel for private(test, iter, slice)
 	for (test = 0; test < N_TESTS; test++)
 	{
 		/*
@@ -94,8 +99,10 @@ void  par_histogram(int current_n_slices, int n_iter) {
 		for (iter = 0; iter < n_iter; iter++) {
 			slice = (rand() * current_n_slices) / (RAND_MAX + 1);
 			hist[test][slice] ++;
+			
 		}
 	}
+	// #pragma omp barrier
 
 }
 

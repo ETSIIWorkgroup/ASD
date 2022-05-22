@@ -47,10 +47,6 @@ using namespace std;
 #define  N_ITERATIONS  (1000*MAX_N_SLICES) //NUMBER of tested random numbers //big number to execute a considerable time . 
 // IT MUST BE  a mulitple of MAX_N_SLICES (so that if the random generation were perfect, the histogram would be uniform)
 
-// Mayor nº de iteraciones para pruebas:
-//#define  N_ITERATIONS  (6000*MAX_N_SLICES) //NUMBER of tested random numbers //big number to execute a considerable time . 
-
-
 #define  N_TESTS 4
 // repeat several times the test with different seeds for the random generation 
 
@@ -88,8 +84,8 @@ void  par_histogram(int current_n_slices, int n_iter) {
 	// int thread_num = omp_get_thread_num();
 	// int n_tests_per_threads = N_TESTS / n_threads;
 
-	//#pragma omp parallel for default(none) shared(n_iter, current_n_slices, hist) private(test, iter, slice)
-	#pragma omp parallel for private(test, iter, slice)
+	#pragma omp parallel for default(none) shared(n_iter, current_n_slices, hist) private(test, iter, slice)
+	//#pragma omp parallel for private(test, iter, slice)
 	for (test = 0; test < N_TESTS; test++)
 	{
 		/*

@@ -60,7 +60,6 @@ ElementType hist[N_TESTS][RANGE]; //FIXED SIZE
 //it must contain the number of times that a certain slice is generated (here slice is the reduced number from the original number returned by rand())
 // the first indexes is to save different tests, each with a different seed 
 
-
 int prime_numbers[29] = { 809, 811, 821, 823, 827, 829, 839, 853, 857, 859, 863, 877, 881, 883, 887 , 907, 911, 919, 929, 937, 941, 947, 953, 967, 971, 977, 983, 991, 997 };
 int seeds[N_TESTS]; //A seed for each thread or process (task) is preferable 
 

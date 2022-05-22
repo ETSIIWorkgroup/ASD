@@ -1,4 +1,4 @@
 ﻿cl : línea de comandos warning D9002: se omite la opción desconocida '/arch:IA32'
   ASD-P8-OpenMP.cpp
-D:\Otros repositorios\ASD\Trabajos\II. 8 - MPI OpenMP\ASD-P8-OpenMP\ASD-P8-OpenMP\ASD-P8-OpenMP.cpp(80): warning C4101: 'test': variable local sin referencia
+D:\Otros repositorios\ASD\Trabajos\II. 8 - MPI OpenMP\ASD-P8-OpenMP\ASD-P8-OpenMP\ASD-P8-OpenMP.cpp(87): warning C4101: 'test': variable local sin referencia
   ASD-P8-OpenMP.vcxproj -> D:\Otros repositorios\ASD\Trabajos\II. 8 - MPI OpenMP\ASD-P8-OpenMP\ASD-P8-OpenMP\x64\Debug\ASD-P8-OpenMP.exe

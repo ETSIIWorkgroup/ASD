@@ -50,7 +50,8 @@ int debug_step = 0;
 #define  N_ITERATIONS  (100*(long)RANGE) //NUMBER of tested random numbers //big number to execute a considerable time . 
 // IT MUST BE  a mulitple of MAX_N_SLICES (so that if the random generation were perfect, the histogram would be uniform)
 
-#define  N_TESTS 2
+//#define  N_TESTS 2
+#define  N_TESTS 4
 // repeat several times the test with different seeds for the random generation 
 
 typedef unsigned long   ElementType;
@@ -90,26 +91,27 @@ void  par_histogram(long int n_iter, void* mat)
 	h_part = (ElementType(*)[RANGE]) mat;
 	int iter, test;
 	unsigned long  slice;
-	// Estos valores se 'machacan' luego.
-	int p = 444, my_rank = 333;
+	int p, my_rank;
 
-	// Rango (el proceso en concreto) y el total de procesos:
+	// Total de procesos (p) y proceso actual(my_rank):
 	MPI_Comm_size(MPI_COMM_WORLD, &p);
 	MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
 	int n_test_per_process = N_TESTS / p;
 
-	for (test = 0; test < N_TESTS; test++)
+	//@  STUDENTS MUST WRITE HERE THE PARALLEL VERSION
+	for (test = 0; test < n_test_per_process; test++)
 	{
 		/*
 			Cada proceso usara nº aleatorios generados por una semilla distinta.
 		*/
-		//srand(seeds[test + n_test_per_process * my_rank]);
-		srand(seeds[test]);
+		srand(seeds[test + n_test_per_process * my_rank]);
+		//srand(seeds[test]);
 		for (iter = 0; iter < n_iter; iter++) {
 			slice = (rand() * RANGE) / ((unsigned long)RAND_MAX + 1);
-			hist[test][slice] ++;
+			h_part[test][slice] ++;
 		}
 	}
+	//@  STUDENTS MUST WRITE HERE THE PARALLEL VERSION
 
 #ifdef DEBUG_PRINT
 	printf("      Step: %3d . MPI computation begins . rank:%d out a total of :%d \n", debug_step++, my_rank, p);
@@ -258,20 +260,20 @@ int main(int argc, char** argv) {
 		if (my_rank == 0) {
 
 			/*
-				El maestro guarda todos los datos recibidos de cada proceso esclavo.
+				El maestro (0) guarda todos los datos recibidos de cada proceso esclavo.
 			*/
-			for (int i = 1; i < p; i++)
+			for (int proceso = 1; proceso < p; proceso++)
 			{
-				MPI_Recv(&hist_partial, 1, MPI_FLOAT, i, 0, MPI_COMM_WORLD, &status);
+				MPI_Recv(&hist[n_test_per_process * proceso][0], (n_test_per_process * RANGE), MPI_UNSIGNED_LONG, proceso, 0, MPI_COMM_WORLD, &status);
 			}
 
 		// Esclavos:
 		} else {
 
 			/*
-				Cada proceso envía su hist_partial al maestro.
+				Cada proceso envía su hist_partial al maestro. Todo se envía al 0, esto es, al maestro. 
 			*/
-			MPI_Send(&hist_partial, 1, MPI_FLOAT, 0, 0, MPI_COMM_WORLD);
+			MPI_Send(&hist_partial[0], (n_test_per_process * RANGE), MPI_UNSIGNED_LONG, 0, 0, MPI_COMM_WORLD);
 
 		}
 		//@  STUDENTS MUST WRITE HERE THE MESSAGES TO COLLECT DATA  

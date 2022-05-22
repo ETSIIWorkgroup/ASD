@@ -41,8 +41,15 @@ using namespace std;
 
 // RAND_MAX		
 // IF THE STUDENT used another pseudorandom generator, please check that the constant RAND_MAX is defined and which value it has.
-#define  MAX_N_SLICES ((RAND_MAX+1)/32) // max number of slices in which the original random numbers are divided 
-#define  MIN_N_SLICES ((RAND_MAX+1)/512) // min number of slices in which the original random numbers are divided 
+//#define  MAX_N_SLICES ((RAND_MAX+1)/32) // max number of slices in which the original random numbers are divided 
+//#define  MIN_N_SLICES ((RAND_MAX+1)/512) // min number of slices in which the original random numbers are divided 
+
+/*
+	Pruebas con RANGOS más grandes, esto es, aumentar el rango (la diferencia entre MIN_N_SLICES y MAX_N_SLICES) que a su vez
+	define la entrada de la función par_histogram(int current_n_slices, int n_iter).
+*/
+#define  MAX_N_SLICES ((RAND_MAX+1)/4) 
+#define  MIN_N_SLICES ((RAND_MAX+1)/512) 
 
 #define  N_ITERATIONS  (1000*MAX_N_SLICES) //NUMBER of tested random numbers //big number to execute a considerable time . 
 // IT MUST BE  a mulitple of MAX_N_SLICES (so that if the random generation were perfect, the histogram would be uniform)
@@ -133,6 +140,8 @@ void  accumulative_deviation(int current_n_slices, ElementType vec[]) {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int main(int argc, char** argv) {
+
+	printf("%d", MAX_N_SLICES);
 
 	double par_initial_time, par_elapsed_time, par_minimum_time = 1e+36;
 	double seq_initial_time, seq_elapsed_time, seq_minimum_time = 1e+36;

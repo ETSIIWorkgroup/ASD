@@ -16,3 +16,4 @@ Proyecto para Arquitectura de Sistemas Distribuidos - Universidad de Sevilla
 ![8](https://github.com/ETSIIWorkgroup/ASD/blob/main/Trabajos/II.%208%20-%20MPI%20OpenMP/Capturas/8.png)
 ![9](https://github.com/ETSIIWorkgroup/ASD/blob/main/Trabajos/II.%208%20-%20MPI%20OpenMP/Capturas/9.png)
 ![10](https://github.com/ETSIIWorkgroup/ASD/blob/main/Trabajos/II.%208%20-%20MPI%20OpenMP/Capturas/10.png)
+![11](https://github.com/ETSIIWorkgroup/ASD/blob/main/Trabajos/II.%208%20-%20MPI%20OpenMP/Capturas/11.png)
